@@ -3,12 +3,12 @@
       <img id="Background" style="  overflow-x: hidden; max-height: 100%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackground.png" alt="Ah shit lost it again">
       <div style="transform: translateY(-400px); position: absolute; overflow: hidden; max-width: 100%">
         <div style="transform: translateY(675px);  overflow-x: hidden; max-height: 100%; max-width: 100%">
-          <img id="WireOne" style="" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
-          <img id="WireTwo" style="" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
+          <img id="WireOne" style="opacity: 20%;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
+          <img id="WireTwo" style="opacity: 20%;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
         </div>
         <div style="transform: translateY(-200px)">
-          <h1 class="PageTitleTwo" > Our </h1> <h1 class="PageTitleOne"> Services</h1>
-          <h3 class="SemiTitle"> Piratical and expert solutions</h3>
+          <h1 style="opacity: 100%;" class="PageTitleTwo" > Our </h1> <h1 style="opacity: 100%;" class="PageTitleOne"> Services</h1>
+          <h3 style="opacity: 80%;" class="SemiTitle"> Piratical and expert solutions</h3>
           <b-button pill variant="success" style="margin-top: 40px; padding-right: 35px;  padding-left: 35px; padding-top: 9px;  padding-bottom: 9px"> Services </b-button>
         </div>
 

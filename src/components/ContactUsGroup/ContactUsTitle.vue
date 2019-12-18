@@ -3,8 +3,8 @@
     <img id="Background" style="" src="../../assets/images/ContactUsTitleBackground.png" alt="Ah shit lost it again">
     <div style=" overflow: hidden; max-width: 100%; height: 50vw">
       <div style="transform: translateY(64%)">
-        <h1 class="PageTitleOne"> Contact Us </h1>
-        <h3 class="SemiTitle"> Get In Touch </h3>
+        <h1 style="opacity: 100%;" class="PageTitleOne"> Contact Us </h1>
+        <h3 style="opacity: 80%;" class="SemiTitle"> Get In Touch </h3>
       </div>
 
     </div>
