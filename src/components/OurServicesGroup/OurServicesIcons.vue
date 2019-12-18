@@ -79,7 +79,6 @@
 
 <script>
   import JQuery from 'jquery';
-  import Footer from "../Footer";
   let $ = JQuery;
     export default {
       name: "OurServicesIcons",
