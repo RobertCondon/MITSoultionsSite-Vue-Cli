@@ -221,7 +221,6 @@
 
     margin-left: auto;
     margin-right: auto;
-    opacity: 0;
 
   }
   .arrow{

@@ -228,32 +228,10 @@
     display: inline-block;
     padding: 0 30px 0 30px;
   }
-  .wrapper{
-
-    animation-name: load;
-    animation-fill-mode: forwards;
-    animation-delay: 0.25s;
-    animation-timing-function: ease-out;
-    animation-duration: 1s;
-  }
-  @-webkit-keyframes load {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 100%;
-    }
-  }
-  @keyframes  load {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 100%;
-    }
 
 
-  }
+
+
 
   .intro-content{
     font-size: 20px;
