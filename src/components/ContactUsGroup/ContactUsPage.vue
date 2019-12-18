@@ -89,7 +89,7 @@
             // this.ChangeSeeThrough(document.documentElement.scrollTop);
             // console.log(this.GetSeeThrough());
             self.Scrolled = document.documentElement.scrollTop;
-            if(document.documentElement.scrollTop >= 50) {
+            if(document.documentElement.scrollTop >= 10) {
               self.Boo = true;
               if(nav_classes != null) {
                 if (nav_classes.contains("stuck") === false) {

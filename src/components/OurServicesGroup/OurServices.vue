@@ -448,6 +448,7 @@
       mounted() {
         this.onResize();
         window.addEventListener('resize', this.onResize, {passive: true});
+        this.isMobile = window.innerWidth < 800;
 
         function offsetAnchor() {
           if (location.hash.length !== 0) {

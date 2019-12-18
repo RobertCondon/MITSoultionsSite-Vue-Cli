@@ -138,7 +138,12 @@
     position: relative;
     text-align: center;
     vertical-align: center;
-    alignment: center
+    alignment: center;
+    transition: 1s;
+    font-family: 'Big Shoulders Text', cursive;
+    font-weight: 600;
+    color: white;
+    font-size:  1.5vw;
   }
   .IconContent {
     z-index: 3;

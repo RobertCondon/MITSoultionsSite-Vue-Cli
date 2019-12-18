@@ -63,11 +63,11 @@
 
 
           <div style="background-color: #dadbe0;  overflow-x: hidden; max-width: 100%;">
-            <div class="ServiceBackground" style="height: 100%; position: relative">
+            <div class="ServiceBackground" style="height: 100vh; position: relative">
 
               <transition name="slide-fade" style="margin-top: 40%; position: absolute; width: 20%;" >
                 <div v-if="SlideServices" style="position: absolute; top:0; left:0; overflow-x: hidden; max-width: 100%; overflow-y: hidden; max-height: 100%">
-                  <h6> Our Services </h6>
+                  <h6 id="IconsTitle"> Our Services </h6>
                   <Icons ></Icons>
                 </div>
               </transition>
@@ -329,9 +329,9 @@
 
 </script>
 
-<style >
+<style scoped>
   .NavMiddle {
-    width: 67%;
+    width: 47%;
   }
 
   .wrapper{
@@ -586,4 +586,14 @@
     opacity: 0;
   }
 
+  #IconsTitle {
+    transform: translateY(30%);
+    transition: 1s;
+    font-family: 'Big Shoulders Text', cursive;
+    font-weight: 600;
+    color: #859E30;
+    text-shadow: -2px 0px #425014;
+    width: 80%;
+    font-size: 7.5vw;
+  }
 </style>

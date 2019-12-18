@@ -92,7 +92,7 @@
 
     opacity: 1;
     padding-right: 20px;
-    margin: 250px;
+    margin: 10px;
     background: transparent;
     border: 2px solid #E0FBFC;
   }
