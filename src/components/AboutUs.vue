@@ -211,7 +211,7 @@
 
 </script>
 
-<style>
+<style scoped>
   @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Michroma&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
