@@ -55,7 +55,7 @@
         <h1 class="ServiceNumber " style="opacity: 10%;"  v-if="!isMobile" >01</h1>
         <div class="ServiceContent">
 
-          <h1 style="opacity: 100%;"   class="ServiceTitle" style=""> Computer Systems </h1>
+          <h1 style="opacity: 100%;"   class="ServiceTitle" > Computer Systems </h1>
           <div id="Line1" class="ServiceLineTitle"></div>
         </div>
         <p style="opacity: 100%;"   class="ServiceTopContent">

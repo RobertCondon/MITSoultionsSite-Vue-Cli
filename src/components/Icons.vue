@@ -164,7 +164,7 @@
     height: 45%;
     width: 55%;
   }
-  .IconContent:hover h3 {
+  .IconContent:hover .Fluff {
      opacity: 100%;
    }
   .IconContent:hover .BorderY {

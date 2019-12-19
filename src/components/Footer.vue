@@ -120,7 +120,7 @@
 
 
 
-<style>
+<style >
   .Vision{
     position: relative;
     float: left;

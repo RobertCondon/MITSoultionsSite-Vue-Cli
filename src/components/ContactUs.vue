@@ -114,7 +114,7 @@ export default {
 
 </script>
 
-<style>
+<style >
   @import url(https://fonts.googleapis.com/css?family=Lato:400);
 
 
@@ -133,6 +133,7 @@ export default {
     margin: 16% auto 10% auto;
     transform: translateX(150%);
     transition: 0.3s;
+
   }
 
   #Submit {
