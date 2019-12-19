@@ -48,24 +48,23 @@
       <OurServicesIcons style="transform: translateY(50px)"></OurServicesIcons>
 
 
-      <a herf="#What">s</a>
       <div style="padding-top: 90px; position: relative; z-index: 1;" id="ItemOne"  class="ServiceItem">
-        <img class="Divider" style="opacity: 10%; position: relative; z-index: 1; width: 100vm; right: 0; transform: translateY(-90px)"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
-        <img class="ServiceIcon" id="IconOne" style="" src="../../assets/images/svg/computerSystems.png" alt="Ah shit lost it again">
+        <img class="Divider" style=" position: relative; z-index: 1; width: 100vm; right: 0; transform: translateY(-90px)"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" id="IconOne" style="opacity: 10%;" src="../../assets/images/svg/computerSystems.png" alt="Ah shit lost it again">
 
-        <h1 class="ServiceNumber " v-if="!isMobile" >01</h1>
+        <h1 class="ServiceNumber " style="opacity: 10%;"  v-if="!isMobile" >01</h1>
         <div class="ServiceContent">
 
-          <h1 class="ServiceTitle" style=""> Computer Systems </h1>
+          <h1 style="opacity: 100%;"   class="ServiceTitle" style=""> Computer Systems </h1>
           <div id="Line1" class="ServiceLineTitle"></div>
         </div>
-        <p class="ServiceTopContent">
+        <p style="opacity: 100%;"   class="ServiceTopContent">
           Step out of the Dark Ages in IT with the latest computer systems. <br>
           <br>
           Like nature and the human species, information and computer systems continually evolve. Working on outdated technology platforms and software affects your productivity, not to mention your patience!
         </p>
         <transition name="ReadMoreTrans">
-            <p class="ReadMore" v-if="this.ReadMoreArray[0].ReadBool" :key="this.ReadMoreArray[0].ReadBool">
+            <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[0].ReadBool" :key="this.ReadMoreArray[0].ReadBool">
               The type of computer system you choose needs to have compatible elements, be specific to your business and operate with as few hitches as possible - regardless if it's hardware, software, robust servers, secure backup systems, specific network capabilities or even devices for work done remotely.
 
               Solid yet flexible computer systems allow you to get on with the job, without interruption. IT infrastructure needs to be prepared for the possibility of security breaches, denial of service attacks and power failures.
@@ -91,17 +90,17 @@
 
       <div id="ItemTwo"  class="ServiceItem">
         <img class="ServiceIcon" id="IconTwo" style=" opacity: 10%; "  src="../../assets/images/svg/breakfixServices.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber" v-if="!isMobile" >02</h1>
+        <h1 class="ServiceNumber" style="opacity: 10%;"  v-if="!isMobile" >02</h1>
         <div class="ServiceMegaContent">
           <div class="ServiceContent">
-            <h1 class="ServiceTitle"> Break/Fix Support </h1>
+            <h1 style="opacity: 100%;"   class="ServiceTitle"> Break/Fix Support </h1>
             <div id="Line2" class="ServiceLineTitle"></div>
           </div>
-          <p class="ServiceTopContent">
+          <p style="opacity: 100%;"   class="ServiceTopContent">
             Not ready yet for contract or fully managed support solution? Try our Break Fix Service support for any hardware and software problem.
           </p>
           <transition name="ReadMoreTrans">
-            <p class="ReadMore" v-if="this.ReadMoreArray[1].ReadBool" :key="this.ReadMoreArray[1].ReadBool">
+            <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[1].ReadBool" :key="this.ReadMoreArray[1].ReadBool">
               Our Break Fix Service provides peace of mind and support for any IT issues you may encounter. A professional team of technicians and extensive expertise supporting multi-vendor hardware and software platforms.
 
               A solution best suited for those businesses that have small IT requirements, limited funding, or where the business already has an internal IT person or IT team.
@@ -121,18 +120,18 @@
 
       <div id="ItemThree"  class="ServiceItem">
         <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/ServerManagement.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber" v-if="!isMobile" >03</h1>
+        <h1 class="ServiceNumber" style="opacity: 10%;"  v-if="!isMobile" >03</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
-            <h1 class="ServiceTitle" > Server Management </h1>
+            <h1 style="opacity: 100%;"   class="ServiceTitle" > Server Management </h1>
             <div id="Line3" class="ServiceLineTitle"></div>
           </div>
-          <p class="ServiceTopContent">
+          <p style="opacity: 100%;"   class="ServiceTopContent">
             Servers & cloud computing: matching a (virtual) server to your data needs
             When it comes to small business servers, virtual servers or cloud computing, there are a myriad of server options. Selecting the right fit for your network size, backup preferences and data requirements will reduce downtime, facilitate faster installation of new applications, give you the option of managing email and even hosting your own website.
             </p>
           <transition name="ReadMoreTrans">
-            <p class="ReadMore" v-if="this.ReadMoreArray[2].ReadBool" :key="this.ReadMoreArray[2].ReadBool">
+            <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[2].ReadBool" :key="this.ReadMoreArray[2].ReadBool">
               <br><br><b>Cloud Computing</b><br>
               The trend toward cloud computing simply involves moving your data storage and/or setting up specific business applications on the internet, so the data or software is not stored at your office or workplace. Benefits of cloud computing include the increased ability to access data remotely, reduced hardware outlays and upgrades, and the reassurance of off-site storage for backup and recovery – an advantage in the event of another earthquake. Cloud computing works best when you have a high-speed data cable for internet connections. If your internet connection is based on copper wires or is unreliable, then cloud computing may not be the ideal solution.
 
@@ -173,17 +172,17 @@
 
       <div id="ItemFour"  class="ServiceItem">
         <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/disasterRecovery.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber " v-if="!isMobile" >04</h1>
+        <h1 class="ServiceNumber " style="opacity: 10%;"  v-if="!isMobile" >04</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
-            <h1 class="ServiceTitle" > Disaster Recovery </h1>
+            <h1 style="opacity: 100%;" class="ServiceTitle" > Disaster Recovery </h1>
             <div id="Line4" class="ServiceLineTitle"></div>
           </div>
-          <p class="ServiceTopContent">
+          <p style="opacity: 100%;"   class="ServiceTopContent">
             Backup and recovery: Manage IT disaster recovery
           </p>
           <transition name="ReadMoreTrans">
-            <p class="ReadMore" v-if="this.ReadMoreArray[3].ReadBool" :key="this.ReadMoreArray[3].ReadBool">
+            <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[3].ReadBool" :key="this.ReadMoreArray[3].ReadBool">
               <br><br><b>We're your backup and recovery experts.</b><br>
               Why does your business need a backup and recovery plan? Being prepared and organised to mitigate the risk of outages and productivity through IT disaster recovery is extremely important for any company. From virus infections to accidental fire, flood damage and even malicious damage, you need to have procedures in place to combat any level of threat – not to mention seismic wobbles!
 
@@ -227,18 +226,18 @@
 
       <div id="ItemFive"  class="ServiceItem">
         <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/networking.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber" v-if="!isMobile" >05</h1>
+        <h1 class="ServiceNumber" style="opacity: 10%;"  v-if="!isMobile" >05</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
-            <h1 class="ServiceTitle" > Networking </h1>
+            <h1 style="opacity: 100%;" class="ServiceTitle" > Networking </h1>
             <div id="Line5" class="ServiceLineTitle"></div>
           </div>
-          <p class="ServiceTopContent">
+          <p style="opacity: 100%;"   class="ServiceTopContent">
             <b>Network consulting: network support & computing for your business</b><br><br>
             Your computer networking needs grow with your business. When there's an outage, Manage IT's remote network consulting service means we can be there faster – even if we're there in a 'virtual' sense.
           </p>
           <transition name="ReadMoreTrans">
-            <p class="ReadMore" v-if="this.ReadMoreArray[4].ReadBool" :key="this.ReadMoreArray[4].ReadBool">
+            <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[4].ReadBool" :key="this.ReadMoreArray[4].ReadBool">
               <br><br><b>What we do </b><br>
               Manage IT's network support covers many areas. Perhaps you're integrating new smartphones and tablets, or are increasing flexibility for staff by providing remote access. Your computer networking needs to be robust and restrict access to confidential information with security protocols.
 
@@ -261,18 +260,18 @@
 
       <div id="ItemSix" name="ItemSix"  class="ServiceItem">
         <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/databaseManagement.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber " v-if="!isMobile" >06</h1>
+        <h1 class="ServiceNumber " style="opacity: 10%;"  v-if="!isMobile" >06</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
-            <h1 class="ServiceTitle" > Database Management </h1>
+            <h1 style="opacity: 100%;"   class="ServiceTitle" > Database Management </h1>
             <div id="Line6" class="ServiceLineTitle"></div>
           </div>
-          <p class="ServiceTopContent">
+          <p style="opacity: 100%;"   class="ServiceTopContent">
             <b>Manage IT provide and prove quicker financial returns with the client</b><br><br>
             Our database management team can deliver any database solution from single-user desktop versions to full client server architecture, based on either Microsoft SQL Servers or Microsoft Access. Manage IT specialise in delivering functionally powerful database management solutions quickly and economically, and in the most feasible way for your organisation.
           </p>
           <transition name="ReadMoreTrans">
-            <p class="ReadMore" v-if="this.ReadMoreArray[5].ReadBool" :key="this.ReadMoreArray[5].ReadBool">
+            <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[5].ReadBool" :key="this.ReadMoreArray[5].ReadBool">
               When it comes to your database, management solutions, Manage IT are focused on your organisation’s own processes. We work to enhance these processes and the overall business. This means we provide and prove quicker financial returns with the client.
 
               Our database management is flexible around how you want to work and we strive to successfully integrate our work into each customer’s individual operations/methodologies.
@@ -295,18 +294,18 @@
 
       <div id="ItemSeven"  class="ServiceItem">
         <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/security.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber" v-if="!isMobile" >07</h1>
+        <h1 class="ServiceNumber" style="opacity: 10%;"  v-if="!isMobile" >07</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
-            <h1 class="ServiceTitle" > Security </h1>
+            <h1 style="opacity: 100%;"   class="ServiceTitle" > Security </h1>
             <div id="Line7" class="ServiceLineTitle"></div>
           </div>
-          <p class="ServiceTopContent">
+          <p style="opacity: 100%;"   class="ServiceTopContent">
             <b>Manage IT – Your Network and IT Systems' Bodyguard</b><br><br>
             We're not dressed up in black suits with dark glasses and earpiece communication devices. We do however have a number of options to keep a close eye on the security of your business' computing systems, ensuring that the mafia are not infiltrating your network.
           </p>
           <transition name="ReadMoreTrans">
-            <p class="ReadMore" v-if="this.ReadMoreArray[6].ReadBool" :key="this.ReadMoreArray[6].ReadBool">
+            <p style="opacity: 100%;"  class="ReadMore" v-if="this.ReadMoreArray[6].ReadBool" :key="this.ReadMoreArray[6].ReadBool">
               Security standards are always changing to keep up with the fast pace of the IT world. This is why it's so important to use an IT consulting company like Manage IT. We have our eyes on the ball all the time, adapting to changes as they happen in order to provide your IT infrastructure with the latest and most secure security systems available.
 
 
@@ -338,19 +337,19 @@
 
       <div id="ItemEight" style="margin-bottom: -200px"  class="ServiceItem">
         <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/cloudComputing.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber" v-if="!isMobile" >08</h1>
+        <h1 class="ServiceNumber" style="opacity: 10%;"  v-if="!isMobile" >08</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
-            <h1 class="ServiceTitle" > Cloud computing </h1>
+            <h1 style="opacity: 100%;"   class="ServiceTitle" > Cloud computing </h1>
             <div id="Line8" class="ServiceLineTitle"></div>
           </div>
-          <p class="ServiceTopContent">
+          <p style="opacity: 100%;"   class="ServiceTopContent">
             <b>Generally speaking the 'Cloud' refers to the internet.</b><br><br>
             So Cloud computing is computing over the internet. <br>
             The value to Cloud varies. The main benfits include the scope you can create to focus on other things by giving responsibilty for maintenance and upkeep of servers and software to someone else; the peace of mind that comes with knowing you can go about your business from anywhere you can find an internet connection, and not be exposed to the downtime risks associated with a fixed location; and finally, having the ability to bring greater certainty to cashflow by replacing irregular and often heavy capital expenditure with regular and predictable operational expenditure.
           </p>
           <transition name="ReadMoreTrans">
-            <p class="ReadMore" v-if="this.ReadMoreArray[7].ReadBool" :key="this.ReadMoreArray[7].ReadBool">
+            <p style="opacity: 100%;"  class="ReadMore" v-if="this.ReadMoreArray[7].ReadBool" :key="this.ReadMoreArray[7].ReadBool">
 
 
               <br><br><b>TALK OVER DATA FOR THIS ONE NO IDEA REALLY</b><br>
