@@ -50,7 +50,7 @@
 
       <a herf="#What">s</a>
       <div style="padding-top: 90px; position: relative; z-index: 1;" id="ItemOne"  class="ServiceItem">
-        <img class="Divider" style="position: relative; z-index: 1; width: 100vm; right: 0; transform: translateY(-90px)"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+        <img class="Divider" style="opacity: 10%; position: relative; z-index: 1; width: 100vm; right: 0; transform: translateY(-90px)"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         <img class="ServiceIcon" id="IconOne" style="" src="../../assets/images/svg/computerSystems.png" alt="Ah shit lost it again">
 
         <h1 class="ServiceNumber " v-if="!isMobile" >01</h1>
@@ -90,7 +90,7 @@
 
 
       <div id="ItemTwo"  class="ServiceItem">
-        <img class="ServiceIcon" id="IconTwo" style="" src="../../assets/images/svg/breakfixServices.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" id="IconTwo" style=" opacity: 10%; "  src="../../assets/images/svg/breakfixServices.png" alt="Ah shit lost it again">
         <h1 class="ServiceNumber" v-if="!isMobile" >02</h1>
         <div class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -120,7 +120,7 @@
 
 
       <div id="ItemThree"  class="ServiceItem">
-        <img class="ServiceIcon" style="" src="../../assets/images/svg/ServerManagement.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 10%; " " src="../../assets/images/svg/ServerManagement.png" alt="Ah shit lost it again">
         <h1 class="ServiceNumber" v-if="!isMobile" >03</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -172,7 +172,7 @@
 
 
       <div id="ItemFour"  class="ServiceItem">
-        <img class="ServiceIcon" style="" src="../../assets/images/svg/disasterRecovery.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/disasterRecovery.png" alt="Ah shit lost it again">
         <h1 class="ServiceNumber " v-if="!isMobile" >04</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -226,7 +226,7 @@
 
 
       <div id="ItemFive"  class="ServiceItem">
-        <img class="ServiceIcon" style="" src="../../assets/images/svg/networking.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/networking.png" alt="Ah shit lost it again">
         <h1 class="ServiceNumber" v-if="!isMobile" >05</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -260,7 +260,7 @@
 
 
       <div id="ItemSix" name="ItemSix"  class="ServiceItem">
-        <img class="ServiceIcon" style="" src="../../assets/images/svg/databaseManagement.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/databaseManagement.png" alt="Ah shit lost it again">
         <h1 class="ServiceNumber " v-if="!isMobile" >06</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -294,7 +294,7 @@
 
 
       <div id="ItemSeven"  class="ServiceItem">
-        <img class="ServiceIcon" style="" src="../../assets/images/svg/security.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/security.png" alt="Ah shit lost it again">
         <h1 class="ServiceNumber" v-if="!isMobile" >07</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -337,7 +337,7 @@
 
 
       <div id="ItemEight" style="margin-bottom: -200px"  class="ServiceItem">
-        <img class="ServiceIcon" style="" src="../../assets/images/svg/cloudComputing.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/cloudComputing.png" alt="Ah shit lost it again">
         <h1 class="ServiceNumber" v-if="!isMobile" >08</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -694,8 +694,10 @@
 
 
   .ServiceIcon {
-    position: absolute; opacity: 10%;
-    transform: translate(-700px, -285px); height: 47%
+    position: absolute;
+    opacity: 10%;
+    transform: translate(-700px, -285px);
+    height: 47%
   }
 
   .ServiceNumber {
