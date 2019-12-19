@@ -120,7 +120,7 @@
 
 
       <div id="ItemThree"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 10%; " " src="../../assets/images/svg/ServerManagement.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/ServerManagement.png" alt="Ah shit lost it again">
         <h1 class="ServiceNumber" v-if="!isMobile" >03</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
