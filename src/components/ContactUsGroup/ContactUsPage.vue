@@ -4,16 +4,16 @@
         <b-navbar v-if="!isMobile" id="nav"  :sticky="true" style="color: darkblue; padding-top: 0px;" type="Dark">
           <b-navbar-brand href="#">
             <transition name="fade">
-              <img v-if="Boo" :key="Boo" style="position: absolute; padding-top: 25px; z-index: -3; transform: translateX(-16px);" src="../../assets/images/ManageIT_Background2.png" alt="Ahh">
+              <img v-if="Boo" :key="Boo" style=" width: 20vw; position: absolute;  z-index: -3; transform: translateX(-16px); top:0;" src="../../assets/images/ManageIT_Background2.png" alt="Ahh">
             </transition>
             <transition name="fade">
-              <img v-if="Boo" :key="Boo" style="width: 38.4vw; height: 108%; position: absolute; padding-top: 25px; z-index: -4; transform: translateX(357px);" src="../../assets/images/ManageIT_Background_Line.png" alt="Ahh">
+              <img v-if="Boo" :key="Boo" class="NavMiddle" style="width: 41vw; height: 5.4vh; position: absolute; top: 0; z-index: -4; transform: translateX(18vw);" src="../../assets/images/ManageIT_Background_Line.png" alt="Ahh">
             </transition>
             <transition name="fade">
-              <img v-if="Boo" :key="Boo" style="position: absolute; padding-top: 25px; z-index: -4; right: 0" src="../../assets/images/ManageIT_Background_Options.png" alt="Ahh">
+              <img v-if="Boo" :key="Boo" style="position: absolute; top: 0; z-index: -4; right: 0; width: 42vw;" src="../../assets/images/ManageIT_Background_Options.png" alt="Ahh">
             </transition>
-            <router-link to="/">
-              <img style="padding-top: 30px" src="../../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
+            <router-link  to="/">
+              <img style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
             </router-link>
           </b-navbar-brand>
 

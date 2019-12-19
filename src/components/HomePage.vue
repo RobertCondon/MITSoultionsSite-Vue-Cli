@@ -6,7 +6,7 @@
 
           <h2 class="Contact-Top"> 0800 648787 </h2>
           <h2 class="Contact-Top"> 58-64 Carmen Rd </h2>
-          <b-button class="Contact-Top" style="font-size: 120%; padding: 5px; margin-left: 35px; transform: translateY(-5px);" variant="outline-success">Client Portal</b-button>
+          <b-button class="Contact-Top" id="PortalButton" style="" variant="outline-success">Client Portal</b-button>
           <div class="line"></div>
         </div>
 
@@ -14,16 +14,16 @@
           <b-navbar id="nav"  :sticky="true" style="color: darkblue; padding-top: 0px;" type="Dark">
             <b-navbar-brand href="#">
               <transition name="fade">
-                <img v-if="Boo" :key="Boo" style="position: absolute; padding-top: 25px; z-index: -3; transform: translateX(-16px);" src="../assets/images/ManageIT_Background2.png" alt="Ahh">
+                <img v-if="Boo" :key="Boo" style=" width: 20vw; position: absolute;  z-index: -3; transform: translateX(-16px); top:0;" src="../assets/images/ManageIT_Background2.png" alt="Ahh">
               </transition>
               <transition name="fade">
-                <img v-if="Boo" :key="Boo" class="NavMiddle" style=" height: 108%; position: absolute; padding-top: 25px; z-index: -4; transform: translateX(357px);" src="../assets/images/ManageIT_Background_Line.png" alt="Ahh">
+                <img v-if="Boo" :key="Boo" class="NavMiddle" style="width: 41vw; height: 5.4vh; position: absolute; top: 0; z-index: -4; transform: translateX(18vw);" src="../assets/images/ManageIT_Background_Line.png" alt="Ahh">
               </transition>
               <transition name="fade">
-                <img v-if="Boo" :key="Boo" style="position: absolute; padding-top: 25px; z-index: -4; right: 0" src="../assets/images/ManageIT_Background_Options.png" alt="Ahh">
+                <img v-if="Boo" :key="Boo" style="position: absolute; top: 0; z-index: -4; right: 0; width: 42vw;" src="../assets/images/ManageIT_Background_Options.png" alt="Ahh">
               </transition>
               <router-link  to="/">
-              <img style="padding-top: 30px" src="../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
+                <img style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
               </router-link>
             </b-navbar-brand>
 
@@ -330,9 +330,7 @@
 </script>
 
 <style scoped>
-  .NavMiddle {
-    width: 47%;
-  }
+
 
 
    img {
@@ -371,6 +369,11 @@
     text-align: center;
     //color: #2c3e50;
   }
+
+  #PortalButton {
+    font-size: 1vw; padding: 0.4%; margin-left: 35px; transform: translateY(-0.5vw);
+  }
+
   #CarouselImage {
     height: 1175px;
   }
@@ -409,7 +412,7 @@
     font-family: 'Big Shoulders Text', cursive;
     font-weight: 600;
     margin-right: 1vw;
-    font-size: 140%;
+    font-size: 1.2vw;
   }
 
   .Contact-Top-Box {
@@ -435,7 +438,7 @@
     transition: 1s;
   }
   .NavTitle {
-    font-size: 160%;
+    font-size: 1.35vw;
     transition: 0.25s;
   }
   .NavItem:hover > .NavTitle {
