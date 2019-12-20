@@ -14,6 +14,7 @@ export default {
 </script>
 
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,400,600|Montserrat&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat&display=swap');
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
