@@ -37,16 +37,36 @@ export default {
   .nav-link {
     color:#E0FBFC;
     text-shadow: 0px 1px black;
-    padding-top: 30px;
+    padding: 0;
     font-family: 'Big Shoulders Text', cursive;
     font-weight: 100;
-    margin-right: 1vw;
     transition: 0.3s;
   }
-  .navbar {
-    z-index:10;
-    width:100%;
-    height: 70px;
+
+  .navbar-expand .navbar-nav .nav-link {
+    padding: 0;
+    margin: 0 1.3vw;
+  }
+
+  #RightLinks {
+    position: absolute;
+    top: 3vh;
+    right: 2vw;
+  }
+
+  .Contact-Top {
+    display:inline-block;
+    padding: 30px;
+    font-family: 'Big Shoulders Text', cursive;
+    font-weight: 600;
+    margin-right: 1vw;
+    font-size: 1.2vw;
+  }
+
+  .Contact-Top-Box {
+    text-align: right;
+    color: #859e30;
+    margin-bottom: 0px;
   }
   .NavLine {
     transform: translateY(-5px);
@@ -56,7 +76,7 @@ export default {
     transition: 1s;
   }
   .NavTitle {
-    font-size: 160%;
+    font-size: 1.35vw;
     transition: 0.25s;
   }
   .NavItem:hover > .NavTitle {

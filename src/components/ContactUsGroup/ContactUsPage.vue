@@ -27,7 +27,7 @@
 
 
           <b-collapse id="ml-auto" is-nav right>
-            <b-navbar-nav class="ml-auto">
+            <b-navbar-nav class="ml-auto" id="RightLinks">
               <b-nav-item class="nav-link"  href="#" >
                 <router-link tag="div" to="/AboutUs"><div class="NavItem"><h2 class="NavTitle">About Us</h2> <div class="NavLine"></div></div></router-link>
               </b-nav-item>
@@ -137,15 +137,17 @@
     padding-top: 0px;
     background: none;
   }
-  .nav-link {
-    color:#E0FBFC;
-    text-shadow: 0px 1px black;
-    padding-top: 30px;
-    font-family: 'Big Shoulders Text', cursive;
-    font-weight: 100;
-    margin-right: 1vw;
-    transition: 0.3s;
+  .navbar-expand .navbar-nav .nav-link {
+    padding: 0;
+    margin: 0 1.3vw;
   }
+
+  #RightLinks {
+    position: absolute;
+    top: 3vh;
+    right: 2vw;
+  }
+
   .navbar {
     z-index:10;
     width:100%;
@@ -157,10 +159,6 @@
     width: 0px;
     height: 0px;
     transition: 1s;
-  }
-  .NavTitle {
-    font-size: 160%;
-    transition: 0.25s;
   }
   .NavItem:hover > .NavTitle {
     color: #859e30;

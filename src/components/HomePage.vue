@@ -37,7 +37,7 @@
 
 
             <b-collapse id="ml-auto" is-nav right>
-              <b-navbar-nav class="ml-auto">
+              <b-navbar-nav class="ml-auto" id="RightLinks">
                 <b-nav-item class="nav-link" type="dark" href="#">
                   <router-link tag="div" to="/AboutUs"><div class="NavItem"><h2 class="NavTitle">About us</h2> <div class="NavLine"></div></div></router-link>
                 </b-nav-item>
@@ -392,34 +392,12 @@
   #nav {
 
   }
+
   nav.stuck {
     padding-top: 0px;
     background: none;
   }
-  .nav-link {
-    color:#E0FBFC;
-    text-shadow: 0px 1px black;
-    padding-top: 30px;
-    font-family: 'Big Shoulders Text', cursive;
-    font-weight: 100;
-    margin-right: 1vw;
-    transition: 0.3s;
-  }
 
-  .Contact-Top {
-    display:inline-block;
-    padding: 30px;
-    font-family: 'Big Shoulders Text', cursive;
-    font-weight: 600;
-    margin-right: 1vw;
-    font-size: 1.2vw;
-  }
-
-  .Contact-Top-Box {
-    text-align: right;
-    color: #859e30;
-    margin-bottom: 0px;
-  }
 
   .line{
     transform: translateY(-25px);
@@ -429,6 +407,16 @@
     position: absolute;
     right: 0;
   }
+   .navbar-expand .navbar-nav .nav-link {
+     padding: 0;
+     margin: 0 1.3vw;
+   }
+
+   #RightLinks {
+     position: absolute;
+     top: 3vh;
+     right: 2vw;
+   }
 
   .NavLine {
     transform: translateY(-5px);
@@ -437,10 +425,7 @@
     height: 0px;
     transition: 1s;
   }
-  .NavTitle {
-    font-size: 1.35vw;
-    transition: 0.25s;
-  }
+
   .NavItem:hover > .NavTitle {
     color: #859e30;
   }
