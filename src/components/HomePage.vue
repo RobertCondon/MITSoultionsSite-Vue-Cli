@@ -552,7 +552,7 @@
     font-size: 7.5vw;
   }
 
-   .IconContent:hover .Fluff {
+   .IconContent:hover, .Fluff {
      opacity: 99%;
    }
 </style>

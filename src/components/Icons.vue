@@ -167,6 +167,15 @@
   .IconContent:hover .Fluff {
      opacity: 99%;
    }
+  .IconContent:hover .fluff {
+    opacity: 99%;
+  }
+  .IconContent:hover, .Fluff {
+    opacity: 99%;
+  }
+  .IconContent:hover, .fluff {
+    opacity: 99%;
+  }
   .IconContent:hover .BorderY {
     left: -1%;
     bottom: -1%;
