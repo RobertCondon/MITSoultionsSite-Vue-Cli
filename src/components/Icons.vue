@@ -152,6 +152,9 @@
     text-shadow: 2px 2px #425014;
     transition: 1s;
   }
+  .IconContent:hover .fluff {
+    opacity: unset;
+  }
   .IconContent:hover {
     text-shadow: 0px 5px #425014;
     cursor: pointer;
@@ -165,17 +168,10 @@
     width: 55%;
   }
   .IconContent:hover .Fluff {
-     opacity: 99%;
+     opacity: unset;
    }
-  .IconContent:hover .fluff {
-    opacity: 99%;
-  }
-  .IconContent:hover, .Fluff {
-    opacity: 99%;
-  }
-  .IconContent:hover, .fluff {
-    opacity: 99%;
-  }
+
+
   .IconContent:hover .BorderY {
     left: -1%;
     bottom: -1%;
