@@ -294,7 +294,7 @@
           // this.ChangeSeeThrough(document.documentElement.scrollTop);
           // console.log(this.GetSeeThrough());
           self.Scrolled = document.documentElement.scrollTop;
-          if(document.documentElement.scrollTop >= 150 && nav_classes != null) {
+          if(document.documentElement.scrollTop >= 115 && nav_classes != null) {
             self.Boo = true;
             if (nav_classes.contains("stuck") === false) {
               nav_classes.toggle("stuck");
@@ -399,14 +399,7 @@
   }
 
 
-  .line{
-    transform: translateY(-25px);
-    width: 40vw;
-    height: 0px;
-    border-bottom: 1px solid #859e30;
-    position: absolute;
-    right: 0;
-  }
+
    .navbar-expand .navbar-nav .nav-link {
      padding: 0;
      margin: 0 1.3vw;
@@ -558,4 +551,8 @@
     width: 80%;
     font-size: 7.5vw;
   }
+
+   .IconContent:hover .Fluff {
+     opacity: 99%;
+   }
 </style>

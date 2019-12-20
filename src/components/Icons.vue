@@ -165,7 +165,7 @@
     width: 55%;
   }
   .IconContent:hover .Fluff {
-     opacity: 100%;
+     opacity: 99%;
    }
   .IconContent:hover .BorderY {
     left: -1%;

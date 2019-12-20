@@ -56,11 +56,20 @@ export default {
 
   .Contact-Top {
     display:inline-block;
-    padding: 30px;
+    padding: 1.5vw 1.5vw 0 1.5vw;
     font-family: 'Big Shoulders Text', cursive;
     font-weight: 600;
     margin-right: 1vw;
     font-size: 1.2vw;
+  }
+
+  .line{
+    transform: translateY(-5px);
+    width: 40vw;
+    height: 0px;
+    border-bottom: 1px solid #859e30;
+    position: absolute;
+    right: 0;
   }
 
   .Contact-Top-Box {
