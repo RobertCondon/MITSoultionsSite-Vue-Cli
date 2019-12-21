@@ -5,18 +5,18 @@
     <img v-if="!isMobile" id="Keyboard"  src="../../assets/images/ContactUsKeyboard.png" alt="Ah shit lost it again">
     <div v-if="!isMobile"  id="PinkPostIt" style=" ">
       <div style="transform: translateY(100%)">
-        <h1 class="PageTitleTwo"> Remote Desktop </h1>
-        <h3 class="SemiTitle1"> Download remote desktop for</h3>
-        <h3 class="SemiTitle1"> instant support. </h3>
+        <h1 style="opacity: unset" class="PageTitleTwo"> Remote Desktop </h1>
+        <h3 style="opacity: 80%"  class="SemiTitle1"> Download remote desktop for</h3>
+        <h3 style="opacity: 80%"  class="SemiTitle1"> instant support. </h3>
         <h3> DownLoad Button </h3>
       </div>
     </div>
 
     <div  id="YellowPostIt" style="">
 
-        <h1 class="PageTitleOne"> IT Support </h1>
-        <h3 class="SemiTitle"> Professional IT services made for you locally </h3>
-        <h3 class="SemiTitle"> By a close-knit company in CHCH </h3>
+        <h1 style="opacity: unset" class="PageTitleOne"> IT Support </h1>
+        <h3 style="opacity: 80%" class="SemiTitle"> Professional IT services made for you locally </h3>
+        <h3 style="opacity: 80%" class="SemiTitle"> By a close-knit company in CHCH </h3>
 
 
     </div>

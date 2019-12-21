@@ -3,14 +3,16 @@
     <flickity ref="flickity" :options="flickityOptions">
       <div class="carousel-cell" v-bind:style="{'background-image': 'url('+SlideShow[0]+')'}" style="background-repeat: no-repeat; background-size: cover;">
         <router-link to="/OurServices">
-          <b-button class="Menu-Button" squared variant="success" style="left: 0; margin-top: 320px; margin-left: 86px;"> Services </b-button>
+          <b-button squared variant="success" style=" padding: 0.4vw 0 0.4vw 0; left: 0; margin-top: 35vh; margin-left: 4.5vw"> <span class="Menu-Button"> Services </span> </b-button>
         </router-link>
         <router-link to="/OurServices#Packages">
-        <b-button class="Menu-Button" squared variant="outline-primary" style="left: 0; margin-top: 320px; margin-left: 60px;"> Packages </b-button>
+          <b-button  squared variant="outline-primary" style=" padding: 0.4vw 0 0.4vw 0; left: 0;  margin-top: 35vh; margin-left: 5.5vw;"> <span class="Menu-Button"> Packages </span> </b-button>
         </router-link>
       </div>
       <div class="carousel-cell" v-bind:style="{'background-image': 'url('+SlideShow[1]+')'}" style="background-repeat: no-repeat; background-size: cover;">
-        <b-button class="Menu-Button" squared variant="success" style="left: 0; margin-top: 260px; margin-left: 82px;"> Support </b-button>
+        <router-link to="/ContactUs">
+          <b-button  squared variant="success" style="padding: 0.4vw 0 0.4vw 0; left: 0; margin-top: 30vh; margin-left: 4vw"> <span class="Menu-Button"> Support </span> </b-button>
+        </router-link>
       </div>
     </flickity>
 
@@ -37,7 +39,7 @@
            prevNextButtons: false,
           // pageDots: true,
            wrapAround: true,
-          autoPlay: 3500,
+          autoPlay: 35009999,
           pauseAutoPlayOnHover: true
         }
       }
@@ -61,10 +63,10 @@
   .Menu-Button {
     font-family: 'Big Shoulders Text', cursive;
     font-weight: 600;
-    letter-spacing: 0.03em;
-    font-size: 70%;
-    padding-right: 60px;
-    padding-left: 60px;
+    letter-spacing: 0.03vw;
+    font-size: 1.0vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
   }
 
 
