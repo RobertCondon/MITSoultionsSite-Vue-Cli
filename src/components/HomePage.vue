@@ -17,13 +17,19 @@
                 <img v-if="Boo" :key="Boo" style=" width: 20vw; position: absolute;  z-index: -3; transform: translateX(-16px); top:0;" src="../assets/images/ManageIT_Background2.png" alt="Ahh">
               </transition>
               <transition name="fade">
-                <img v-if="Boo" :key="Boo" class="NavMiddle" style="width: 41vw; height: 5.4vh; position: absolute; top: 0; z-index: -4; transform: translateX(18vw);" src="../assets/images/ManageIT_Background_Line.png" alt="Ahh">
+                <img v-if="Boo" :key="Boo" class="NavMiddle" style="width: 40vw; height: 5.4vh; position: absolute; top: 0; z-index: -4; transform: translateX(16.55vw);" src="../assets/images/ManageIT_Background_Line.png" alt="Ahh">
               </transition>
               <transition name="fade">
                 <img v-if="Boo" :key="Boo" style="position: absolute; top: 0; z-index: -4; right: 0; width: 42vw;" src="../assets/images/ManageIT_Background_Options.png" alt="Ahh">
               </transition>
               <router-link  to="/">
-                <img style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
+                <transition name="fade">
+                  <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
+                </transition>
+                <transition name="fade">
+                  <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logoWhite.png" alt="Ah shit lost it again">
+                </transition>
+
               </router-link>
             </b-navbar-brand>
 
@@ -124,7 +130,7 @@
       <HomePageMobile></HomePageMobile>
         <div style="position: relative; display: inline-block; text-align: center;  overflow-x: hidden; max-width: 100%; max-height: 100vh">
           <img src="../assets/images/ServiceToSuitYou2.png" alt="Fuck off" style=" height: 100vh; transform: translateX(-50%); overflow-x: hidden; ">
-          <img src="../assets/images/MIDCircle_Transparent.png" alt="Fuck off" style=" width: 100%; position: absolute; top: 27%; opacity: 20%; overflow: hidden;
+          <img src="../../public/MIDCircle_Transparent.png" alt="Fuck off" style=" width: 100%; position: absolute; top: 27%; opacity: 20%; overflow: hidden;
           transform: translateX(-50%); max-height: 50vh">
           <div style="position: absolute; top: 25%; max-height: 100vh;">
             <h1 style=" overflow: hidden;  font-size: 4.7rem;

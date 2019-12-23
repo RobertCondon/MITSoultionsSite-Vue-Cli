@@ -13,7 +13,13 @@
             <img v-if="Boo" :key="Boo" style="position: absolute; top: 0; z-index: -4; right: 0; width: 42vw;" src="../../assets/images/ManageIT_Background_Options.png" alt="Ahh">
           </transition>
           <router-link  to="/">
-            <img style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
+            <transition name="fade">
+              <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
+            </transition>
+            <transition name="fade">
+              <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../../assets/images/manageit-digital_logoWhite.png" alt="Ah shit lost it again">
+            </transition>
+
           </router-link>
         </b-navbar-brand>
 

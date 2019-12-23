@@ -11,7 +11,6 @@
           <h3 style="opacity: 80%; z-index: 3;" class="SemiTitle"> Piratical and expert solutions</h3>
           <b-button pill variant="success" style="margin-top: 40px; padding-right: 35px;  padding-left: 35px; padding-top: 9px;  padding-bottom: 9px"> Services </b-button>
         </div>
-
       </div>
     </div>
 </template>
