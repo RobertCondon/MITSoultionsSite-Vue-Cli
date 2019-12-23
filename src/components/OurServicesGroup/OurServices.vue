@@ -82,7 +82,7 @@
           <i v-if="!this.ReadMoreArray[0].ReadBool" class="ArrowIcon"></i>
           <i v-if="this.ReadMoreArray[0].ReadBool" class="ArrowIconUp"></i>
         </div>
-        <img  id="Divder1" class="Divider" style="z-index: 0; width: 100vm; right: 0"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+        <img  id="Divder1" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
       </div>
 
 
@@ -110,7 +110,7 @@
             <i v-if="!this.ReadMoreArray[1].ReadBool" class="ArrowIcon"></i>
             <i v-if="this.ReadMoreArray[1].ReadBool" class="ArrowIconUp"></i>
           </div>
-          <img  id="Divder2" class="Divider" style="z-index: 0; width: 100vm; right: 0"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder2" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
       </div>
 
@@ -165,7 +165,7 @@
             <i v-if="!this.ReadMoreArray[2].ReadBool" class="ArrowIcon"></i>
             <i v-if="this.ReadMoreArray[2].ReadBool" class="ArrowIconUp"></i>
           </div>
-          <img  id="Divder3" class="Divider" style="z-index: 0; width: 100vm; right: 0"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder3" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
       </div>
 
@@ -218,7 +218,7 @@
             <i v-if="!this.ReadMoreArray[3].ReadBool" class="ArrowIcon"></i>
             <i v-if="this.ReadMoreArray[3].ReadBool" class="ArrowIconUp"></i>
           </div>
-          <img  id="Divder4" class="Divider" style="z-index: 0; width: 100vm; right: 0"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder4" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
       </div>
 
@@ -287,7 +287,7 @@
             <i v-if="!this.ReadMoreArray[5].ReadBool" class="ArrowIcon"></i>
             <i v-if="this.ReadMoreArray[5].ReadBool" class="ArrowIconUp"></i>
           </div>
-          <img  id="Divder6" class="Divider" style="z-index: 0; width: 100vm; right: 0"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder6" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
       </div>
 
@@ -330,7 +330,7 @@
             <i v-if="!this.ReadMoreArray[6].ReadBool" class="ArrowIcon"></i>
             <i v-if="this.ReadMoreArray[6].ReadBool" class="ArrowIconUp"></i>
           </div>
-          <img  id="Divder7" class="Divider" style="z-index: 0; width: 100vm; right: 0"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder7" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
       </div>
 
@@ -371,7 +371,7 @@
             <i v-if="!this.ReadMoreArray[7].ReadBool" class="ArrowIcon"></i>
             <i v-if="this.ReadMoreArray[7].ReadBool" class="ArrowIconUp"></i>
           </div>
-          <img  id="Divder8" class="Divider" style="z-index: 0; width: 100vm; right: 0"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder8" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
       </div>
       <Footer></Footer>
@@ -534,6 +534,7 @@
   .Divider {
     transform: translateY(-230px);
     transition: 1s;
+    z-index: 0; width: 100vw; right: 0
   }
 
   #IconTwo {

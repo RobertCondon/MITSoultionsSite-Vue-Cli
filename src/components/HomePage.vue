@@ -90,7 +90,7 @@
 
               <parallax :fixed="true">
 
-                <video style="position: relative; z-index: 100; transform: translateY(30px)" preload="auto" autoplay="autoplay"  loop="true" controls>
+                <video style="position: relative; z-index: 100; transform: translateY(30px); width: 100vw" preload="auto" autoplay="autoplay"  loop="true" controls>
                   <source src="../assets/images/ParalaxGraph2.mp4" type="video/mp4">
                 </video>
               </parallax>
