@@ -130,9 +130,10 @@
       <HomePageMobile></HomePageMobile>
         <div style="position: relative; display: inline-block; text-align: center;  overflow-x: hidden; max-width: 100%; max-height: 100vh">
           <img src="../assets/images/ServiceToSuitYou2.png" alt="Fuck off" style=" height: 100vh; transform: translateX(-50%); overflow-x: hidden; ">
-          <img id="HomeSpirl" src="../../public/MIDCircle_Transparent.png" alt="Fuck off" style=" width: 100%; position: absolute; top: 27%;  overflow: hidden;
-          transform: translateX(-50%); max-height: 50vh" >
-          <div style="position: absolute; top: 25%; max-height: 100vh;">
+          <img src="../assets/images/manageit-digital_logoMobile.png" alt="FillIN" style=" position: absolute; top: 3%; width: 50%; transform: translateX(-50%);">
+          <img id="HomeSpirl" src="../../public/MIDCircle_Transparent.png" alt="Fuck off" style=" width: 100%; position: absolute; top: 32%;  overflow: hidden;
+          transform: translateX(-50%); max-height: 50vh; opacity: 20%; visibility: visible;" >
+          <div style="position: absolute; top: 34%; max-height: 100vh;">
             <h1 style=" overflow: hidden;  font-size: 4.7rem;
             color: whitesmoke;
             font-family: 'Bebas Neue', cursive; font-weight: 400;
