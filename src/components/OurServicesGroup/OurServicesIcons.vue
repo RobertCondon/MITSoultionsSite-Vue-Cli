@@ -126,6 +126,9 @@
   .ServiceDiv_:hover .AllServices_ {
     height: 62%;
   }
+  .ServiceDiv_:hover .ServiceTag {
+    font-size: 65px;
+  }
   .ServiceDiv_:hover .SBorderX {
     top: 5%;
     left: 2%;
@@ -135,9 +138,7 @@
     bottom: 3%;
     right: 2%;
   }
-  .ServiceDiv_:hover .ServiceTag {
-    font-size: 65px;
-  }
+
   .ServiceDiv_ {
     transition: 1s;
     margin: 20px; height: 200px; width: 550px; display: inline-block; position: relative
@@ -246,6 +247,12 @@
   }
 
   @media (max-width:800px){
+    .ServiceDiv_:hover .AllServices_ {
+      height: 0.1vh;
+    }
+    .ServiceDiv_:hover .ServiceTag {
+      font-size: 1vw;
+    }
     .ServiceDiv_ {
       transition: 1s;
       margin-left: 7%;  margin-right: 7%;
