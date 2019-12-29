@@ -130,8 +130,13 @@
       <HomePageMobile></HomePageMobile>
         <div style="position: relative; display: inline-block; text-align: center;  overflow-x: hidden; max-width: 100%; max-height: 100vh">
           <img src="../assets/images/ServiceToSuitYou2.png" alt="Fuck off" style=" height: 100vh; transform: translateX(-50%); overflow-x: hidden; ">
-          <img src="../../public/MIDCircle_Transparent.png" alt="Fuck off" style=" width: 100%; position: absolute; top: 27%; opacity: 20%; overflow: hidden;
-          transform: translateX(-50%); max-height: 50vh">
+          <img src="../../public/MIDCircle_Transparent.png" alt="Fuck off" style=" width: 100%; position: absolute; top: 27%;
+          -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=20)';
+          filter: alpha(opacity=20);
+          -moz-opacity: 0.2;
+          -khtml-opacity: 0.2;
+          opacity: 20%; overflow: hidden;
+          transform: translateX(-50%); max-height: 50vh" >
           <div style="position: absolute; top: 25%; max-height: 100vh;">
             <h1 style=" overflow: hidden;  font-size: 4.7rem;
             color: whitesmoke;
