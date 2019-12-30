@@ -2,200 +2,200 @@
   <div  id="app" class="wrapper" >
       <div >
         <div  v-if="!this.isMobile">
-        <div id="Top-Info" class="Contact-Top-Box" style="background-color: black; ">
+          <div id="Top-Info" class="Contact-Top-Box" style="background-color: black; ">
 
-          <h2 class="Contact-Top"> 0800 648787 </h2>
-          <h2 class="Contact-Top"> 58-64 Carmen Rd </h2>
-          <b-button class="Contact-Top" id="PortalButton" style="" variant="outline-success">Client Portal</b-button>
-          <div class="line"></div>
-        </div>
+            <h2 class="Contact-Top"> 0800 648787 </h2>
+            <h2 class="Contact-Top"> 58-64 Carmen Rd </h2>
+            <b-button class="Contact-Top" id="PortalButton" style="" variant="outline-success">Client Portal</b-button>
+            <div class="line"></div>
+          </div>
 
-        <div id="nav-Alloud" >
-          <b-navbar id="nav"  :sticky="true" style="color: darkblue; padding-top: 0px;" type="Dark">
-            <b-navbar-brand href="#">
-              <transition name="fade">
-                <img v-if="Boo" :key="Boo" style=" width: 20vw; position: absolute;  z-index: -3; transform: translateX(-16px); top:0;" src="../assets/images/ManageIT_Background2.png" alt="Ahh">
-              </transition>
-              <transition name="fade">
-                <img v-if="Boo" :key="Boo" class="NavMiddle" style="width: 40vw; height: 5.4vh; position: absolute; top: 0; z-index: -4; transform: translateX(16.55vw);" src="../assets/images/ManageIT_Background_Line.png" alt="Ahh">
-              </transition>
-              <transition name="fade">
-                <img v-if="Boo" :key="Boo" style="position: absolute; top: 0; z-index: -4; right: 0; width: 42vw;" src="../assets/images/ManageIT_Background_Options.png" alt="Ahh">
-              </transition>
-              <router-link  to="/">
+          <div id="nav-Alloud" >
+            <b-navbar id="nav"  :sticky="true" style="color: darkblue; padding-top: 0px;" type="Dark">
+              <b-navbar-brand href="#">
                 <transition name="fade">
-                  <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
+                  <img v-if="Boo" :key="Boo" style=" width: 20vw; position: absolute;  z-index: -3; transform: translateX(-16px); top:0;" src="../assets/images/ManageIT_Background2.png" alt="Ahh">
                 </transition>
                 <transition name="fade">
-                  <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logoWhite.png" alt="Ah shit lost it again">
+                  <img v-if="Boo" :key="Boo" class="NavMiddle" style="width: 40vw; height: 5.4vh; position: absolute; top: 0; z-index: -4; transform: translateX(16.55vw);" src="../assets/images/ManageIT_Background_Line.png" alt="Ahh">
                 </transition>
+                <transition name="fade">
+                  <img v-if="Boo" :key="Boo" style="position: absolute; top: 0; z-index: -4; right: 0; width: 42vw;" src="../assets/images/ManageIT_Background_Options.png" alt="Ahh">
+                </transition>
+                <router-link  to="/">
+                  <transition name="fade">
+                    <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
+                  </transition>
+                  <transition name="fade">
+                    <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logoWhite.png" alt="Ah shit lost it again">
+                  </transition>
 
-              </router-link>
-            </b-navbar-brand>
-
-
-
-
-
-
-
-
-
-
-            <b-collapse id="ml-auto" is-nav right>
-              <b-navbar-nav class="ml-auto" id="RightLinks">
-                <b-nav-item class="nav-link" type="dark" href="#">
-                  <router-link tag="div" to="/AboutUs"><div class="NavItem"><h2 class="NavTitle">About us</h2> <div class="NavLine"></div></div></router-link>
-                </b-nav-item>
-                <b-nav-item class="nav-link"  href="#" >
-                  <router-link tag="div" to="/OurServices"><div class="NavItem"><h2 class="NavTitle">Our Services</h2> <div class="NavLine"></div></div></router-link>
-                </b-nav-item>
-                <b-nav-item  class="nav-link"  href="#" >
-                  <router-link tag="div" to="/ContactUs"> <div class="NavItem"><h2 class="NavTitle">Contact Us</h2> <div class="NavLine"></div></div></router-link>
-                </b-nav-item>
-                <b-nav-item  class="nav-link"  href="#" ><div class="NavItem"><h2 class="NavTitle">Portal</h2> <div class="NavLine"></div></div></b-nav-item>
-              </b-navbar-nav>
-
-            </b-collapse>
-          </b-navbar>
-          <SlideShowMenu id="SlideShow"></SlideShowMenu>
+                </router-link>
+              </b-navbar-brand>
 
 
 
 
-          <img style=" z-index: 1; position: absolute; transform: translate(0, -65%); width: 100%; left: 0"  src="../assets/images/Divider2.png" alt="Ah shit lost it again">
 
 
 
 
-          <div style="background-color: #dadbe0;  overflow-x: hidden; max-width: 100%;">
-            <div class="ServiceBackground" style="height: 100vh; position: relative">
 
-              <transition name="slide-fade" style="margin-top: 40%; position: absolute; width: 20%;" >
-                <div v-if="SlideServices" style="position: absolute; top:0; left:0; overflow-x: hidden; max-width: 100%; overflow-y: hidden; max-height: 100%">
-                  <h6 id="IconsTitle"> Our Services </h6>
-                  <Icons ></Icons>
-                </div>
-              </transition>
-              <transition name="slide-fade-right" style="position: absolute; width: 20%; right: 0; overflow-x: hidden; max-width: 100%;" >
-                  <div v-if="SlideServices" style="overflow-x: hidden; max-width: 100%;">
-                    <AllServices style=""></AllServices>
+
+              <b-collapse id="ml-auto" is-nav right>
+                <b-navbar-nav class="ml-auto" id="RightLinks">
+                  <b-nav-item class="nav-link" type="dark" href="#">
+                    <router-link tag="div" to="/AboutUs"><div class="NavItem"><h2 class="NavTitle">About us</h2> <div class="NavLine"></div></div></router-link>
+                  </b-nav-item>
+                  <b-nav-item class="nav-link"  href="#" >
+                    <router-link tag="div" to="/OurServices"><div class="NavItem"><h2 class="NavTitle">Our Services</h2> <div class="NavLine"></div></div></router-link>
+                  </b-nav-item>
+                  <b-nav-item  class="nav-link"  href="#" >
+                    <router-link tag="div" to="/ContactUs"> <div class="NavItem"><h2 class="NavTitle">Contact Us</h2> <div class="NavLine"></div></div></router-link>
+                  </b-nav-item>
+                  <b-nav-item  class="nav-link"  href="#" ><div class="NavItem"><h2 class="NavTitle">Portal</h2> <div class="NavLine"></div></div></b-nav-item>
+                </b-navbar-nav>
+
+              </b-collapse>
+            </b-navbar>
+            <SlideShowMenu id="SlideShow"></SlideShowMenu>
+
+
+
+
+            <img style=" z-index: 1; position: absolute; transform: translate(0, -65%); width: 100%; left: 0"  src="../assets/images/Divider2.png" alt="Ah shit lost it again">
+
+
+
+
+            <div style="background-color: #dadbe0;  overflow-x: hidden; max-width: 100%;">
+              <div class="ServiceBackground" style="height: 100vh; position: relative">
+
+                <transition name="slide-fade" style="margin-top: 40%; position: absolute; width: 20%;" >
+                  <div v-if="SlideServices" style="position: absolute; top:0; left:0; overflow-x: hidden; max-width: 100%; overflow-y: hidden; max-height: 100%">
+                    <h6 id="IconsTitle"> Our Services </h6>
+                    <Icons ></Icons>
                   </div>
-              </transition>
+                </transition>
+                <transition name="slide-fade-right" style="position: absolute; width: 20%; right: 0; overflow-x: hidden; max-width: 100%;" >
+                    <div v-if="SlideServices" style="overflow-x: hidden; max-width: 100%;">
+                      <AllServices style=""></AllServices>
+                    </div>
+                </transition>
+
+              </div>
+              <div class="ServiceBackground" style="height: 20vh"></div>
+              <img style=" z-index: 1; position: absolute; transform: translate(0, -34%); width: 101%; right: 0"  src="../assets/images/ParrlaxImageTransition.png" alt="Ah shit lost it again">
+
+
 
             </div>
-            <div class="ServiceBackground" style="height: 20vh"></div>
-            <img style=" z-index: 1; position: absolute; transform: translate(0, -34%); width: 101%; right: 0"  src="../assets/images/ParrlaxImageTransition.png" alt="Ah shit lost it again">
 
+              <div class="parallax-container" style="position: relative; height: 120%; overflow: hidden; max-width: 100%; ">
+                <img class="parallax-title"  src="../assets/images/WhyUsParrlax2.png" alt="Ah fuck">
+
+                <parallax :fixed="true">
+
+                  <video style="position: relative; z-index: 100; transform: translateY(30px); width: 100vw" preload="auto" autoplay="autoplay"  loop="true" controls>
+                    <source src="../assets/images/ParalaxGraph2.mp4" type="video/mp4">
+                  </video>
+                </parallax>
+              </div>
+
+            <img style=" z-index: 1; position: absolute; transform: translate(0, -64%); width: 101%; right: 0"  src="../assets/images/ParrlaxBottomTransition.png" alt="Ah shit lost it again">
+
+            <div style=" z-index: 1; background-color: #dadbe0; overflow: hidden; max-width: 100%;">
+
+             <ContactUs style="z-index: 1;"></ContactUs>
+              <div> <img style=" z-index: 1; position: absolute; transform: translate(0, -10%); width: 100vm; right: 0"  src="../assets/images/DividerChunk2.png" alt="Ah shit lost it again"></div>
+
+              <Testimonials></Testimonials>
+
+              <div>
+                <Footer></Footer>
+              </div>
+
+
+
+
+            </div>
 
 
           </div>
-
-            <div class="parallax-container" style="position: relative; height: 120%; overflow: hidden; max-width: 100%; ">
-              <img class="parallax-title"  src="../assets/images/WhyUsParrlax2.png" alt="Ah fuck">
-
-              <parallax :fixed="true">
-
-                <video style="position: relative; z-index: 100; transform: translateY(30px); width: 100vw" preload="auto" autoplay="autoplay"  loop="true" controls>
-                  <source src="../assets/images/ParalaxGraph2.mp4" type="video/mp4">
-                </video>
-              </parallax>
-            </div>
-
-          <img style=" z-index: 1; position: absolute; transform: translate(0, -64%); width: 101%; right: 0"  src="../assets/images/ParrlaxBottomTransition.png" alt="Ah shit lost it again">
-
-          <div style=" z-index: 1; background-color: #dadbe0; overflow: hidden; max-width: 100%;">
-
-           <ContactUs style="z-index: 1;"></ContactUs>
-            <div> <img style=" z-index: 1; position: absolute; transform: translate(0, -10%); width: 100vm; right: 0"  src="../assets/images/DividerChunk2.png" alt="Ah shit lost it again"></div>
-
-            <Testimonials></Testimonials>
-
-            <div>
-              <Footer></Footer>
-            </div>
-
-
-
-
-          </div>
-
 
         </div>
 
-    </div>
 
+        <div v-if="this.isMobile" style="background-color: #dadbe0;">
+          <HomePageMobile></HomePageMobile>
+            <div style="position: relative;  text-align: center;  overflow-x: hidden; max-width: 100%; max-height: 100vh">
+              <img src="../assets/images/ServiceToSuitYou2.png" alt="Fuck off" style=" height: 100vh; transform: translateX(-50%); overflow-x: hidden; ">
+              <img src="../assets/images/manageit-digital_logoMobile.png" alt="FillIN" style=" position: absolute; top: 3%; width: 50%; transform: translateX(-50%);">
+              <img id="HomeSpirl" src="../../public/MIDCircle_Transparent.png" alt="Fuck off" style=" width: 100%; position: absolute; top: 28%;  overflow: hidden;
+              transform: translateX(-50%); max-height: 50vh; opacity: 0.2; visibility: visible; zoom: 1;" >
+              <div style="position: absolute; top: 30%; max-height: 100vh;">
+                <h1 style=" overflow: hidden;  font-size: 4.7rem;
+                color: whitesmoke;
+                font-family: 'Bebas Neue', cursive; font-weight: 400;
+                "> Services to Suit You </h1>
+                <h4 style=" overflow: hidden; font-size: 1.4rem;
 
-    <div v-if="this.isMobile" style="background-color: #dadbe0;">
-      <HomePageMobile></HomePageMobile>
-        <div style="position: relative; display: inline-block; text-align: center;  overflow-x: hidden; max-width: 100%; max-height: 100vh">
-          <img src="../assets/images/ServiceToSuitYou2.png" alt="Fuck off" style=" height: 100vh; transform: translateX(-50%); overflow-x: hidden; ">
-          <img src="../assets/images/manageit-digital_logoMobile.png" alt="FillIN" style=" position: absolute; top: 3%; width: 50%; transform: translateX(-50%);">
-          <img id="HomeSpirl" src="../../public/MIDCircle_Transparent.png" alt="Fuck off" style=" width: 100%; position: absolute; top: 28%;  overflow: hidden;
-          transform: translateX(-50%); max-height: 50vh; opacity: 0.2; visibility: visible; zoom: 1;" >
-          <div style="position: absolute; top: 30%; max-height: 100vh;">
-            <h1 style=" overflow: hidden;  font-size: 4.7rem;
-            color: whitesmoke;
-            font-family: 'Bebas Neue', cursive; font-weight: 400;
-            "> Services to Suit You </h1>
-            <h4 style=" overflow: hidden; font-size: 1.7rem;
-
-          font-family: 'Montserrat', sans-serif; font-weight: 400; color: whitesmoke; opacity: 90%
-          ">From 'as you need it' to proactive support
-              and everything inbetween, we assure peace of mind
-            </h4>
-          </div>
-          <img style=" z-index: 1; position: absolute; transform: translate(0, -65%); width: 100%; left: 0"  src="../assets/images/Divider2.png" alt="Ah shit lost it again">
-          <div  class="ServiceBackground">
-            <div class="ServiceBackground" >
-            <h1 style=" overflow: hidden;  font-size: 17.0vw;
-            color: #859e30;
-            font-family: 'Bebas Neue', cursive; font-weight: 400;
-            transform: translateY(20%);
-            ">Services  </h1>
-            <Icons style="transform: scale3d(1.1, 1.1, 1); margin-bottom: 20px"></Icons>
-            <AllServicesMobile></AllServicesMobile>
-            </div>
-
-            <div style="transform: translate(0, 20%); background-repeat: no-repeat; background-size: 100% 100%;" v-bind:style="{'background-image': 'url('+MobileWhyUs+')'}">
-              <img style=" z-index: 1; position: absolute; top:-2px;  width: 101%; right: 0"  src="../assets/images/ParrlaxImageTransition2.png" alt="Ah shit lost it again">
-              <div style="margin-top: 0%">
-                <h3 style=" overflow: hidden;  font-size: 5.0vw;
-              color: #495d68;;
-              font-family: 'Bebas Neue', cursive; font-weight: 400; margin: 0;
-              padding-top: 20%;
-              opacity: 80%;
-              "> Manage IT </h3>
-                <h1 style=" overflow: hidden;  font-size: 17.0vw;
-              color: #2a2a36;
-              font-family: 'Bebas Neue', cursive; font-weight: 400;"> Why Us </h1>
-                <h4 style=" overflow: hidden; font-size: 4.5vw;
-            text-align: left; margin-left: 3%;
-             display: list-item; list-style-type: disc;  list-style-position: inside;
-            font-family: 'Montserrat', sans-serif; font-weight: 400; color: #2a2a36; opacity: 90%">
-                  We here at manage IT are here for you, priding ourselves on our abblity to create
-                  meaningful and easy to understand dialoge, so togther we can work to your maxiumim benefit.
-                </h4>
-                <h4 style=" overflow: hidden; font-size: 4.5vw;
-            text-align: left; margin-left: 3%;
-             display: list-item; list-style-type: disc;  list-style-position: inside;
-            font-family: 'Montserrat', sans-serif; font-weight: 400; color: #2a2a36; opacity: 90%;
-            padding-bottom: 20%">
-                That's why our mission statement means so much to us, 'harnessing the potential technology
-                  to help people and business work smarter, faster and better."
+              font-family: 'Montserrat', sans-serif; font-weight: 400; color: whitesmoke; opacity: 90%
+              ">From 'as you need it' to proactive support
+                  and everything inbetween, we assure peace of mind
                 </h4>
               </div>
-              <img style=" z-index: 1; position: absolute; bottom: 0; width: 101%; right: 0"  src="../assets/images/ParrlaxBottomTransition.png" alt="Ah shit lost it again">
-            </div>
-            <div style="transform: translateY(16%)">
-              <ContactUs></ContactUs>
-            </div>
-            <Footer style="transform: translateY(80%)"></Footer>
-          </div>
+              <img style=" z-index: 1; position: absolute; transform: translate(0, -65%); width: 100%; left: 0"  src="../assets/images/Divider2.png" alt="Ah shit lost it again">
+              <div  class="ServiceBackground">
+                <div class="ServiceBackground" >
+                <h1 style=" overflow: hidden;  font-size: 17.0vw;
+                color: #859e30;
+                font-family: 'Bebas Neue', cursive; font-weight: 400;
+                transform: translateY(20%);
+                ">Services  </h1>
+                <Icons style="transform: scale3d(1.1, 1.1, 1); margin-bottom: 20px"></Icons>
+                <AllServicesMobile></AllServicesMobile>
+                </div>
 
+                <div style="transform: translate(0, 20%); background-repeat: no-repeat; background-size: 100% 100%;" v-bind:style="{'background-image': 'url('+MobileWhyUs+')'}">
+                  <img style=" z-index: 1; position: absolute; top:-2px;  width: 101%; right: 0"  src="../assets/images/ParrlaxImageTransition2.png" alt="Ah shit lost it again">
+                  <div style="margin-top: 0%">
+                    <h3 style=" overflow: hidden;  font-size: 5.0vw;
+                  color: #495d68;;
+                  font-family: 'Bebas Neue', cursive; font-weight: 400; margin: 0;
+                  padding-top: 20%;
+                  opacity: 80%;
+                  "> Manage IT </h3>
+                    <h1 style=" overflow: hidden;  font-size: 17.0vw;
+                  color: #2a2a36;
+                  font-family: 'Bebas Neue', cursive; font-weight: 400;"> Why Us </h1>
+                    <h4 style=" overflow: hidden; font-size: 4.5vw;
+                text-align: left; margin-left: 3%;
+                 display: list-item; list-style-type: disc;  list-style-position: inside;
+                font-family: 'Montserrat', sans-serif; font-weight: 400; color: #2a2a36; opacity: 90%">
+                      We here at manage IT are here for you, priding ourselves on our abblity to create
+                      meaningful and easy to understand dialoge, so togther we can work to your maxiumim benefit.
+                    </h4>
+                    <h4 style=" overflow: hidden; font-size: 4.5vw;
+                text-align: left; margin-left: 3%;
+                 display: list-item; list-style-type: disc;  list-style-position: inside;
+                font-family: 'Montserrat', sans-serif; font-weight: 400; color: #2a2a36; opacity: 90%;
+                padding-bottom: 20%">
+                    That's why our mission statement means so much to us, 'harnessing the potential technology
+                      to help people and business work smarter, faster and better."
+                    </h4>
+                  </div>
+                  <img style=" z-index: 1; position: absolute; bottom: 0; width: 101%; right: 0"  src="../assets/images/ParrlaxBottomTransition.png" alt="Ah shit lost it again">
+                </div>
+                <div style="transform: translateY(16%)">
+                  <ContactUs></ContactUs>
+                </div>
+                <Footer style="transform: translateY(80%)"></Footer>
+              </div>
+
+            </div>
         </div>
-    </div>
-    </div>
+      </div>
 
   </div>
 
