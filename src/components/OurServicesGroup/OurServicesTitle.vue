@@ -4,12 +4,12 @@
       <img v-if="isMobile" id="Background2" style="  overflow-x: hidden; max-height: 100%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackgroundMobile.png" alt="Ah shit lost it again">
       <div id="OurServicesTitleCard" style=" position: absolute; overflow: hidden; max-width: 100%">
         <div id="Wires" style="  overflow-x: hidden; max-height: 100%; max-width: 100%">
-          <img id="WireOne" style="opacity: 20%;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
-          <img id="WireTwo" style="opacity: 20%;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
+          <img id="WireOne" style="opacity: 0.2;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
+          <img id="WireTwo" style="opacity: 0.2;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
         </div>
         <div  style="z-index: 2;">
-          <h1 style="opacity: 100%; z-index: 2;" class="PageTitleTwo" > Our </h1> <h1 style="opacity: 100%;" class="PageTitleOne"> Services</h1>
-          <h3 style="opacity: 80%; z-index: 3;" class="SemiTitle"> Piratical and expert solutions</h3>
+          <h1 style="opacity: 1; z-index: 2;" class="PageTitleTwo" > Our </h1> <h1 style="opacity: 1" class="PageTitleOne"> Services</h1>
+          <h3 style="opacity: 0.8; z-index: 3;" class="SemiTitle"> Piratical and expert solutions</h3>
           <b-button pill variant="success" style="margin-top: 40px; padding-right: 35px;  padding-left: 35px; padding-top: 9px;  padding-bottom: 9px"> Services </b-button>
         </div>
       </div>
@@ -51,7 +51,7 @@
     font-weight: 400;
     font-size: 2vw;
       color: #dadbe0;
-    opacity: 80%;
+    opacity: 0.8;
     transition: 0.5s;
   }
   .PageTitleOne, .PageTitleTwo {
@@ -60,7 +60,7 @@
     font-weight: 400;
     font-size: 15vw;
     position: relative;
-    opacity: 100%;
+    opacity: 1;
     transition: 0.5s;
   }
   .PageTitleOne {
@@ -97,7 +97,7 @@
   position: relative;
   z-index: 1;
   transform: translateX(100%);
-  opacity: 20%;
+  opacity: 0.2;
   animation-name: Start;
   animation-duration: 30s;
   animation-timing-function: linear;
@@ -106,7 +106,7 @@
 #WireTwo {
   position: relative;
   z-index: 1;
-  opacity: 20%;
+  opacity: 0.2;
   transform: translate(0%,-100%);
   animation-name: Middle;
   animation-duration: 30s;
@@ -153,7 +153,7 @@
       font-size: 30vw;
       position: relative;
       z-index: 1;
-      opacity: 100%
+      opacity: 1;
     }
 
     #OurServicesTitleCard {
@@ -179,7 +179,7 @@
       font-weight: 400;
       font-size: 6vw;
       color: #dadbe0;
-      opacity: 80%
+      opacity: 0.8;
     }
     #Background {
       height: 850px;
