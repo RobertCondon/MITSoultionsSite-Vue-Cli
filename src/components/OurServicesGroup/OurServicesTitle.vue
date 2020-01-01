@@ -1,12 +1,13 @@
 <template>
     <div style="height: 100vh; overflow-x: hidden; max-height: 100%; max-width: 100%">
-      <img id="Background" style="  overflow-x: hidden; max-height: 100%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackground.png" alt="Ah shit lost it again">
-      <div style="top: -50%; position: absolute; overflow: hidden; max-width: 100%">
-        <div style="transform: translateY(975px);  overflow-x: hidden; max-height: 100%; max-width: 100%">
+      <img v-if="!isMobile" id="Background" style="  overflow-x: hidden; max-height: 100%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackground.png" alt="Ah shit lost it again">
+      <img v-if="isMobile" id="Background2" style="  overflow-x: hidden; max-height: 100%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackgroundMobile.png" alt="Ah shit lost it again">
+      <div id="OurServicesTitleCard" style=" position: absolute; overflow: hidden; max-width: 100%">
+        <div id="Wires" style="  overflow-x: hidden; max-height: 100%; max-width: 100%">
           <img id="WireOne" style="opacity: 20%;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
           <img id="WireTwo" style="opacity: 20%;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
         </div>
-        <div style="z-index: 2;">
+        <div  style="z-index: 2;">
           <h1 style="opacity: 100%; z-index: 2;" class="PageTitleTwo" > Our </h1> <h1 style="opacity: 100%;" class="PageTitleOne"> Services</h1>
           <h3 style="opacity: 80%; z-index: 3;" class="SemiTitle"> Piratical and expert solutions</h3>
           <b-button pill variant="success" style="margin-top: 40px; padding-right: 35px;  padding-left: 35px; padding-top: 9px;  padding-bottom: 9px"> Services </b-button>
@@ -16,9 +17,32 @@
 </template>
 
 <script>
-    export default {
-        name: "OurServicesTitle"
+  import {EventBus} from "../../App";
+
+  export default {
+    name: "OurServicesTitle",
+    data() {
+      return{
+        isMobile: false
+      }
+    },
+    methods: {
+      onResize () {
+        this.isMobile = window.innerWidth < 800;
+      }
+    },
+    mounted() {
+      let self = this;
+
+
+      EventBus.$on('MobileSize', changed => {
+        console.log(`Oh, that's nice. It's gotten ${changed} clicks! :)`);
+        self.isMobile = changed;
+      });
+      window.onload = EventBus.$emit('PageLoaded', true);
     }
+
+  }
 </script>
 
 <style scoped>
@@ -54,6 +78,14 @@
   }
 
   #Background {
+    position: absolute;
+
+    width: 100vw;
+
+    transform: translate(-50%, 0);
+  }
+
+  #Background2 {
     position: absolute;
 
     width: 100vw;
@@ -110,15 +142,25 @@
   }
 }
   @media (max-width:800px){
+    #Wires {
+      transform: translateY(750px);
+    }
+
     .PageTitleOne, .PageTitleTwo {
       display: inline-block;
       font-family: 'Bebas Neue', cursive;
       font-weight: 400;
-      font-size: 20vw;
+      font-size: 30vw;
       position: relative;
-      z-index: -1;
+      z-index: 1;
       opacity: 100%
     }
+
+    #OurServicesTitleCard {
+      position: absolute;
+      top: -650px;
+    }
+
     .PageTitleOne {
       padding-left:3%;
 
@@ -140,6 +182,9 @@
       opacity: 80%
     }
     #Background {
+      height: 850px;
+    }
+    #Background2 {
       height: 850px;
     }
   }

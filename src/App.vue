@@ -5,10 +5,38 @@
 </template>
 
 <script>
-
+import Vue from 'vue';
+export const EventBus = new Vue();
 export default {
   name: 'app',
-  components: {
+  data() {
+    return{
+      isMobile: false,
+      EslintUser: false,
+    }
+  },
+  methods: {
+    onResize () {
+      this.isMobile = window.innerWidth < 800;
+
+      EventBus.$emit('MobileSize', this.isMobile);
+    }
+  },
+  mounted() {
+    let self = this;
+    EventBus.$on('PageLoaded', changed => {
+      self.EslintUser = changed;
+      console.log("Paged loaded emoting now");
+      EventBus.$emit('MobileSize', self.isMobile);
+    });
+
+    this.onResize();
+    window.addEventListener('resize', this.onResize, {passive: true});
+  },
+  watch:{
+    $route (){
+      EventBus.$emit('MobileSize', this.isMobile);
+    }
   }
 }
 </script>
