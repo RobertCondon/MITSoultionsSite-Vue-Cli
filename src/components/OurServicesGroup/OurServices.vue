@@ -391,6 +391,7 @@
   import Footer from "../Footer";
   import JQuery from 'jquery';
   import HomePageMobile from "../HomePageMobile";
+  import {EventBus} from "../../App";
   let $ = JQuery;
     export default {
         name: "OurServices",
@@ -451,9 +452,12 @@
         }
       },
       mounted() {
-        this.onResize();
-        window.addEventListener('resize', this.onResize, {passive: true});
-        this.isMobile = window.innerWidth < 800;
+        let self = this;
+        EventBus.$on('MobileSize', changed => {
+          console.log(`Oh, that's nice. It's gotten ${changed} clicks! :)`);
+          self.isMobile = changed;
+        });
+        window.onload = EventBus.$emit('PageLoaded', true);
 
         function offsetAnchor() {
           if (location.hash.length !== 0) {
@@ -471,7 +475,7 @@
         // Set the offset when entering page with hash present in the url
         window.setTimeout(offsetAnchor, 0);
 
-        var self = this;
+
         this.$nextTick(function(){
           window.addEventListener("scroll", function(){
             var navbar = document.getElementById("nav");
