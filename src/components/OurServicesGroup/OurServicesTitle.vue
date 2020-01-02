@@ -46,6 +46,13 @@
 </script>
 
 <style scoped>
+  #OurServicesTitleCard {
+    top: -600px;
+  }
+  #Wires {
+    transform: translateY(950px);
+  }
+
   .SemiTitle {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
