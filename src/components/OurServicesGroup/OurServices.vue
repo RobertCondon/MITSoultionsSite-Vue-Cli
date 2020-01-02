@@ -56,9 +56,9 @@
 
       <div style="padding-top: 90px; position: relative; z-index: 1;" id="ItemOne"  class="ServiceItem">
         <img class="Divider" style=" position: relative; z-index: 1; width: 100vm; right: 0; transform: translateY(-90px)"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
-        <img class="ServiceIcon" id="IconOne" style="opacity: 10%;" src="../../assets/images/svg/computerSystems.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" id="IconOne" style="opacity: 0.1;" src="../../assets/images/svg/computerSystems.png" alt="Ah shit lost it again">
 
-        <h1 class="ServiceNumber " style="opacity: 10%;"  v-if="!isMobile" >01</h1>
+        <h1 class="ServiceNumber " style="opacity: 0.1;"  v-if="!isMobile" >01</h1>
         <div class="ServiceContent">
 
           <h1 style="opacity: 100%;"   class="ServiceTitle" > Computer Systems </h1>
@@ -84,9 +84,11 @@
               Boost your productivity levels and get your business back on track with Manage IT. Contact us today.
             </p>
         </transition>
-        <div id="Arrow1" class="Arrow" style=""  @click="TransitionOn(0)">
-          <i v-if="!this.ReadMoreArray[0].ReadBool" class="ArrowIcon"></i>
-          <i v-if="this.ReadMoreArray[0].ReadBool" class="ArrowIconUp"></i>
+        <div class="ArrowAudjust">
+          <div id="Arrow1" class="Arrow" style=""  @click="TransitionOn(0)">
+            <i v-if="!this.ReadMoreArray[0].ReadBool" class="ArrowIcon"></i>
+            <i v-if="this.ReadMoreArray[0].ReadBool" class="ArrowIconUp"></i>
+          </div>
         </div>
         <img  id="Divder1" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
       </div>
@@ -95,8 +97,8 @@
 
 
       <div id="ItemTwo"  class="ServiceItem">
-        <img class="ServiceIcon" id="IconTwo" style=" opacity: 10%; "  src="../../assets/images/svg/breakfixServices.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber" style="opacity: 10%;"  v-if="!isMobile" >02</h1>
+        <img class="ServiceIcon" id="IconTwo" style=" opacity: 0.1; "  src="../../assets/images/svg/breakfixServices.png" alt="Ah shit lost it again">
+        <h1 class="ServiceNumber" style="opacity: 0.1;"  v-if="!isMobile" >02</h1>
         <div class="ServiceMegaContent">
           <div class="ServiceContent">
             <h1 style="opacity: 100%;"   class="ServiceTitle"> Break/Fix Support </h1>
@@ -112,9 +114,11 @@
               A solution best suited for those businesses that have small IT requirements, limited funding, or where the business already has an internal IT person or IT team.
             </p>
           </transition>
-          <div id="Arrow2" class="Arrow" style=""  @click="TransitionOn(1)">
-            <i v-if="!this.ReadMoreArray[1].ReadBool" class="ArrowIcon"></i>
-            <i v-if="this.ReadMoreArray[1].ReadBool" class="ArrowIconUp"></i>
+          <div class="ArrowAudjust">
+            <div id="Arrow2" class="Arrow" style=""  @click="TransitionOn(1)">
+              <i v-if="!this.ReadMoreArray[1].ReadBool" class="ArrowIcon"></i>
+              <i v-if="this.ReadMoreArray[1].ReadBool" class="ArrowIconUp"></i>
+            </div>
           </div>
           <img  id="Divder2" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
@@ -125,8 +129,8 @@
 
 
       <div id="ItemThree"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/ServerManagement.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber" style="opacity: 10%;"  v-if="!isMobile" >03</h1>
+        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/ServerManagement.png" alt="Ah shit lost it again">
+        <h1 class="ServiceNumber" style="opacity: 0.1;"  v-if="!isMobile" >03</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
             <h1 style="opacity: 100%;"   class="ServiceTitle" > Server Management </h1>
@@ -167,9 +171,11 @@
               Reduced remote servicing costs
             </p>
           </transition>
-          <div id="Arrow3" class="Arrow" style=""  @click="TransitionOn(2)">
-            <i v-if="!this.ReadMoreArray[2].ReadBool" class="ArrowIcon"></i>
-            <i v-if="this.ReadMoreArray[2].ReadBool" class="ArrowIconUp"></i>
+          <div class="ArrowAudjust">
+            <div id="Arrow3" class="Arrow" style=""  @click="TransitionOn(2)">
+              <i v-if="!this.ReadMoreArray[2].ReadBool" class="ArrowIcon"></i>
+              <i v-if="this.ReadMoreArray[2].ReadBool" class="ArrowIconUp"></i>
+            </div>
           </div>
           <img  id="Divder3" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
@@ -177,8 +183,8 @@
 
 
       <div id="ItemFour"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/disasterRecovery.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber " style="opacity: 10%;"  v-if="!isMobile" >04</h1>
+        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/disasterRecovery.png" alt="Ah shit lost it again">
+        <h1 class="ServiceNumber " style="opacity: 0.1;"  v-if="!isMobile" >04</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
             <h1 style="opacity: 100%;" class="ServiceTitle" > Disaster Recovery </h1>
@@ -220,9 +226,11 @@
               Talk to our Manage IT team about your backup and recovery requirements. It doesn't matter if your desktop needs replacement parts or your entire network needs to be replicated off-site, Manage IT provide the reassurance and peace of mind you welcome from disaster recovery IT experts.
             </p>
           </transition>
-          <div id="Arrow4" class="Arrow" style=""  @click="TransitionOn(3)">
-            <i v-if="!this.ReadMoreArray[3].ReadBool" class="ArrowIcon"></i>
-            <i v-if="this.ReadMoreArray[3].ReadBool" class="ArrowIconUp"></i>
+          <div class="ArrowAudjust">
+            <div id="Arrow4" class="Arrow" style=""  @click="TransitionOn(3)">
+              <i v-if="!this.ReadMoreArray[3].ReadBool" class="ArrowIcon"></i>
+              <i v-if="this.ReadMoreArray[3].ReadBool" class="ArrowIconUp"></i>
+            </div>
           </div>
           <img  id="Divder4" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
@@ -231,8 +239,8 @@
 
 
       <div id="ItemFive"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/networking.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber" style="opacity: 10%;"  v-if="!isMobile" >05</h1>
+        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/networking.png" alt="Ah shit lost it again">
+        <h1 class="ServiceNumber" style="opacity: 0.1;"  v-if="!isMobile" >05</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
             <h1 style="opacity: 100%;" class="ServiceTitle" > Networking </h1>
@@ -255,9 +263,11 @@
 
             </p>
           </transition>
-          <div id="Arrow5" class="Arrow" style=""  @click="TransitionOn(4)">
-            <i v-if="!this.ReadMoreArray[4].ReadBool" class="ArrowIcon"></i>
-            <i v-if="this.ReadMoreArray[4].ReadBool" class="ArrowIconUp"></i>
+          <div class="ArrowAudjust">
+            <div id="Arrow5" class="Arrow" style=""  @click="TransitionOn(4)">
+              <i v-if="!this.ReadMoreArray[4].ReadBool" class="ArrowIcon"></i>
+              <i v-if="this.ReadMoreArray[4].ReadBool" class="ArrowIconUp"></i>
+            </div>
           </div>
           <img  id="Divder5" class="Divider" style="z-index: 0; width: 100vm; right: 0"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
@@ -265,8 +275,8 @@
 
 
       <div id="ItemSix" name="ItemSix"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/databaseManagement.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber " style="opacity: 10%;"  v-if="!isMobile" >06</h1>
+        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/databaseManagement.png" alt="Ah shit lost it again">
+        <h1 class="ServiceNumber " style="opacity: 0.1;"  v-if="!isMobile" >06</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
             <h1 style="opacity: 100%;"   class="ServiceTitle" > Database Management </h1>
@@ -289,9 +299,11 @@
 
             </p>
           </transition>
-          <div id="Arrow6" class="Arrow" style=""  @click="TransitionOn(5)">
-            <i v-if="!this.ReadMoreArray[5].ReadBool" class="ArrowIcon"></i>
-            <i v-if="this.ReadMoreArray[5].ReadBool" class="ArrowIconUp"></i>
+          <div class="ArrowAudjust">
+            <div id="Arrow6" class="Arrow" style=""  @click="TransitionOn(5)">
+              <i v-if="!this.ReadMoreArray[5].ReadBool" class="ArrowIcon"></i>
+              <i v-if="this.ReadMoreArray[5].ReadBool" class="ArrowIconUp"></i>
+            </div>
           </div>
           <img  id="Divder6" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
@@ -299,8 +311,8 @@
 
 
       <div id="ItemSeven"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/security.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber" style="opacity: 10%;"  v-if="!isMobile" >07</h1>
+        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/security.png" alt="Ah shit lost it again">
+        <h1 class="ServiceNumber" style="opacity: 0.1;"  v-if="!isMobile" >07</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
             <h1 style="opacity: 100%;"   class="ServiceTitle" > Security </h1>
@@ -332,9 +344,11 @@
 
             </p>
           </transition>
-          <div id="Arrow7" class="Arrow" style=""  @click="TransitionOn(6)">
-            <i v-if="!this.ReadMoreArray[6].ReadBool" class="ArrowIcon"></i>
-            <i v-if="this.ReadMoreArray[6].ReadBool" class="ArrowIconUp"></i>
+          <div class="ArrowAudjust">
+            <div id="Arrow7" class="Arrow" style=""  @click="TransitionOn(6)">
+              <i v-if="!this.ReadMoreArray[6].ReadBool" class="ArrowIcon"></i>
+              <i v-if="this.ReadMoreArray[6].ReadBool" class="ArrowIconUp"></i>
+            </div>
           </div>
           <img  id="Divder7" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
@@ -342,8 +356,8 @@
 
 
       <div id="ItemEight" style="margin-bottom: -200px"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 10%; "  src="../../assets/images/svg/cloudComputing.png" alt="Ah shit lost it again">
-        <h1 class="ServiceNumber" style="opacity: 10%;"  v-if="!isMobile" >08</h1>
+        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/cloudComputing.png" alt="Ah shit lost it again">
+        <h1 class="ServiceNumber" style="opacity: 0.1;"  v-if="!isMobile" >08</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
             <h1 style="opacity: 100%;"   class="ServiceTitle" > Cloud computing </h1>
@@ -373,12 +387,16 @@
 
             </p>
           </transition>
-          <div id="Arrow8" class="Arrow" style=""  @click="TransitionOn(7)">
-            <i v-if="!this.ReadMoreArray[7].ReadBool" class="ArrowIcon"></i>
-            <i v-if="this.ReadMoreArray[7].ReadBool" class="ArrowIconUp"></i>
+          <div class="ArrowAudjust">
+              <div id="Arrow8" class="Arrow" style=""  @click="TransitionOn(7)">
+                <i v-if="!this.ReadMoreArray[7].ReadBool" class="ArrowIcon"></i>
+                <i v-if="this.ReadMoreArray[7].ReadBool" class="ArrowIconUp"></i>
+              </div>
+
           </div>
           <img  id="Divder8" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
         </div>
+
       </div>
       <Footer></Footer>
     </div>
@@ -418,6 +436,7 @@
       },
       methods: {
         onResize () {
+          console.log("Resize called coming in: "+ window.innerWidth < 800);
           this.isMobile = window.innerWidth < 800
         },
 
@@ -452,6 +471,7 @@
         }
       },
       mounted() {
+        window.onload = this.onResize();
         let self = this;
         EventBus.$on('MobileSize', changed => {
           console.log(`Oh, that's nice. It's gotten ${changed} clicks! :)`);
@@ -523,7 +543,8 @@
             }
 
           })
-        })
+        });
+
       }
     }
 </script>
@@ -542,7 +563,7 @@
     transition: 2s;
   }
   .Divider {
-    transform: translateY(-230px);
+    transform: translateY(-58%);
     transition: 1s;
     z-index: 0; width: 100vw; right: 0
   }
@@ -706,14 +727,14 @@
   .ServiceIcon {
     position: absolute;
     opacity: 10%;
-    transform: translate(-700px, -285px);
+    transform: translate(-100%, -70%);
     height: 47%
   }
 
   .ServiceNumber {
     position: absolute;
     opacity: 10%;
-    transform: translate(550%, -200px);
+    transform: translate(70vw, -200px);
     font-family: 'Bebas Neue', cursive;
     font-weight: 400;
     font-size: 350px;
@@ -818,6 +839,14 @@
     opacity: 0;
   }
   @media (max-width:800px){
+    .ArrowAudjust {
+      transform: scale(0.6) translate(-22%, 30%);
+
+      transition: 1s;
+
+    }
+
+
     .wrapper {
       overflow: hidden;
     }
@@ -858,16 +887,24 @@
     }
     .ServiceIcon {
       position: absolute; opacity: 10%;
-      transform: translate(-50%, -285px); height: 47%;
+      transform: translate(-50%, -50%);
+      height: initial; width: 80%;
       overflow: hidden; max-width: 100%;
+      transition: 1s;
     }
     #IconTwo {
-      transform: translate(-50%, -200px); height: 40%;
-      overflow: hidden;
+      position: absolute; opacity: 10%;
+      transform: translate(-50%, -0%);
+      height: initial; width: 80%;
+      overflow: hidden; max-width: 100%;
+      transition: 1s;
     }
     #IconOne {
-      transform: translate(0%, -140px); height: 20%;
-      overflow: hidden;
+      position: absolute; opacity: 10%;
+      transform: translate(-110%, 40%);
+      height: initial; width: 80%;
+      overflow: hidden; max-width: 100%;
+      transition: 1s;
     }
   }
 </style>
