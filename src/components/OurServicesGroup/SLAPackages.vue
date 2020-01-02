@@ -65,6 +65,7 @@
 
 <script>
   import JQuery from 'jquery';
+  import {EventBus} from "../../App";
   let $ = JQuery;
     export default {
         name: "SLAPackages",
@@ -81,6 +82,13 @@
       },
       mounted() {
         var self = this;
+
+        EventBus.$on('MobileSize', changed => {
+          console.log(`Packages managed to get: ${changed} `);
+          self.Packages = changed;
+        });
+        window.onload = EventBus.$emit('PageLoaded', true);
+
         this.$nextTick(function(){
           window.addEventListener("scroll", function(){
             self.Scrolled = document.documentElement.scrollTop;
