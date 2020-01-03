@@ -261,6 +261,7 @@
     }
   }
   @media (max-width:550px){
+
     .IconContent {
       z-index: 3;
       height: 45vw;
@@ -275,6 +276,9 @@
       height: 35%;
       width: 35%
     }
+    .ServiceText {
+      font-size: 4vw;
+    }
     h1 {
       transition: 1s;
       font-family: 'Big Shoulders Text', cursive;
@@ -285,7 +289,7 @@
     .Fluff {
       text-shadow: 0px 0px #425014;
       opacity: 0%;
-      font-size: 2.8vw;
+      font-size: 2.5vw;
       color: slategray;
       transition: 1s;
     }

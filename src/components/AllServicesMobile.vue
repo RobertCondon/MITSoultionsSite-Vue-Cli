@@ -121,6 +121,15 @@
       color: #495d68;
     }
 
+    .ServiceDiv_:hover .ServiceTag {
+      font-size: 13.0vw;
+    }
+    .ServiceDiv_:hover .AllServices_ {
+      margin-top: 1%;
+      margin-left: 10%;
+      height:  120px;
+    }
+
 
     @media (max-width:450px){
       .AllServices_ {

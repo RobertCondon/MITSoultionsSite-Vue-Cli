@@ -1,34 +1,64 @@
 <template>
-    <div style="height: 100vh; overflow-x: hidden; max-height: 100%; max-width: 100%">
-      <img id="Background" style="  overflow-x: hidden; max-height: 100%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackground.png" alt="Ah shit lost it again">
-      <div style="transform: translateY(-400px); position: absolute; overflow: hidden; max-width: 100%">
-        <div style="transform: translateY(675px);  overflow-x: hidden; max-height: 100%; max-width: 100%">
-          <img id="WireOne" style="opacity: 20%;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
-          <img id="WireTwo" style="opacity: 20%;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
+    <div style="height: 120vh; overflow-x: hidden; max-height: 100%; max-width: 100%">
+      <img v-if="!isMobile" id="Background" style="  overflow-x: hidden; max-height: 100%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackground.png" alt="Ah shit lost it again">
+      <img v-if="isMobile" id="Background2" style="  overflow-x: hidden; max-height: 110%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackgroundMobile.png" alt="Ah shit lost it again">
+      <div id="OurServicesTitleCard" style=" position: absolute; overflow: hidden; max-width: 100%">
+        <div id="Wires" style="  overflow-x: hidden; max-height: 100%; max-width: 100%">
+          <img id="WireOne" style="opacity: 0.2;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
+          <img id="WireTwo" style="opacity: 0.2;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
         </div>
-        <div style="transform: translateY(-200px)">
-          <h1 style="opacity: 100%;" class="PageTitleTwo" > Our </h1> <h1 style="opacity: 100%;" class="PageTitleOne"> Services</h1>
-          <h3 style="opacity: 80%;" class="SemiTitle"> Piratical and expert solutions</h3>
+        <div  style="z-index: 2;">
+          <h1 style="opacity: 1; z-index: 2;" class="PageTitleTwo" > Our </h1> <h1 style="opacity: 1" class="PageTitleOne"> Services</h1>
+          <h3 style="opacity: 0.8; z-index: 3;" class="SemiTitle"> Piratical and expert solutions</h3>
           <b-button pill variant="success" style="margin-top: 40px; padding-right: 35px;  padding-left: 35px; padding-top: 9px;  padding-bottom: 9px"> Services </b-button>
         </div>
-
       </div>
     </div>
 </template>
 
 <script>
-    export default {
-        name: "OurServicesTitle"
+  import {EventBus} from "../../App";
+
+  export default {
+    name: "OurServicesTitle",
+    data() {
+      return{
+        isMobile: false
+      }
+    },
+    methods: {
+      onResize () {
+        this.isMobile = window.innerWidth < 800;
+      }
+    },
+    mounted() {
+      let self = this;
+
+
+      EventBus.$on('MobileSize', changed => {
+        console.log(`Oh, that's nice. It's gotten ${changed} clicks! :)`);
+        self.isMobile = changed;
+      });
+      window.onload = EventBus.$emit('PageLoaded', true);
     }
+
+  }
 </script>
 
 <style scoped>
+  #OurServicesTitleCard {
+    top: -600px;
+  }
+  #Wires {
+    transform: translateY(950px);
+  }
+
   .SemiTitle {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 2vw;
       color: #dadbe0;
-    opacity: 80%;
+    opacity: 0.8;
     transition: 0.5s;
   }
   .PageTitleOne, .PageTitleTwo {
@@ -37,8 +67,7 @@
     font-weight: 400;
     font-size: 15vw;
     position: relative;
-    z-index: -1;
-    opacity: 100%;
+    opacity: 1;
     transition: 0.5s;
   }
   .PageTitleOne {
@@ -58,8 +87,16 @@
   #Background {
     position: absolute;
 
-    width: 100%;
-    height: 850px;
+    width: 100vw;
+
+    transform: translate(-50%, 0);
+  }
+
+  #Background2 {
+    position: absolute;
+
+    width: 100vw;
+
     transform: translate(-50%, 0);
   }
 
@@ -67,7 +104,7 @@
   position: relative;
   z-index: 1;
   transform: translateX(100%);
-  opacity: 20%;
+  opacity: 0.2;
   animation-name: Start;
   animation-duration: 30s;
   animation-timing-function: linear;
@@ -76,7 +113,7 @@
 #WireTwo {
   position: relative;
   z-index: 1;
-  opacity: 20%;
+  opacity: 0.2;
   transform: translate(0%,-100%);
   animation-name: Middle;
   animation-duration: 30s;
@@ -112,15 +149,25 @@
   }
 }
   @media (max-width:800px){
+    #Wires {
+      transform: translateY(750px);
+    }
+
     .PageTitleOne, .PageTitleTwo {
       display: inline-block;
       font-family: 'Bebas Neue', cursive;
       font-weight: 400;
-      font-size: 20vw;
+      font-size: 30vw;
       position: relative;
-      z-index: -1;
-      opacity: 100%
+      z-index: 1;
+      opacity: 1;
     }
+
+    #OurServicesTitleCard {
+      position: absolute;
+      top: -670px;
+    }
+
     .PageTitleOne {
       padding-left:3%;
 
@@ -139,7 +186,13 @@
       font-weight: 400;
       font-size: 6vw;
       color: #dadbe0;
-      opacity: 80%
+      opacity: 0.8;
+    }
+    #Background {
+      height: 950px;
+    }
+    #Background2 {
+      height: 950px;
     }
   }
 

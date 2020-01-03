@@ -1,11 +1,11 @@
 <template>
     <div style="background-color: #dadbe0; padding-bottom: 100px">
       <h1 class="SectionTitle"> Service Level Packages (SLA) </h1>
-      <div style="width: 100%; height: 250px"></div>
+      <div style="width: 100%; height: 10vw"></div>
       <transition name="PackageAniLeft" :key="Packages">
         <div id="PackageBronze" v-if="Packages" style="" class="Package">
           <div style="background-color: #cdced3;">
-            <h1 class="PackageTitle"> Bronze </h1>
+            <h1 class="PackageTitle" style=" text-shadow: #F7C59F 2.5px 1.5px"> Bronze </h1>
             <h4>Understand Whats Going On</h4>
           </div>
           <div style="background-color: #d6d7dc; margin-top: -10px;">
@@ -19,7 +19,7 @@
       </transition>
       <div id="Gold" class="Package">
         <div style="background-color: #cdced3;">
-          <h1 class="PackageTitle"> Gold </h1>
+          <h1 class="PackageTitle" style="text-shadow: #E1CE7A 2.5px 1.5px"> Gold </h1>
           <h4>Full 24/7 Support</h4>
         </div>
         <div style="background-color: #d6d7dc; margin-top: -10px;">
@@ -35,7 +35,7 @@
       <transition name="PackageAniRight" :key="Packages">
         <div v-if="Packages" id="PackageSliver" style="" class="Package">
           <div style="background-color: #cdced3;">
-            <h1 class="PackageTitle"> Sliver </h1>
+            <h1 class="PackageTitle" style="text-shadow: #D8DBE2 2.5px 1.5px"> Sliver </h1>
             <h4>Critical Support</h4>
           </div>
           <div style="background-color: #d6d7dc; margin-top: -10px;">
@@ -65,6 +65,7 @@
 
 <script>
   import JQuery from 'jquery';
+  import {EventBus} from "../../App";
   let $ = JQuery;
     export default {
         name: "SLAPackages",
@@ -81,6 +82,13 @@
       },
       mounted() {
         var self = this;
+
+        EventBus.$on('MobileSize', changed => {
+          console.log(`Packages managed to get: ${changed} `);
+          self.Packages = changed;
+        });
+        window.onload = EventBus.$emit('PageLoaded', true);
+
         this.$nextTick(function(){
           window.addEventListener("scroll", function(){
             self.Scrolled = document.documentElement.scrollTop;
@@ -283,6 +291,10 @@
     width: 50%;
   }
   @media (max-width:800px){
+    .PackageTitle {
+      font-size: 13vw;
+    }
+
     #PackageBronze {
       margin-left: 0
     }
@@ -308,7 +320,7 @@
     }
     @media (max-width:600px){
       .Package {
-        width: 80%;
+        width: 90%;
         margin: 5%;
       }
       #PackageBronze {

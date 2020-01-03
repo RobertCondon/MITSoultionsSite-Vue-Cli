@@ -7,8 +7,10 @@
         <div class="IconBottomLeft"></div>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
-        <img class="AllServices_" style=" margin-top: 35px; margin-left: 30px;" src="../../assets/images/svg/breakfixServices.png" alt="Ah shit lost it again">
-        <h1 id="BreakFixText" class="ServiceTag" style="  "> Break/Fix <br> Support </h1>
+        <div class="ContentForIcons">
+          <img class="AllServices_" style="" src="../../assets/images/svg/breakfixServices.png" alt="Ah shit lost it again">
+          <h1 class="ServiceTag" style="  "> Break/Fix <br> Support </h1>
+        </div>
       </div>
 
       <div class="ServiceDiv_" @click="ServiceClick(6)"  >
@@ -16,8 +18,10 @@
         <div class="IconBottomLeft"></div>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
-        <img class="AllServices_" style=" margin-left: 40px " src="../../assets/images/svg/security.png" alt="Ah shit lost it again">
-        <h1 id="SecurityText" class="ServiceTag" style="  "> IT Security </h1>
+        <div class="ContentForIcons">
+          <img class="AllServices_" style="" src="../../assets/images/svg/security.png" alt="Ah shit lost it again">
+          <h1 id="SecurityText" class="ServiceTag" style="  "> IT Security </h1>
+        </div>
       </div>
 
       <div class="ServiceDiv_" @click="ServiceClick(0)" >
@@ -25,16 +29,20 @@
         <div class="IconBottomLeft"></div>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
-        <img class="AllServices_" style=" margin-left: 10px "  src="../../assets/images/svg/computerSystems.png" alt="Ah shit lost it again">
-        <h1 class="ServiceTag" style=" "> Computer Systems </h1>
+        <div class="ContentForIcons">
+          <img class="AllServices_"   src="../../assets/images/svg/computerSystems.png" alt="Ah shit lost it again">
+          <h1 class="ServiceTag" style=" "> Computer Systems </h1>
+        </div>
       </div>
       <div class="ServiceDiv_" @click="ServiceClick(2)"  >
         <div class="IconBottomRight"></div>
         <div class="IconBottomLeft"></div>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
-        <img class="AllServices_" style=" margin-left: 25px; margin-top: 45px " src="../../assets/images/svg/ServerManagement.png" alt="Ah shit lost it again">
-        <h1 id="ServerText" class="ServiceTag" style="  "> Server <br> Management </h1>
+        <div class="ContentForIcons">
+        <img class="AllServices_" style=" " src="../../assets/images/svg/ServerManagement.png" alt="Ah shit lost it again">
+        <h1  class="ServiceTag" style="  "> Server <br> Management </h1>
+        </div>
       </div>
 
       <div class="ServiceDiv_" @click="ServiceClick(3)"  >
@@ -42,8 +50,10 @@
         <div class="IconBottomLeft"></div>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
+        <div class="ContentForIcons">
         <img class="AllServices_" src="../../assets/images/svg/disasterRecovery.png" alt="Ah shit lost it again">
         <h1 class="ServiceTag" style=" "> Disaster Recovery </h1>
+        </div>
       </div>
 
       <div class="ServiceDiv_" style="margin: 20px;" @click="ServiceClick(4)" >
@@ -51,8 +61,10 @@
         <div class="IconBottomLeft"></div>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
-        <img class="AllServices_" style="margin-left: 40px" src="../../assets/images/svg/networking.png" alt="Ah shit lost it again">
+        <div class="ContentForIcons">
+        <img class="AllServices_" style="" src="../../assets/images/svg/networking.png" alt="Ah shit lost it again">
         <h1 id="NetworkingText" class="ServiceTag" style=""> Networking  </h1>
+        </div>
       </div>
 
       <div class="ServiceDiv_" @click="ServiceClick(2)">
@@ -60,8 +72,10 @@
         <div class="IconBottomLeft"></div>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
-        <img class="AllServices_" style="margin-left: 40px" src="../../assets/images/svg/databaseManagement.png" alt="Ah shit lost it again">
-        <h1 id="DatabaseText" class="ServiceTag" style="">Database <br> Management </h1>
+        <div class="ContentForIcons">
+        <img class="AllServices_" style="" src="../../assets/images/svg/databaseManagement.png" alt="Ah shit lost it again">
+        <h1  class="ServiceTag" style="">Database <br> Management </h1>
+        </div>
       </div>
 
       <div class="ServiceDiv_" @click="ServiceClick(7)"  >
@@ -69,11 +83,12 @@
         <div class="IconBottomLeft"></div>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
-        <img class="AllServices_" style="margin-left: 40px; margin-top: 40px" src="../../assets/images/svg/cloudComputing.png" alt="Ah shit lost it again">
-        <h1 id="CloudText" class="ServiceTag" style=""> Cloud <br> computing </h1>
-
+        <div class="ContentForIcons">
+          <img class="AllServices_" style="" src="../../assets/images/svg/cloudComputing.png" alt="Ah shit lost it again">
+          <h1 class="ServiceTag" style=""> Cloud <br> computing </h1>
+        </div>
       </div>
-
+      <div style="height: 60px"></div>
     </div>
 </template>
 
@@ -107,24 +122,28 @@
 
 <style scoped>
   .ServiceTag {
-    float: right;
     transition: 1s;
-    text-align: center;
-    margin-left: auto;
     font-family: 'Bebas Neue', cursive;
     font-weight: 400;
     font-size: 63px;
     color: #495d68;
-    transform: translate(-5px, 65px);
+    transform: initial;
+    text-align: initial;
+    float: initial;
+    margin: initial;
   }
   .AllServices_ {
     margin-top: 6%;
     height: 60%;
     transition: 1s;
     float: left;
+    margin-left: 20%;
   }
   .ServiceDiv_:hover .AllServices_ {
     height: 62%;
+  }
+  .ServiceDiv_:hover .ServiceTag {
+    font-size: 65px;
   }
   .ServiceDiv_:hover .SBorderX {
     top: 5%;
@@ -135,9 +154,7 @@
     bottom: 3%;
     right: 2%;
   }
-  .ServiceDiv_:hover .ServiceTag {
-    font-size: 65px;
-  }
+
   .ServiceDiv_ {
     transition: 1s;
     margin: 20px; height: 200px; width: 550px; display: inline-block; position: relative
@@ -226,29 +243,36 @@
     border-bottom: 3px dotted dimgray;
   }
 
-  #CloudText {
-    transform: translate(-55px, 25px);
-  }
-  #DatabaseText {
-    transform: translate(-45px, 25px);
-  }
+
   #NetworkingText {
     margin-right: 40px
   }
-  #ServerText {
-    transform: translate(-45px, 25px);
-  }
+
   #SecurityText {
     margin-left: 40px; float: left
   }
-  #BreakFixText {
-    transform: translate(-85px, 25px);
+
+
+  .ContentForIcons {
+    width: 100%;
+    height: 100%;
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    align-items:center;
+    justify-content:center;
   }
 
   @media (max-width:800px){
+    .ServiceDiv_:hover .AllServices_ {
+      height: 0.1vh;
+    }
+    .ServiceDiv_:hover .ServiceTag {
+      font-size: 1vw;
+    }
     .ServiceDiv_ {
       transition: 1s;
       margin-left: 7%;  margin-right: 7%;
+
       height: 180px; width: 90%; display: inline-block; position: relative
     }
     .AllServices_ {
@@ -258,15 +282,14 @@
       float: left;
     }
     .ServiceTag {
-      float: right;
+
       transition: 1s;
-      text-align: center;
-      margin-left: auto;
+
       font-family: 'Bebas Neue', cursive;
       font-weight: 400;
       font-size: 9.0vw;
       color: #495d68;
-      transform: translate(-10px, 60px);
+
 
     }
     #SecurityText {
@@ -277,44 +300,33 @@
       .ServiceDiv_ {
         transition: 1s;
         margin-left: 0;  margin-right: 0;
-        height: 160px; width: 90%; display: inline-block; position: relative
+        margin-top: 5px; margin-bottom: 5px;
+        height: 110px; width: 90%; display: inline-block; position: relative;
       }
       .AllServices_ {
-        margin-top: 50px;
-        height: 60px;
+        margin-top: initial;
+        height: 80px;
         transition: 1s;
         float: left;
       }
       .ServiceTag {
-        float: right;
         transition: 1s;
-        text-align: center;
-        margin-left: auto;
         font-family: 'Bebas Neue', cursive;
         font-weight: 400;
         font-size: 9.0vw;
         color: #495d68;
-        transform: translate(-10px, 60px);
       }
 
-      #CloudText {
-        transform: translate(-15px, 45px);
-      }
-      #DatabaseText {
-        transform: translate(0px, 55px);
-      }
+
+
       #NetworkingText {
         margin-right: 5px
       }
-      #ServerText {
-        transform: translate(0px, 25px);
-      }
+
       #SecurityText {
-        margin-left: 15px; float: right
+        margin: initial;
       }
-      #BreakFixText {
-        transform: translate(-40px, 25px);
-      }
+
     }
   }
 </style>
