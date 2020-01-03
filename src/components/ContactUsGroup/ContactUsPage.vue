@@ -1,7 +1,9 @@
 <template>
-    <div style="background-color: #dadbe0; ">
-      <HomePageMobile v-if="isMobile"></HomePageMobile>
-        <b-navbar v-if="!isMobile" id="nav"  :sticky="true" style="color: darkblue; padding-top: 0px;" type="Dark">
+    <div style="background-color: #dadbe0; overflow: hidden; max-width: 100%">
+      <div>
+        <HomePageMobile v-if="isMobile"></HomePageMobile>
+
+        <b-navbar v-if="!isMobile" id="nav"  :sticky="true" style=" position: fixed; color: darkblue; padding-top: 0px;" type="Dark">
           <b-navbar-brand href="#">
             <transition name="fade">
               <img v-if="Boo" :key="Boo" style=" width: 20vw; position: absolute;  z-index: -3; transform: translateX(-16px); top:0;" src="../../assets/images/ManageIT_Background2.png" alt="Ahh">
@@ -48,10 +50,12 @@
 
           </b-collapse>
         </b-navbar>
-      <ContactUsTitle></ContactUsTitle>
-      <ContactUsNote></ContactUsNote>
-      <ContactUs></ContactUs>
-      <Footer></Footer>
+
+        <ContactUsTitle></ContactUsTitle>
+        <ContactUsNote></ContactUsNote>
+        <ContactUs></ContactUs>
+        <Footer></Footer>
+      </div>
     </div>
 </template>
 
@@ -133,7 +137,7 @@
 <style scoped>
 
   nav {
-    background-color: black;
+    background-color: transparent;
     transition: all 0.1s;
   }
   #nav {
@@ -142,6 +146,12 @@
   nav.stuck {
     padding-top: 0px;
     background: none;
+  }
+
+  .navbar {
+    z-index:10;
+    width:100%;
+    height: 70px;
   }
   .navbar-expand .navbar-nav .nav-link {
     padding: 0;
@@ -154,11 +164,6 @@
     right: 2vw;
   }
 
-  .navbar {
-    z-index:10;
-    width:100%;
-    height: 70px;
-  }
   .NavLine {
     transform: translateY(-5px);
     border-bottom: 2px solid #859e30;

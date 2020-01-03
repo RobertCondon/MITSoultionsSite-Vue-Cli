@@ -124,29 +124,29 @@
   @media (max-width:800px){
     #Background {
       position: absolute;  overflow: hidden; max-height: 100%; max-width: 100%;
-      transform: translateY(0%);
-      left: 25%;
+      transform: translateY(-30%);
+      left: 10%;
       height: auto;
-      width: 50%;
+      width: 80%;
     }
     #YellowPostIt {
-      overflow: hidden; max-width: 100%; height: 33vw; display: inline-block;
-      transform: translate(-4%, 25%)
+      overflow: hidden; max-width: 100%; height: 40vw; display: inline-block;
+      transform: translate(-4%, -5%)
     }
 
     #PostIts {
-      margin-top: 20%;
+      margin-top: 5%;
       margin-bottom: 20%;
       height: 100%;
 
     }
     .PageTitleOne {
-      font-size:  8.0vw;
+      font-size:  13.0vw;
     }
     .SemiTitle {
-      font-size: 2.1vw;
-      width: 80%;
-      transform: translateX(13%);
+      font-size: 4vw;
+      width: 70%;
+      transform: translateX(25%);
     }
   }
 
