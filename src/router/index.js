@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/ParseTextAsHtml'
+import CreateBlog from '@/components/CreateBlog'
 import Testimonials from '@/components/Testimonials'
 import HomePage from '@/components/HomePage'
 import Test from '@/components/SlideShowMenu'
@@ -11,13 +11,13 @@ import OurServicesTitle from '@/components/OurServicesGroup/OurServicesTitle'
 import OurServicesIcons from '@/components/OurServicesGroup/OurServicesIcons'
 import SLAPackages from '@/components/OurServicesGroup/SLAPackages'
 import ContactUSPage from '@/components/ContactUsGroup/ContactUsPage'
+import Blog from '@/components/Blog'
+import BlogHome from '@/components/BlogHome'
 
 import AboutUs from '@/components/AboutUs'
 
 
 Vue.use(Router);
-
-
 
 export default new Router({
   mode: 'history',
@@ -35,6 +35,16 @@ export default new Router({
       path: '/',
       name: 'HomePage',
       component: HomePage
+    },
+    {
+      path:'/Blog/:blogId',
+      name: 'Blog',
+      component: Blog
+    },
+    {
+      path:'/Blog',
+      name: 'BlogHome',
+      component: BlogHome
     },
     {
       path: '/ContactUs',
@@ -87,9 +97,9 @@ export default new Router({
       component: AboutUs
     },
     {
-      path: '/Hello',
-      name: 'Hello',
-      component: HelloWorld
+      path: '/Create',
+      name: 'Create',
+      component: CreateBlog
     }
   ]
 })
