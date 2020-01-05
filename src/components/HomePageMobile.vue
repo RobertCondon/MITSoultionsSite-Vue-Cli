@@ -10,18 +10,18 @@
             <span></span>
             <span></span>
             <span></span>
-            <ul id="menu">
+            <ul id="menu" v-bind:style="{'background-image': 'url('+BackgroundImage+')'}" >
               <router-link  to="/">
               <li><a class="a" href="#">Home</a></li>
               </router-link>
               <router-link  to="/AboutUs">
-              <li><a class="a" href="#">About Us</a></li>
+              <li><a class="a" href="#">About <br> Us</a></li>
               </router-link>
               <router-link  to="/OurServices">
-              <li><a class="a" href="#">Our Services</a></li>
+              <li><a class="a" href="#">Our <br> Services</a></li>
               </router-link>
               <router-link  to="/ContactUs">
-              <li><a class="a" href="#">Contact Us</a></li>
+              <li><a class="a" href="#">Contact <br> Us</a></li>
               </router-link>
             </ul>
           </div>
@@ -33,7 +33,13 @@
 
 <script>
     export default {
-        name: "HomePageMobile"
+        name: "HomePageMobile",
+      data() {
+        return {
+          BackgroundImage: require('../assets/images/MobileMenuBackground.png'),
+        }
+      }
+
     }
 </script>
 
@@ -49,10 +55,11 @@
     text-decoration: none;
     color: #1E1E23;
     opacity:1;
-    font-family: 'work sans', sans serif;
-    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    font-size: 1.6em;
     transition: 200ms;
+    text-shadow: 0.001em 0.001em forestgreen;
   }
   .a:hover {
     opacity:0.5;
@@ -140,21 +147,23 @@
     position: absolute;
     width: 200px;
     height: 100vh;
-    box-shadow: 0 0 10px #85888C;
+    box-shadow: 0px 0px 100vw #444444;
     margin: -50px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
+    padding-left: 20px;
+    padding-top: 90px;
     background-color: #F5F6FA;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   #menu li
   {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     transition-delay: 2s;
   }
 

@@ -54,7 +54,7 @@
       </div>
 
 
-      <div class="bottom-bar" style="font-size: 2.0vw;top:100px; text-align: center;">Copyright © 2019 Manage IT. All Rights Reserved. Designed by In House Web.</div>
+      <div class="bottom-bar" style="">Copyright © 2019 Manage IT. All Rights Reserved. Designed by In House Web.</div>
 
     </div>
 
@@ -197,13 +197,16 @@
     top: 12px;
   }
   .bottom-bar{
-    top:30%;
     margin-right: auto;
     margin-left: auto;
-    width: 600px;
+    width: 100%;
     position: relative;
     height: 20px;
     color: #7D7E75;
+    font-size: 1.0vw;
+    top: 100px;
+    text-align: center;
+
 
   }
   .columnTitle{
@@ -223,6 +226,18 @@
 
 
   @media (max-width:800px){
+    .bottom-bar{
+      margin-right: auto;
+      margin-left: auto;
+      width: 600px;
+      position: relative;
+      height: 20px;
+      color: #7D7E75;
+      font-size: 2.0vw;
+      top:100px;
+      text-align: center;
+
+    }
     .ContactUs{
       display: inline-block;
       height:90%;
