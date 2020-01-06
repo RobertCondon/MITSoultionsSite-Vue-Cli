@@ -55,7 +55,7 @@
                     let id = this.$router.currentRoute.params.blogId;
                     console.log(id)
                     const blogData = await BlogController.getBlog(id);
-                    console.log(blogData.data.blog.Content);
+                    console.log(blogData);
                     this.blogContent = blogData.data.blog.Content;
                     document.getElementById('blog').innerHTML = this.blogContent
                 } catch (e) {
