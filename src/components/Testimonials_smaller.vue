@@ -231,9 +231,13 @@
   }
   .arrow.animated.right{
     transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
   }
   .arrow.animated.left{
     transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
   }
   .arrow.animated.right:hover{
 
@@ -243,6 +247,9 @@
     animation-name: colorChangeRight;
     animation-fill-mode: forwards;
     transform: rotate(-45deg);
+
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
   }
   .arrow.animated.left:hover{
 
@@ -252,6 +259,8 @@
     animation-name: colorChangeLeft;
     animation-fill-mode: forwards;
     transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
   }
   .arrow.animated.left:active{
     animation-name: arrowClickedLeft;
@@ -267,6 +276,7 @@
     animation-duration: 0.05s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
+
   }
 
 
@@ -281,6 +291,7 @@
       border-color: #859e30;
     }
     from {
+        -ms-transform: scale3d(1, 1, 1) rotate(135deg);
       -webkit-transform: scale3d(1, 1, 1) rotate(135deg);
       transform: scale3d(1, 1, 1)  rotate(135deg);
     }
@@ -288,11 +299,13 @@
     50% {
       -webkit-transform: scale3d(1.05, 1.05, 1.05) rotate(135deg);
       transform: scale3d(1.05, 1.05, 1.05)rotate(135deg);
+        -ms-transform: scale3d(1.05, 1.05, 1.05)rotate(135deg);
     }
 
     to {
       -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
       transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
+        -ms-transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
     }
   }
 
@@ -307,16 +320,19 @@
   from {
     -webkit-transform: scale3d(1, 1, 1) rotate(-45deg);
     transform: scale3d(1, 1, 1)  rotate(-45deg);
+      -ms-transform: scale3d(1, 1, 1)  rotate(-45deg);
   }
 
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05)rotate(-45deg);
     transform: scale3d(1.05, 1.05, 1.05)rotate(-45deg);
+      -ms-transform: scale3d(1.05, 1.05, 1.05)rotate(-45deg);
   }
 
   to {
     -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
+      -ms-transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
   }
   }
 
@@ -324,18 +340,21 @@
     from {
       -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
       transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
+        -ms-transform:  scale3d(1.1, 1.1, 1.1) rotate(135deg);
 
     }
 
     50% {
       -webkit-transform: scale3d(1, 1, 1) rotate(135deg);
       transform: scale3d(1, 1, 1) rotate(135deg);
+        -ms-transform: scale3d(1, 1, 1) rotate(135deg);
       border-radius: 0 30px 0px 30px;
     }
 
     to {
       -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate(135deg);
       transform: scale3d(0.9, 0.9, 0.9) rotate(135deg);
+        -ms-transform: scale3d(0.9, 0.9, 0.9) rotate(135deg);
       border-radius: 0 30px 0 30px;
     }
   }
@@ -343,18 +362,21 @@
     from {
       -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
       transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
+        -ms-transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
 
     }
 
     50% {
       -webkit-transform: scale3d(1, 1, 1) rotate(-45deg);
       transform: scale3d(1, 1, 1) rotate(-45deg);
+        -ms-transform: scale3d(1, 1, 1) rotate(-45deg);
       border-radius: 0 30px 0px 30px;
     }
 
     to {
       -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate(-45deg);
       transform: scale3d(0.9, 0.9, 0.9) rotate(-45deg);
+        -ms-transform: scale3d(0.9, 0.9, 0.9) rotate(-45deg);
       border-radius: 0 30px 0 30px;
     }
   }

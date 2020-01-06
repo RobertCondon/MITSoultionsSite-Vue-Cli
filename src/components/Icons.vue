@@ -1,5 +1,8 @@
 <template>
-    <div id="ServiceBackImage" style=" position: relative; transform: translateX(-18.5%); z-index: 1;">
+    <div id="ServiceBackImage" style=" position: relative; transform: translateX(-18.5%);
+     -webkit-transform: translateX(-18.5%);
+    -ms-transform: translateX(-18.5%);
+    z-index: 1;">
       <img id="ServiceImage"  src="../assets/images/ServicesTemplate2.png" alt="Ah shit lost it again">
       <div id="Tags">
         <router-link  to="/OurServices#ItemThree">
@@ -106,13 +109,14 @@
     margin-top: 30%;
     vertical-align: center;
     position: relative;
-    height: var(--aspectRatio);
+    height: 33%;
     width: calc(var(--aspectRatio)*1.23077);
     transition: 1s;
   }
   .Fluff {
     text-shadow: 0px 0px #425014;
     opacity: 0%;
+    filter: alpha(opacity=0);
     font-size: 0.8vw;
     color: slategray;
     transition: 1s;
@@ -126,6 +130,8 @@
   }
   h6 {
     transform: translateY(30%);
+    -webkit-transform: translateY(30%);
+    -ms-transform: translateY(30%);
     transition: 1s;
     font-family: 'Big Shoulders Text', cursive;
     font-weight: 600;
@@ -154,6 +160,7 @@
   }
   .IconContent:hover .fluff {
     opacity: unset;
+    filter: alpha(opacity=100);
   }
   .IconContent:hover {
     text-shadow: 0px 5px #425014;
@@ -169,6 +176,7 @@
   }
   .IconContent:hover .Fluff {
      opacity: unset;
+    filter: alpha(opacity=100);
    }
 
 
@@ -234,6 +242,7 @@
     .Fluff {
       text-shadow: 0px 0px #425014;
       opacity: 0%;
+      filter: alpha(opacity=0);
       font-size: 1.8vw;
       color: slategray;
       transition: 1s;
@@ -289,6 +298,7 @@
     .Fluff {
       text-shadow: 0px 0px #425014;
       opacity: 0%;
+      filter: alpha(opacity=0);
       font-size: 2.5vw;
       color: slategray;
       transition: 1s;
@@ -341,6 +351,8 @@
       font-size: 63px;
       color: #495d68;
       transform: translate(-5px, 65px);
+      -webkit-transform: translate(-5px, 65px);
+      -ms-transform: translate(-5px, 65px);
     }
     .AllServices_ {
       margin-top: 6%;

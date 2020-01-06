@@ -14,10 +14,15 @@
             <b-navbar id="nav"  :sticky="true" style="color: darkblue; padding-top: 0px;" type="Dark">
               <b-navbar-brand href="#">
                 <transition name="fade">
-                  <img v-if="Boo" :key="Boo" style=" width: 20vw; position: absolute;  z-index: -3; transform: translateX(-16px); top:0;" src="../assets/images/ManageIT_Background2.png" alt="Ahh">
+                  <img v-if="Boo" :key="Boo" style=" width: 20vw; position: absolute;  z-index: -3; transform: translateX(-16px);
+                  -webkit-transform: translateX(-16px);
+                  -ms-transform: translateX(-16px);
+                  top:0;" src="../assets/images/ManageIT_Background2.png" alt="Ahh">
                 </transition>
                 <transition name="fade">
-                  <img v-if="Boo" :key="Boo" class="NavMiddle" style="width: 40vw; height: 5.4vh; position: absolute; top: 0; z-index: -4; transform: translateX(16.55vw);" src="../assets/images/ManageIT_Background_Line.png" alt="Ahh">
+                  <img v-if="Boo" :key="Boo" class="NavMiddle" style="width: 40vw; height: 5.4vh; position: absolute; top: 0; z-index: -4; transform: translateX(16.55vw);
+                   -webkit-transform: translateX(16.55vw);
+                  -ms-transform: translateX(16.55vw);" src="../assets/images/ManageIT_Background_Line.png" alt="Ahh">
                 </transition>
                 <transition name="fade">
                   <img v-if="Boo" :key="Boo" style="position: absolute; top: 0; z-index: -4; right: 0; width: 42vw;" src="../assets/images/ManageIT_Background_Options.png" alt="Ahh">
@@ -386,6 +391,8 @@
 
   #PortalButton {
     font-size: 1vw; padding: 0.4%; margin-left: 35px; transform: translateY(-0.5vw);
+    -ms-transform: translateY(-0.5vw);
+    -webkit-transform: translateY(-0.5vw);
   }
 
   #CarouselImage {
@@ -427,6 +434,8 @@
 
   .NavLine {
     transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
     border-bottom: 2px solid #859e30;
     width: 0px;
     height: 0px;
@@ -502,6 +511,8 @@
   .slide-fade-enter, .slide-fade-leave-to
     /* .slide-fade-leave-active below version 2.1.8 */ {
     transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
     opacity: 0;
   }
 
@@ -514,6 +525,8 @@
   .slide-fade-right-enter, .slide-fade-right-leave-to
     /* .slide-fade-leave-active below version 2.1.8 */ {
     transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    -webkit-transform: translateX(150%);
     opacity: 0;
   }
 

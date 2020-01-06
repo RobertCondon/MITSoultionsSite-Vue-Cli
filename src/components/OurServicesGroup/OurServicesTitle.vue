@@ -10,7 +10,7 @@
         <div  style="z-index: 2;">
           <h1 style="opacity: 1; z-index: 2;" class="PageTitleTwo" > Our </h1> <h1 style="opacity: 1" class="PageTitleOne"> Services</h1>
           <h3 style="opacity: 0.8; z-index: 3;" class="SemiTitle"> Piratical and expert solutions</h3>
-          <b-button pill variant="success" style="margin-top: 40px; padding-right: 35px;  padding-left: 35px; padding-top: 9px;  padding-bottom: 9px"> Services </b-button>
+
         </div>
       </div>
     </div>
@@ -51,6 +51,8 @@
   }
   #Wires {
     transform: translateY(950px);
+    -webkit-transform: translateY(950px);
+    -ms-transform: translateY(950px);
   }
 
   .SemiTitle {
@@ -90,6 +92,8 @@
     width: 100vw;
 
     transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
   }
 
   #Background2 {
@@ -98,12 +102,16 @@
     width: 100vw;
 
     transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
   }
 
 #WireOne {
   position: relative;
   z-index: 1;
   transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
   opacity: 0.2;
   animation-name: Start;
   animation-duration: 30s;
@@ -115,6 +123,8 @@
   z-index: 1;
   opacity: 0.2;
   transform: translate(0%,-100%);
+  -webkit-transform: translate(0%,-100%);
+  -ms-transform: translate(0%,-100%);
   animation-name: Middle;
   animation-duration: 30s;
   animation-timing-function: linear;
@@ -129,11 +139,12 @@
   from {
     -webkit-transform:translate(0px, -100%);
     transform: translate(0px, -100%);
-
+    -ms-transform: translate(0%,-100%);
   }
   to {
     -webkit-transform:translate(-100%, -100%);
     transform: translate(-100%, -100%);
+    -ms-transform: translate(-100%, -100%);
   }
 }
 
@@ -141,16 +152,21 @@
   from {
     -webkit-transform:translate( 99.88%, 0);
     transform: translate(99.88%, 0);
+    -ms-transform: translate(99.88%, 0);
 
   }
   to {
     -webkit-transform:translate(0, 0);
+    -ms-transform: translate(0, 0);
     transform: translate(0, 0);
+
   }
 }
   @media (max-width:800px){
     #Wires {
       transform: translateY(750px);
+      -webkit-transform:translateY(750px);
+      -ms-transform:translateY(750px);
     }
 
     .PageTitleOne, .PageTitleTwo {

@@ -1,10 +1,16 @@
 <template>
   <div class="parallax-container" style=" position: relative; height: 120%; overflow: hidden; max-width: 100%; max-height: 100%">
-    <img class="parallax-title" style="transform: translateX(16%) scale(1.2); z-index: 0;" src="../assets/images/WhyUsParrlax2.png" alt="Ah fuck">
+    <img class="parallax-title" style="transform: translateX(16%) scale(1.2);
+      -ms-transform: translateX(16%) scale(1.2);
+    -webkit-transform: translateX(16%) scale(1.2);
+    z-index: 0;" src="../assets/images/WhyUsParrlax2.png" alt="Ah fuck">
 
     <parallax :fixed="true">
 
-      <video style="position: relative; z-index: 100; transform: translateY(30px); width: 100%; height: 100%;" preload="auto" autoplay="autoplay"  loop="true" controls>
+      <video style="position: relative; z-index: 100; transform: translateY(30px);
+      -ms-transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+      width: 100%; height: 100%;" preload="auto" autoplay="autoplay"  loop="true" controls>
         <source src="../assets/images/ParalaxGraph2.mp4" style=" width: 100%; height: 100%;" type="video/mp4">
       </video>
     </parallax>
