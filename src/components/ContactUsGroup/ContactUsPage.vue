@@ -54,6 +54,17 @@
         <ContactUsTitle></ContactUsTitle>
         <ContactUsNote></ContactUsNote>
         <ContactUs></ContactUs>
+        <h1 style="
+        display: inline-block;
+        font-family: 'Bebas Neue', cursive;
+        font-weight: 400;
+        font-size:  6.5vw;
+        color: #6f6476;
+        position: relative;
+        z-index: 2;
+        opacity: 100%
+         "> Where Are We </h1>
+        <img style=" display: inline-block; width: 100%; padding: 3% 10% 10% 10%" src="../../assets/images/ManageITMap.png" alt="None">
         <Footer></Footer>
       </div>
     </div>
