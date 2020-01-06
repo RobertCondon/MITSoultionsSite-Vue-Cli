@@ -1,8 +1,9 @@
 <template>
 
-  <div class="wrapper" style="position: relative; height: auto;">
+  <div class="wrapper" style="position: relative; height: 100%;">
     <div style="position: relative;" class="testimonialBackground">
     <div style="position: relative;" class="testimonialBackground">
+        <div style="height: 15vh"></div>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
@@ -65,7 +66,7 @@
                       >
 
                   <h2><p style="text-align: center; font-family: 'Lora',serif;">{{testlist[i].short}}</p></h2>
-                  <p v-bind:v-for="quote in testlist[i].quote" style="font-family: 'Martel', serif; text-align: left; color: #555; " >{{quote}}</p>
+                  <p v-bind:key="quote" v-for="quote in testlist[i].quote" style="font-family: 'Martel', serif; text-align: left; color: #555; " >{{quote}}</p>
                   <p style="text-align: center; font-family: 'Georgia',serif; font-size: 26px; ">{{testlist[i].author}}</p>
                   <img :src="testlist[i].logo" style="width: auto; height: auto;">
                 </div>

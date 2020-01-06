@@ -1,7 +1,5 @@
 <template>
-    <div id="ServiceBackImage" style=" position: relative; transform: translateX(-18.5%);
-     -webkit-transform: translateX(-18.5%);
-    -ms-transform: translateX(-18.5%);
+    <div id="ServiceBackImage" style=" position: relative;
     z-index: 1;">
       <img id="ServiceImage"  src="../assets/images/ServicesTemplate2.png" alt="Ah shit lost it again">
       <div id="Tags">
@@ -82,6 +80,9 @@
   #ServiceBackImage {
     width: 100%;
     height: 100%;
+    transform: translateX(-15.5%);
+    -webkit-transform: translateX(-15.5%);
+    -ms-transform: translateX(-15.5%);
   }
 
   #ServiceImage {
@@ -214,6 +215,14 @@
   }
 
   @media (max-width:800px){
+    #ServiceBackImage {
+      width: 100%;
+      height: 100%;
+      transform: translateX(-5.5%);
+      -webkit-transform: translateX(-5.5%);
+      -ms-transform: translateX(-5.5%);
+    }
+
     #ServiceImage {
       width: 95%;
       height: 60vh;
