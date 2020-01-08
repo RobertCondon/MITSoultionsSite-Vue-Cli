@@ -24,7 +24,7 @@
                  width: 50px;
                  float: left;
                  position: absolute;
-                 top: 450px" v-on:click="previousItem"></i>
+                 top: 520px" v-on:click="previousItem"></i>
 
 
 
@@ -36,7 +36,7 @@
                      height: 50px;
                      width: 50px;
                      float: right;
-                    top: 450px;
+                    top: 520px;
                     position: absolute;"
                      v-on:click="nextItem" ></i>
 
@@ -44,7 +44,7 @@
 
 
           <div class="Title" style="margin-left: auto; margin-right: auto;">
-          <span style="font-family: 'Martel', serif; font-weight: bolder; font-size: 75px; opacity: 100%;">Testimonials</span>
+          <span style="font-family: 'Bebas Neue', cursive; font-weight: 200; font-size: 110px; opacity: 100%;">Testimonials</span>
           </div>
 
           <div id="testimonials-container"
@@ -65,9 +65,9 @@
                      style="text-align: center; padding: 15px; color: #272727;"
                       >
 
-                  <h2><p style="text-align: center; font-family: 'Lora',serif;">{{testlist[i].short}}</p></h2>
-                  <p v-bind:key="quote" v-for="quote in testlist[i].quote" style="font-family: 'Martel', serif; text-align: left; color: #555; " >{{quote}}</p>
-                  <p style="text-align: center; font-family: 'Georgia',serif; font-size: 26px; ">{{testlist[i].author}}</p>
+                  <h2><p style="text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 500;">{{testlist[i].short}}</p></h2>
+                  <p v-bind:key="quote" v-for="quote in testlist[i].quote" style="font-family: 'Montserrat', sans-serif; text-align: left; color: #555; " >{{quote}}</p>
+                  <p style="text-align: center; font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 600;">{{testlist[i].author}}</p>
                   <img :src="testlist[i].logo" style="width: auto; height: auto;">
                 </div>
 

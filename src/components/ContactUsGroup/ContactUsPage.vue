@@ -62,7 +62,8 @@
         color: #6f6476;
         position: relative;
         z-index: 2;
-        opacity: 100%
+        opacity: 1;
+        margin-top: 10%;
          "> Where Are We </h1>
         <img style=" display: inline-block; width: 100%; padding: 3% 10% 10% 10%" src="../../assets/images/ManageITMap.png" alt="None">
         <Footer></Footer>

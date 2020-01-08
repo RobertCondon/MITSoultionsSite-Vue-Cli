@@ -9,7 +9,7 @@
         </div>
         <div  style="z-index: 2;">
           <h1 style="opacity: 1; z-index: 2;" class="PageTitleTwo" > Our </h1> <h1 style="opacity: 1" class="PageTitleOne"> Services</h1>
-          <h3 style="opacity: 0.8; z-index: 3;" class="SemiTitle"> Piratical and expert solutions</h3>
+          <h3 style="opacity: 0.8; z-index: 3;" class="SemiTitle"> Practical and expert solutions</h3>
 
         </div>
       </div>

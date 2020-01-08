@@ -105,7 +105,7 @@
             <div id="Line2" class="ServiceLineTitle"></div>
           </div>
           <p style="opacity: 100%;"   class="ServiceTopContent">
-            Not ready yet for contract or fully managed support solution? Try our Break Fix Service support for any hardware and software problem.
+            Not ready yet for a contract or fully managed support solution? Try our Break Fix Service support for any hardware and software problem.
           </p>
           <transition name="ReadMoreTrans">
             <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[1].ReadBool" :key="this.ReadMoreArray[1].ReadBool">

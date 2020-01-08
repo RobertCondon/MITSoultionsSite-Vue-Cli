@@ -178,8 +178,10 @@
                 text-align: left; margin-left: 3%;
                  display: list-item; list-style-type: disc;  list-style-position: inside;
                 font-family: 'Montserrat', sans-serif; font-weight: 400; color: #2a2a36; opacity: 90%">
-                      We here at manage IT are here for you, priding ourselves on our abblity to create
-                      meaningful and easy to understand dialoge, so togther we can work to your maxiumim benefit.
+                        We at manage IT are here for you, priding
+                        ourselves on the ability to create meaningful
+                        and easy to understand dialogue, so together we
+                        can work to your maximum benefit.
                     </h4>
                     <h4 style=" overflow: hidden; font-size: 4.5vw;
                 text-align: left; margin-left: 3%;
