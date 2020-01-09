@@ -1,8 +1,9 @@
 <template>
 
-  <div class="wrapper" style="position: relative; height: auto;">
+  <div class="wrapper" style="position: relative; height: 100%;">
     <div style="position: relative;" class="testimonialBackground">
     <div style="position: relative;" class="testimonialBackground">
+        <div style="height: 15vh"></div>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
@@ -23,7 +24,7 @@
                  width: 50px;
                  float: left;
                  position: absolute;
-                 top: 450px" v-on:click="previousItem"></i>
+                 top: 520px" v-on:click="previousItem"></i>
 
 
 
@@ -35,7 +36,7 @@
                      height: 50px;
                      width: 50px;
                      float: right;
-                    top: 450px;
+                    top: 520px;
                     position: absolute;"
                      v-on:click="nextItem" ></i>
 
@@ -43,7 +44,7 @@
 
 
           <div class="Title" style="margin-left: auto; margin-right: auto;">
-          <span style="font-family: 'Martel', serif; font-weight: bolder; font-size: 75px; opacity: 100%;">Testimonials</span>
+          <span style="font-family: 'Bebas Neue', cursive; font-weight: 200; font-size: 110px; opacity: 100%;">Testimonials</span>
           </div>
 
           <div id="testimonials-container"
@@ -64,9 +65,10 @@
                      style="text-align: center; padding: 15px; color: #272727;"
                       >
 
-                  <h2 style="text-align: center; font-family: 'Lora',serif;">{{testlist[i].short}} </h2>
-                  <p v-bind:key="quote" v-for="quote in testlist[i].quote" style="font-family: 'Martel', serif; text-align: left; color: #555; " >{{quote}}</p>
-                  <p style="text-align: center; font-family: 'Georgia',serif; font-size: 26px; ">{{testlist[i].author}}</p>
+                  <h2><p style="text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 500;">{{testlist[i].short}}</p></h2>
+                  <p v-bind:key="quote" v-for="quote in testlist[i].quote" style="font-family: 'Montserrat', sans-serif; text-align: left; color: #555; " >{{quote}}</p>
+                  <p style="text-align: center; font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 600;">{{testlist[i].author}}</p>
+
                   <img :src="testlist[i].logo" style="width: auto; height: auto;">
                 </div>
 
@@ -230,9 +232,13 @@
   }
   .arrow.animated.right{
     transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -ms-transform:  rotate(-45deg);
   }
   .arrow.animated.left{
     transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      -ms-transform:  rotate(135deg);
   }
   .arrow.animated.right:hover{
 
@@ -242,6 +248,8 @@
     animation-name: colorChangeRight;
     animation-fill-mode: forwards;
     transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -ms-transform:  rotate(-45deg);
   }
   .arrow.animated.left:hover{
 
@@ -251,6 +259,8 @@
     animation-name: colorChangeLeft;
     animation-fill-mode: forwards;
     transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      -ms-transform:  rotate(135deg);
   }
   .arrow.animated.left:active{
     animation-name: arrowClickedLeft;
@@ -273,89 +283,102 @@
 
 
   @keyframes colorChangeLeft {
-    0% {
-      border-color: #2e2e3a;
-    }
-    100% {
-      border-color: #859e30;
-    }
-    from {
-      -webkit-transform: scale3d(1, 1, 1) rotate(135deg);
-      transform: scale3d(1, 1, 1)  rotate(135deg);
-    }
+      0% {
+          border-color: #2e2e3a;
+      }
+      100% {
+          border-color: #859e30;
+      }
+      from {
+          -ms-transform: scale3d(1, 1, 1) rotate(135deg);
+          -webkit-transform: scale3d(1, 1, 1) rotate(135deg);
+          transform: scale3d(1, 1, 1)  rotate(135deg);
+      }
 
-    50% {
-      -webkit-transform: scale3d(1.05, 1.05, 1.05) rotate(135deg);
-      transform: scale3d(1.05, 1.05, 1.05)rotate(135deg);
-    }
+      50% {
+          -webkit-transform: scale3d(1.05, 1.05, 1.05) rotate(135deg);
+          transform: scale3d(1.05, 1.05, 1.05)rotate(135deg);
+          -ms-transform: scale3d(1.05, 1.05, 1.05)rotate(135deg);
+      }
 
-    to {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
-      transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
-    }
+      to {
+          -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
+          transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
+          -ms-transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
+      }
   }
 
 
   @keyframes colorChangeRight {
-  0% {
-    border-color: #2e2e3a;
-  }
-  100% {
-    border-color: #859e30;
-  }
-  from {
-    -webkit-transform: scale3d(1, 1, 1) rotate(-45deg);
-    transform: scale3d(1, 1, 1)  rotate(-45deg);
-  }
+      0% {
+          border-color: #2e2e3a;
+      }
+      100% {
+          border-color: #859e30;
+      }
+      from {
+          -webkit-transform: scale3d(1, 1, 1) rotate(-45deg);
+          transform: scale3d(1, 1, 1)  rotate(-45deg);
+          -ms-transform: scale3d(1, 1, 1)  rotate(-45deg);
+      }
 
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05)rotate(-45deg);
-    transform: scale3d(1.05, 1.05, 1.05)rotate(-45deg);
-  }
+      50% {
+          -webkit-transform: scale3d(1.05, 1.05, 1.05)rotate(-45deg);
+          transform: scale3d(1.05, 1.05, 1.05)rotate(-45deg);
+          -ms-transform: scale3d(1.05, 1.05, 1.05)rotate(-45deg);
+      }
 
-  to {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
-    transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
-  }
+      to {
+          -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
+          transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
+          -ms-transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
+      }
   }
 
   @keyframes arrowClickedLeft {
-    from {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
-      transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
+      from {
 
-    }
+          transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
+          -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(135deg);
+          -ms-transform:  scale3d(1.1, 1.1, 1.1) rotate(135deg);
 
-    50% {
-      -webkit-transform: scale3d(1, 1, 1) rotate(135deg);
-      transform: scale3d(1, 1, 1) rotate(135deg);
-      border-radius: 0 30px 0px 30px;
-    }
+      }
 
-    to {
-      -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate(135deg);
-      transform: scale3d(0.9, 0.9, 0.9) rotate(135deg);
-      border-radius: 0 30px 0 30px;
-    }
+      50% {
+          -webkit-transform: scale3d(1, 1, 1) rotate(135deg);
+          transform: scale3d(1, 1, 1) rotate(135deg);
+          -ms-transform: scale3d(1, 1, 1) rotate(135deg);
+          border-radius: 0 30px 0px 30px;
+      }
+
+      to {
+          -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate(135deg);
+          transform: scale3d(0.9, 0.9, 0.9) rotate(135deg);
+          -ms-transform: scale3d(0.9, 0.9, 0.9) rotate(135deg);
+          border-radius: 0 30px 0 30px;
+      }
   }
   @keyframes arrowClickedRight {
-    from {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
-      transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
+      from {
+          -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
+          transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
+          -ms-transform: scale3d(1.1, 1.1, 1.1) rotate(-45deg);
 
-    }
+      }
 
-    50% {
-      -webkit-transform: scale3d(1, 1, 1) rotate(-45deg);
-      transform: scale3d(1, 1, 1) rotate(-45deg);
-      border-radius: 0 30px 0px 30px;
-    }
+      50% {
+          -webkit-transform: scale3d(1, 1, 1) rotate(-45deg);
+          transform: scale3d(1, 1, 1) rotate(-45deg);
+          -ms-transform: scale3d(1, 1, 1) rotate(-45deg);
+          border-radius: 0 30px 0px 30px;
+      }
 
-    to {
-      -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate(-45deg);
-      transform: scale3d(0.9, 0.9, 0.9) rotate(-45deg);
-      border-radius: 0 30px 0 30px;
-    }
+      to {
+          -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate(-45deg);
+          transform: scale3d(0.9, 0.9, 0.9) rotate(-45deg);
+          -ms-transform: scale3d(0.9, 0.9, 0.9) rotate(-45deg);
+          border-radius: 0 30px 0 30px;
+      }
   }
   
 

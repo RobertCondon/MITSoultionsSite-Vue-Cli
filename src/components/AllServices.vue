@@ -1,7 +1,10 @@
 <template>
-  <div  style=" left:1%; width: 67.5%; position: relative; transform: translate(75%,0%); padding-top: 19.5%; overflow-y: hidden; max-height: 100%;" >
+  <div  style=" left:1%; width: 67.5%; position: relative; transform: translate(75%,0%);
+   -webkit-transform: translate(75%,0%);
+    -ms-transform: translate(75%,0%);
+   padding-top: 19.5%; overflow-y: hidden; max-height: 100%;" >
     <img style="height: 50%; width: 50%; z-index: 2;"  src="../assets/images/ServiceAll.png" alt="Ah shit lost it again">
-    <router-link  to="/OurServices">
+    <router-link  to="/OurServices#Services">
       <div class="ServiceDiv_" style=" height:37%; width: 24%; right: 36%; top:64%; position: absolute;">
         <img class="SBorderY" src="../assets/images/IconBorderY.png" alt="Ah shit lost it again" style="">
         <img class="SBorderX" src="../assets/images/IconBorderX.png" alt="Ah shit lost it again" style="">
@@ -27,7 +30,9 @@
     bottom: 12%;
     transition: 1s;
     -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
     transform: scaleX(-1);
+
   }
   .SBorderX {
     position: absolute;
@@ -35,6 +40,7 @@
     top: 12%;
     transition: 1s;
     -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
     transform: scaleX(-1);
   }
 

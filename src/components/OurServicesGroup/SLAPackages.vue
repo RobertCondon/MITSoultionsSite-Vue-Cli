@@ -50,7 +50,7 @@
       </transition>
       <div class="BreakFix">
         <div class="BreakFixContent">
-          <h1 class="BreakFixIntro"> For a more flexibilty or as a sumplment to our plans we have<br></h1>
+          <h1 class="BreakFixIntro"> For a more flexibility or as a supplement to our plans we have <br></h1>
           <div class="ServiceDiv_SLA" style="position: relative; margin: auto" @click="ServiceClick(1)">
             <div class="IconBottomRight"></div>
             <div class="IconBottomLeft"></div>

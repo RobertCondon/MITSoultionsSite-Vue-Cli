@@ -1,11 +1,13 @@
 <template>
   <div class="ServiceDiv_" >
-    <div class="IconBottomRight"></div>
-    <div class="IconBottomLeft"></div>
-    <div class="IconTopRight"></div>
-    <div class="IconTopLeft"></div>
-    <img class="AllServices_" src="../assets/images/svg/AllServices.png" alt="Ah shit lost it again">
-    <h1 id="BreakFixText" class="ServiceTag" style="  "> All Services </h1>
+    <router-link  to="/OurServices#Services">
+      <div class="IconBottomRight"></div>
+      <div class="IconBottomLeft"></div>
+      <div class="IconTopRight"></div>
+      <div class="IconTopLeft"></div>
+      <img class="AllServices_" src="../assets/images/svg/AllServices.png" alt="Ah shit lost it again">
+      <h1 id="BreakFixText" class="ServiceTag" style="  "> All Services </h1>
+    </router-link>
   </div>
 </template>
 

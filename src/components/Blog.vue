@@ -60,7 +60,6 @@
                 var reader = new FileReader();
                 try {
                     let id = this.$router.currentRoute.params.blogId;
-
                    const blogData = await BlogController.getBlog(id);
                     // console.log(blogData.data.blog.Content);
                     reader.addEventListener('loadend', (e) => {

@@ -58,6 +58,8 @@
 <style>
   .flickity-page-dots {
     transform: translateY(-40px);
+    -webkit-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
   }
 
   .Menu-Button {
@@ -79,6 +81,8 @@
 
     width: 100%;
     transform: translateX(-50);
+    -webkit-transform: translateX(-50);
+    -ms-transform: translateX(-50);
   }
   .carousel-cell:hover {
     cursor: default;
@@ -86,6 +90,8 @@
 
   .flickity-page-dots {
     transform: translateY(-180px);
+    -webkit-transform: translateY(-180px);
+    -ms-transform: translateY(-180px);
 
   }
 

@@ -62,24 +62,55 @@
 
 
           <div class="circles">
-            <div class="company-introduction" style="color: black;">We are Manage<span style="color: #70892f;">IT</span>
+            <div class="company-introduction" style="color: black;">
+              <div class="SoultionsTitle">
+                <span>Turning complex problems into </span> <span style="color: #70892f;">simple solutions</span>
+              </div>
               <span class="intro-content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor pretium viverra suspendisse potenti nullam. Ut eu sem integer vitae justo eget magna. Ut lectus arcu bibendum at varius vel pharetra vel. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Erat nam at lectus urna duis convallis convallis tellus id. Ac tincidunt vitae semper quis. Urna duis convallis convallis tellus id interdum. Massa placerat duis ultricies lacus sed turpis tincidunt id. Nisi scelerisque eu ultrices vitae. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus. Vitae congue eu consequat ac felis donec et. Etiam tempor orci eu lobortis elementum nibh. Dolor purus non enim praesent elementum facilisis leo vel fringilla. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed.
-              </p>
+                <p>
+                We here at Manage IT are here to speak your 'language' removing the confusion and
+                frustration that normally comes with IT work. Because we are a people driven IT team,
+                and this is how we have long-term business relationships.
+                <br>
+                  <br>
+                Our locally based, close-knit team pride ourselves in being able to see your problems
+                from many different angles to come up with creative solutions to best benefit your needs.
+                While making sure you understand each option before you hand-pick the one that you feel
+                suits your needs.
+                <br>
+                  <br>
+                This is all possible because at our core we cultivate innovation, creativity and technical excellence
+                within our team. Allowing you, ease of mind when any problem arrives. From critical system failures to
+                simply using technology to help push your business to work smarter, harder and better.
+                </p>
               </span>
 
             </div>
 
             <div class="our-values">
 
-              Our Values
+             <span style="font-size: 6vw;">Our Values </span>
               <div >
-                <div class="values"><img src="../assets/images/svg/AllServices.png" alt=""></div>
-                <div class="values"><img src="../assets/images/svg/AllServices.png" alt=""></div>
-                <div class="values"><img src="../assets/images/svg/AllServices.png" alt=""></div>
-                <div class="values"><img src="../assets/images/svg/AllServices.png" alt=""></div>
-                <div class="values"><img src="../assets/images/svg/AllServices.png" alt=""></div>
+                <div class="values">
+                  <img class="ValuePic" src="../assets/images/svg/CustomerUnderstandingLogo.png" alt="">
+                  <span style="margin-top: 5%" class="ValueTitle"> Customer Understanding</span>
+                  <span class="ValueBlerb">Simple easy to understand diologe</span>
+                </div>
+                <div class="values">
+                  <img class="ValuePic" src="../assets/images/svg/OptionsLogo.png" alt="">
+                  <span class="ValueTitle">Options</span>
+                  <span class="ValueBlerb">Being Creative and innovative thinkers</span>
+                </div>
+                <div class="values">
+                  <img class="ValuePic" src="../assets/images/svg/ExelanceLogo.png" alt="">
+                  <span class="ValueTitle">Excellence</span>
+                  <span class="ValueBlerb">Always straving for being at the forefront of our feild</span>
+                </div>
+                <div class="values">
+                  <img class="ValuePic" src="../assets/images/svg/LongevityLogo.png" alt="">
+                  <span class="ValueTitle">Longevity</span>
+                  <span class="ValueBlerb">A job done right will only need to be done once</span>
+                </div>
 
 
               </div>
@@ -221,17 +252,44 @@
   @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
   .content-background{
     background-color: #dadbe0;
-    height: 1000px;
+    display: block;
+    height: 1800px;
     width: 100%;
 
   }
-  .values{
+  .ValuePic {
+    width: 10vw;
     display: inline-block;
-    padding: 0 30px 0 30px;
   }
 
+  .values{
+    display: inline-block;
+    text-align: center;
+    width: 10vw;
+    margin: 5%;
+    alignment: top;
+    vertical-align: top;
+  }
 
+  .ValueTitle {
+    text-align: center;
+    display: inline-block;
+    font-size: 39px;
+    width: 14vw;
+    transform: translateX(-2vw);
+    font-family: 'Bebas Neue', cursive;
+    color: #2e2e3a;
+    font-weight: 400;
+    text-shadow: #859e30 2px 2px 5px;
+  }
+  .ValueBlerb {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    height: auto;
+    color: #2e2e3a;
 
+    text-shadow: none;
+  }
 
 
   .intro-content{
@@ -241,23 +299,28 @@
     text-align: left;
   }
   .company-introduction{
-    font-family: 'Tinos', serif;
-    font-weight: 100;
-    font-size: 60px;
+    margin-top: 10%;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+
+    font-size: 70px;
 
     font-style: normal;
-    width: 70%;
+    width: 50%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-
+    z-index: 9;
   }
   .our-values{
     position: relative;
-    font-size: 60px;
-    font-family: 'Cinzel', serif;
-    font-weight: bolder;
+
+    font-family: 'Bebas Neue', cursive;
     color: #2e2e3a;
+    font-weight: 400;
+
+    color: #2e2e3a;
+    margin-top: 200px;
     text-shadow: #859e30 2px 2px 5px;
     width: 100%;
   }
@@ -265,7 +328,7 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    top: 5%;
+    bottom: -10%;
     font-family: 'Michroma', sans-serif;
     font-size: 50px;
     color: whitesmoke;
@@ -281,15 +344,16 @@
     background: linear-gradient(30deg,#405725 5%, #859e30 50%, whitesmoke);
 
     z-index: 1;
+    margin-bottom: 40px;
   }
   .Page-Title {
-    font-family: 'Martel', serif;
-    font-size: 82px;
-    font-weight: bolder;
-    color: #2e2e3a;
-    top: 70%;
-    text-shadow: #859e30 2px 2px;
-
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    font-size: 6vw;
+    color: #dadbe0;
+    text-shadow: -3px 3px #495d68;
+    top: 42%;
+    text-underline: #859e30;
   }
   .img-src {
     position: fixed;
@@ -300,15 +364,15 @@
     left: 0;
     right: 0;
     z-index: -1;
-    background-image: url("../assets/images/StockImages/placeholderAboutUs.jpg");
-    -webkit-box-shadow: -25px 25px 50px #CBCED3, -25px -25px 50px 0 #CBCED3 inset ;
-    -moz-box-shadow: -25px 25px 50px #CBCED3,-25px -25px 50px 0 #CBCED3 inset;
-    box-shadow: -25px 25px 50px #CBCED3, -25px -25px 50px 0 #CBCED3 inset ;
+    background-image: url("../assets/images/AboutUsBackground.png");
+    -webkit-box-shadow: -25px 25px 50px #f0f0f0, -25px -25px 50px 0 #f0f0f0 inset ;
+    -moz-box-shadow: -25px 25px 50px #f0f0f0,-25px -25px 50px 0 #f0f0f0 inset;
+    box-shadow: -25px 25px 100px #f0f0f0, -25px -55px 100px 0 #f0f0f0 inset ;
   }
 
   .blurred-img {
     opacity: 0;
-    background-image: url("../assets/images/StockImages/placeholderAboutUs.jpg");
+    background-image: url("../assets/images/AboutUsBackground.png");
     filter: blur(100px);
     /*-webkit-box-shadow: -25px 25px 100px #CBCED3, -25px -25px 100px 0 #CBCED3  ;*/
     /*-moz-box-shadow: -25px 25px 100px #CBCED3, -25px -25px 100px 0 #CBCED3  ;*/
@@ -319,16 +383,15 @@ background-color: #dadbe0;
 
 
     width: 100%;
-    height:1000px;
-    -webkit-box-shadow: -25px 25px 100px #CBCED3, -25px -25px 100px 0 #CBCED3  ;
-    -moz-box-shadow: -25px 25px 100px #CBCED3, -25px -25px 100px 0 #CBCED3  ;
-    box-shadow: -25px 25px 100px #CBCED3, -25px -25px 100px 0 #CBCED3 ;
+    -webkit-box-shadow: -25px 25px 100px #f0f0f0, -25px -25px 100px 0 #f0f0f0  ;
+    -moz-box-shadow: -25px 25px 100px #f0f0f0, -25px -25px 100px 0 #f0f0f0  ;
+    box-shadow: -25px 25px 100px #f0f0f0, -25px -25px 100px 0 #f0f0f0 ;
 
   }
   .article {
 
     width:100%;
-    height: 1000px;
+    height: 900px;
     margin-left: auto;
     margin-right: auto;
 
@@ -339,7 +402,6 @@ background-color: #dadbe0;
     position: absolute;
     left: 0;
     width: 100%;
-    height: 1000px;
     overflow: hidden;
     background-image: url('../assets/images/StockImages/concrete_seamless.png');
     background-repeat: repeat;
@@ -429,7 +491,7 @@ background-color: #dadbe0;
     width: 25px;
     height: 25px;
     animation-delay: 15s;
-    animation-duration: 45s;
+    animation-duration: 95s;
     z-index: 1;
   }
 
@@ -473,7 +535,7 @@ background-color: #dadbe0;
     }
 
     100%{
-      transform: translateY(-1000px) rotate(720deg);
+      transform: translateY(-200vh) rotate(720deg);
       opacity: 0;
       border-radius: 50%;
     }
@@ -535,7 +597,7 @@ background-color: #dadbe0;
     }
   }
   nav {
-    background-color: black;
+    background-color: transparent;
     transition: all 0.1s;
   }
   #nav {
@@ -588,7 +650,21 @@ background-color: #dadbe0;
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
   }
-
+  .SoultionsTitle {
+    width: 70%; display: inline-block; margin-bottom: 40px
+  }
+  @media (max-width:800px){
+    .intro-content{
+      font-size: 5.2vw;
+    }
+    .company-introduction {
+      width: 90%;
+      font-size: 10vw;
+    }
+    .SoultionsTitle {
+      width: 70%;
+    }
+  }
 
 
 </style>

@@ -41,7 +41,7 @@
             <li><i class="fa fa-phone" style="font-size: 26px; padding: 0 15px 0 5px;"></i>0800 648 787<br>(03) 381 0333</li><br><br>
             <li ><i class="fa fa-map-marker" style="font-size: 30px; padding: 0 12px 0 8px"></i>Unit 2, 58-56 Carmen Road
               Hornby, Christchurch 8042</li><br><br>
-          <li><i class="fa fa-envelope-open" style="font-size: 24px; padding:5px 12px 0 5px"></i>info@manageit.net.nz<br>sales@manageit.net.nz</li><br>
+          <li><i class="fa fa-envelope-open" style="font-size: 24px; padding:5px 12px 0 5px"></i>info@manageit.nz<br>sales@manageit.nz</li><br>
 
           </ul>
         </div>
@@ -54,7 +54,9 @@
       </div>
 
 
+
       <div class="bottom-bar" style="font-size: 2.0vw; top:100px; text-align: center;">Copyright © 2019 manageIT. All Rights Reserved. Designed by In House Web.</div>
+
 
     </div>
 
@@ -197,13 +199,16 @@
     top: 12px;
   }
   .bottom-bar{
-    top:30%;
     margin-right: auto;
     margin-left: auto;
-    width: 600px;
+    width: 100%;
     position: relative;
     height: 20px;
     color: #7D7E75;
+    font-size: 1.0vw;
+    top: 100px;
+    text-align: center;
+
 
   }
   .columnTitle{
@@ -223,6 +228,18 @@
 
 
   @media (max-width:800px){
+    .bottom-bar{
+      margin-right: auto;
+      margin-left: auto;
+      width: 600px;
+      position: relative;
+      height: 20px;
+      color: #7D7E75;
+      font-size: 2.0vw;
+      top:100px;
+      text-align: center;
+
+    }
     .ContactUs{
       display: inline-block;
       height:90%;

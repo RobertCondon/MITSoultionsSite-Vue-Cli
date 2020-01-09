@@ -132,6 +132,8 @@ export default {
     width: 31%;
     margin: 16% auto 10% auto;
     transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+    -ms-transform: translateX(150%);
     transition: 0.3s;
 
   }
@@ -161,10 +163,14 @@ export default {
     background: #ae4b67;
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.2);
     transform: translate3d(0, -2px, 0);
+    -webkit-transform: translate3d(0, -2px, 0);
+    -ms-transform: translate3d(0, -2px, 0);
   }
   .button:active {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
     transform: translate3d(0, 1px, 0);
+    -webkit-transform: translate3d(0, -2px, 0);
+    -ms-transform: translate3d(0, -2px, 0);
   }
 
 
@@ -238,6 +244,8 @@ export default {
       width: 90%;
       margin: 30% auto 0 auto;
       transform: translateX(3%);
+      -webkit-transform: translateX(3%);
+      -ms-transform: translateX(3%);
       transition: 0.3s;
     }
     input,  textarea  {
