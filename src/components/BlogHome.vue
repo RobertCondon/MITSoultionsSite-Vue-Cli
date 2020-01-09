@@ -6,6 +6,7 @@
         <div v-for="blog in blogs" v-bind:key="blog">{{blog}}</div>
 
 
+
     </div>
 </template>
 
@@ -16,7 +17,8 @@
             return {
                 myUrl: 'asdfb',
                 blogContent:"",
-                blogs: ''
+                blogs: '',
+                thumbnail: ''
             }
         },
         methods: {
@@ -25,7 +27,8 @@
 
                     const blogs = await BlogController.getAll();
                     console.log(blogs.data.Blogs);
-                    this.blogs = blogs.data.Blogs;
+                    this.blogs = blogs.data.Blogs
+                    this.thumbnail = this.blogs[9].Thumbnail.data
                     // this.blogContent = blogData.data.blog.Content;
                     // document.getElementById('blog').innerHTML = this.blogContent
                 } catch (e) {

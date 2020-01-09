@@ -1,43 +1,57 @@
 <template>
   <div class="wrapper">
-    <div id="control-bar" style="height: 20%;">
-      <div style="position: relative;">
-        <span>
-          <div class="command-bar" style="display: inline-block">
-            <button v-for="command in fontCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
-              <i class="command.icon"></i>{{command.text}}
-            </button>
-          </div>
-          <div  class="command-bar" style="display: inline-block">
-            <button v-for="command in alignCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
-              <i class="command.icon"></i>{{command.text}}
-            </button>
-          </div>
-          <div  class="command-bar" style="display: inline-block">
-            <button v-for="command in insertCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
-              <i class="command.icon"></i>{{command.text}}
-            </button>
-          </div>
-          <div  class="command-bar" style="display: inline-block">
-            <button v-for="command in removeCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
-              <i class="command.icon"></i>{{command.text}}
-            </button>
-          </div>
+      <div v-if="correct === true">
+      <div id="control-bar" style="height: 20%;">
+        <div style="position: relative;">
+          <span>
+            <div class="command-bar" style="display: inline-block">
+              <button v-for="command in fontCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
+                <i class="command.icon"></i>{{command.text}}
+              </button>
+            </div>
+            <div  class="command-bar" style="display: inline-block">
+              <button v-for="command in alignCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
+                <i class="command.icon"></i>{{command.text}}
+              </button>
+            </div>
+            <div  class="command-bar" style="display: inline-block">
+              <button v-for="command in insertCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
+                <i class="command.icon"></i>{{command.text}}
+              </button>
+            </div>
+            <div  class="command-bar" style="display: inline-block">
+              <button v-for="command in removeCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
+                <i class="command.icon"></i>{{command.text}}
+              </button>
+            </div>
 
-        </span>
+          </span>
+
+        </div>
+        <button class="get-html" v-on:click="getHTML"> Get HTML</button>
+
+        <!--<span><code class="btn btn-xs %btnClass%" title="%desc%" onmousedown="event.preventDefault();" onclick="doCommand(\'%cmd%\')"><i class="%iconClass%"></i> %cmd%</code></span>'-->
+
       </div>
-      <button class="get-html" v-on:click="getHTML"> Get HTML</button>
+      <div id="help">asdasd</div>
+      <div id="Title" contenteditable="true"> Place Your Title Here </div>
+      <div id="blurb" contenteditable="true"> Place your Blurb here</div>
+      <div id="content" contenteditable="true">Place Your Content Here</div>
+      <div id="author" contenteditable="true"> Place your Author Name here</div>
+        <form id="uploadbanner" enctype="multipart/form-data" >
+          Place your thumbnail here <input id="thumbnail" ref="file" name="myfile" type="file" required @change="onFileChange" accept="image/*"/>
+  <!--        <input type="submit" value="submit" id="submit" />-->
+        </form>
 
-      <!--<span><code class="btn btn-xs %btnClass%" title="%desc%" onmousedown="event.preventDefault();" onclick="doCommand(\'%cmd%\')"><i class="%iconClass%"></i> %cmd%</code></span>'-->
 
+      <img id="photo">
     </div>
-    <div id="help">asdasd</div>
-    <div id="Title" contenteditable="true"> Place Your Title Here </div>
-    <div id="blurb" contenteditable="true"> Place your Blurb here</div>
-    <div id="content" contenteditable="true">Place Your Content Here</div>
-    <div id="link" contenteditable="true"> Place your Link here</div>
-    <div id="author" contenteditable="true"> Place your Author Name here</div>
-
+      <div v-else>
+          <label>Please Enter the Password
+          <input id="password">
+              <button v-on:click="checkPass">Submit Password</button>
+      </label>
+      </div>
   </div>
 </template>
 
@@ -49,6 +63,8 @@
       return {
         // msg: "<html><head><title>titleTest</title></head><body><a href='test0'>test01</a><img src="../assets/logo.png"><a href='test1'>test02</a><a href='test2'>test03</a></body></html>"
         userInput: '',
+          correct: false,
+        password: "1234",
         parms: [{
           "cmd": "aCommandName",
           "desc": "A DOMString representing the name of the command"
@@ -207,7 +223,8 @@
         Blurb: '',
         Link: '',
         Author: '',
-        Date: ''
+        Date: '',
+        thumbnail:''
 
       }
 
@@ -215,10 +232,17 @@
     mounted() {
 
 
+
     },
     methods: {
 
-
+        checkPass: function() {
+          this.userInput = document.getElementById("password").value;
+          console.log(this.userInput)
+          if (this.userInput === this.password) {
+              this.correct = true;
+          }
+        },
       sendHtml: function () {
         this.userInput = document.getElementById('userInput').value;
         var outputSection = document.getElementById('output');
@@ -229,27 +253,76 @@
         document.execCommand(command.cmd, false, (val || ""));
 
       },
+
+      async onFileChange(event){
+
+        var blobData =  this.$refs.file.files[0];
+        // let blob = new Blob([blobData],{type: 'image/*'});
+
+        function readFile(file, onloadCallback) {
+          var reader = new FileReader();
+          reader.onload = onloadCallback;
+          reader.readAsDataURL(file)
+        }
+        self.data = '';
+        readFile(blobData, function(e){
+          self.data = e.target.result;
+          console.log(self.data)
+        });
+
+
+        console.log(event)
+
+      },
       async getHTML() {
           try {
+            // var thumbnail = "";
+            // var reader = new FileReader();
+            // reader.addEventListener('load', function() {
+            //
+            //   reader.readAsDataURL(this.result);
+            //   console.log(this.result)
+            // });
+            // reader.readAsText(document.getElementById('thumbnail').files[0]);
+            // // console.log(thumbnail);
+            // document.querySelector("#image").src =";"
 
 
-            this.Title = document.getElementById('Title').innerHTML;
+            // reader.onloadend = function() {
+            //   var base64data = reader.result;
+            //   // console.log(base64data);
+            // }
+
+
+
+
+
+
+            // let data = new FormData()
+            this.Title = document.getElementById('Title').innerText;
             this.Content = document.getElementById('content').innerHTML;
-            this.Blurb = document.getElementById('blurb').innerHTML;
-            this.Link = document.getElementById('link').innerHTML;
-            this.Author = document.getElementById('author').innerHTML;
+            this.Blurb = document.getElementById('blurb').innerText;
+            this.Author = document.getElementById('author').innerText;
             this.Date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
 
+            // data.append("Thumbnail", this.Thumbnail, "image.png");
+
+
+            // console.log(this.thumbnail)
             const response = await BlogController.createBlog({
-              Content: this.Content,
               Title: this.Title,
+              Content: this.Content,
               Blurb: this.Blurb,
               Author: this.Author,
-              Date: this.Date
+              Date: this.Date,
+              Thumbnail: self.data
+
             });
+
+
             document.getElementById('help').innerHTML = JSON.stringify(response);
           } catch (err) {
-            this.error = err.response.data.error;
+            this.error = err;
             console.log(this.error)
           }
 

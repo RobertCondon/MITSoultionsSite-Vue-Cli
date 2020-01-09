@@ -64,13 +64,14 @@
                      style="text-align: center; padding: 15px; color: #272727;"
                       >
 
-                  <h2><p style="text-align: center; font-family: 'Lora',serif;">{{testlist[i].short}}</p></h2>
-                  <p v-bind:v-for="quote in testlist[i].quote" style="font-family: 'Martel', serif; text-align: left; color: #555; " >{{quote}}</p>
+                  <h2 style="text-align: center; font-family: 'Lora',serif;">{{testlist[i].short}} </h2>
+                  <p v-bind:key="quote" v-for="quote in testlist[i].quote" style="font-family: 'Martel', serif; text-align: left; color: #555; " >{{quote}}</p>
                   <p style="text-align: center; font-family: 'Georgia',serif; font-size: 26px; ">{{testlist[i].author}}</p>
                   <img :src="testlist[i].logo" style="width: auto; height: auto;">
                 </div>
 
-              </div>
+
+          </div>
         </div>
 
 

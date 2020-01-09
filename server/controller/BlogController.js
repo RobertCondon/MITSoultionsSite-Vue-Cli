@@ -5,7 +5,8 @@ module.exports = {
     async createBlog (req, res) {
         try {
             const blogData = await Blog.create(req.body);
-            res.send(blogData.toJSON())
+            console.log(req.body)
+            res.send(blogData)
         } catch (err) {
             res.status(400).send({
 
@@ -46,6 +47,21 @@ module.exports = {
             const allBlogs = await Blog.findAll();
             res.send({
                 Blogs: allBlogs
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    },
+    async uploadThumbnail (req,res) {
+        try {
+            const upload = await Blog.upsert(req.body, {
+                where: {
+                    Title: req.body.Title
+                }
+            });
+            console.log(upload);
+            res.send({
+                message: upload
             })
         } catch (e) {
             console.log(e)

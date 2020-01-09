@@ -26,11 +26,6 @@
 
 
 
-
-
-
-
-
       <b-collapse id="ml-auto" is-nav right>
         <b-navbar-nav class="ml-auto" id="RightLinks">
           <b-nav-item class="nav-link"  href="#" >

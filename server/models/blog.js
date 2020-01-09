@@ -11,7 +11,11 @@ module.exports = (sequelize, DataTypes) =>{
         },
         Title:{
             type: DataTypes.STRING
+        },
+        Thumbnail: {
+            type: DataTypes.STRING
         }
+
     });
     return Blog
 };

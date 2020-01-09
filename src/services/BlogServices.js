@@ -1,16 +1,18 @@
 import Api from '@/services/api'
 
 export default {
-    createBlog (credentials) {
-        return Api().post('/create', credentials)
+    createBlog (data) {
+        return Api().post('/create', data)
     },
     getBlog (blogId) {
         return Api().get('/blog/'+blogId)
     },
     getAll (){
         return Api().get('/blog')
-
-    }
+    },
+    // uploadThumbnail (file){
+    //     return Api().post('/create', file)
+    // }
 }
 
 // AuthenticationService.register({
