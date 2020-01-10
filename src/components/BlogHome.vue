@@ -2,7 +2,7 @@
     <div class="blog">
 
         <div>{{myUrl}}</div>
-
+        
         <div class="BlogPost" v-for="blog in blogs" v-bind:key="blog">
             <img class="Thumbnail" v-bind:src="blog.Thumbnail" alt="../assets/images/BrokenImage.png">
             <div class="BlogContent">
@@ -14,6 +14,7 @@
                 </div>
             </div>
         </div>
+
 
 
 

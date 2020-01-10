@@ -64,21 +64,12 @@
                     // console.log(blogData.data.blog.Content);
                     reader.addEventListener('loadend', (e) => {
                         self.thumbnail = e.srcElement.result;
-                        // console.log(self.thumbnail)
+
                     })
-                    // reader.readAsText(blogData.data.blog.Thumbnail);
 
                     console.log(blogData.data.blog.Thumbnail)
-                    //Working on retrieving blob image
-                    // var blob = new Blob([blogData.data.Thumbnail], {type:"image/jpeg"});
-                    // this.thumbnail = URL.createObjectURL(blob);
-                    // // this.thumbnail = "data:image/png;base64," + btoa(String.fromCharCode.apply(null, new Uint8Array(blogData.data.blog.Thumbnail.data)))
-
-                    // var b64 = Buffer.from(blogData.data.blog.Thumbnail, 'hex').toString('base64');
                     this.thumbnail = blogData.data.blog.Thumbnail;
-
                     this.blogContent = blogData.data.blog.Content;
-                    // console.log(this.thumbnail)
                     document.getElementById('blog').innerHTML = this.blogContent;
                    document.querySelector("#image").src = this.thumbnail
 
