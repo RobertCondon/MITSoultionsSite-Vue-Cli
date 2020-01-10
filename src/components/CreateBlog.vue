@@ -1,31 +1,31 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" style="padding: 20px;">
       <div v-if="correct === true">
           <div id="tabs">
-              <button id="tab-font" v-on:click="selectFont">Fonts</button>
-              <button id="tab-alignment" v-on:click="selectAlign">Alignment</button>
-              <button id="tab-insert" v-on:click="selectInsert">Insert</button>
+              <button id="tab-font" v-on:click="selectFont" style="background-color: #dadbe0;border-bottom: 1px #dadbe0 solid">Fonts</button>
+              <button id="tab-alignment" v-on:click="selectAlign" style="background-color: white; border-bottom: 1px gray solid">Alignment</button>
+              <button id="tab-insert" v-on:click="selectInsert" style="background-color: white; border-bottom: 1px gray solid">Insert</button>
           </div>
       <div id="control-bar" style="height: 20%;">
         <div style="position: relative;">
           <span>
-            <div v-if="selected ==='Font'" class="command-bar" style="display: inline-block">
+            <div v-if="selected ==='Font'" class="command-bar" style="display: block; padding-left: 2%">
               <button v-for="command in fontCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
-                <i class="command.icon"></i>{{command.text}}
+                {{command.text}}
               </button>
             </div>
-            <div  v-if="selected ==='Align'" class="command-bar" style="display: inline-block">
+            <div  v-if="selected ==='Align'" class="command-bar" style="display: inline-block; padding-left: 2%;">
               <button v-for="command in alignCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
-                <i class="command.icon"></i>{{command.text}}
+               {{command.text}}
               </button>
             </div>
-            <div  v-if="selected ==='Insert'" class="command-bar" style="display: inline-block">
+            <div  v-if="selected ==='Insert'" class="command-bar" style="display: inline-block; padding-left: 2%">
               <button v-for="command in insertCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
-                <i class="command.icon"></i>{{command.text}}
+                {{command.text}}
               </button>
             </div>
-            <div  class="command-bar" style="display: inline-block">
-              <button v-for="command in removeCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
+            <div  class="command-bar" style="display: block; float: right; padding-right: 2%; border: 1px gray solid; border-top: none; border-radius: 0 0 20px 0; padding-bottom: 5px" >
+              <button v-for="command in removeCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" style="float: right; margin-right: 10px">
                 <i class="command.icon"></i>{{command.text}}
               </button>
             </div>
@@ -33,18 +33,19 @@
           </span>
 
         </div>
-        <button class="get-html" v-on:click="getHTML"> Get HTML</button>
+        <button class="get-html" v-on:click="getHTML"> Save to Blogsite! </button>
 
         <!--<span><code class="btn btn-xs %btnClass%" title="%desc%" onmousedown="event.preventDefault();" onclick="doCommand(\'%cmd%\')"><i class="%iconClass%"></i> %cmd%</code></span>'-->
 
       </div>
+          <br>
           <div style="position: relative; width: 75%; margin-left: auto; margin-right: auto">
-      <div id="Title" contenteditable="true"> Place Your Title Here </div>
-      <div id="blurb" contenteditable="true"> Place your Blurb here</div>
-      <div id="content" contenteditable="true">Place Your Content Here</div>
-      <div id="author" contenteditable="true"> Place your Author Name here</div>
-        <form id="uploadbanner" enctype="multipart/form-data" >
-          Place your thumbnail here <input id="thumbnail" ref="file" name="myfile" type="file" required @change="onFileChange" accept="image/*"/>
+             <div id="Title" contenteditable="true" style="margin-top: 10px;"> Title </div>
+              <div id="blurb" contenteditable="true" style="margin-top: 10px;"> Blurb</div>
+              <div id="content" contenteditable="true" style="margin-top: 10px;">Content</div>
+              <div id="author" contenteditable="true" style="margin-top: 10px;"> Author</div>
+        <form id="uploadbanner" enctype="multipart/form-data" style="margin-top: 10px;">
+            <label>Thumbnail</label><input id="thumbnail" ref="file" name="myfile" type="file" required @change="onFileChange" accept="image/*"/>
         </form>
           </div>
 
@@ -60,6 +61,7 @@
 
 <script>
   import BlogController from '@/services/BlogServices'
+// import JQuery from 'jquery'
   export default {
     name: 'HelloWorld',
     data() {
@@ -240,12 +242,35 @@
     methods: {
 
         selectFont: function(){
+
+
+            // $('tab-font').css({'background-color': '#dadbe0'});
+            // $('tab-alignment').css({'background-color': 'white'});
+            // $('tab-insert').css({'background-color': 'white'});
+            document.getElementById('tab-font').style.backgroundColor = '#dadbe0';
+            document.getElementById('tab-font').style.borderBottom = '1px #dadbe0 solid';
+            document.getElementById('tab-alignment').style.backgroundColor = 'white';
+            document.getElementById('tab-alignment').style.borderBottom = "1px gray solid";
+            document.getElementById('tab-insert').style.backgroundColor = 'white';
+            document.getElementById('tab-insert').style.borderBottom = '1px gray solid';
             this.selected = 'Font';
         },
         selectAlign: function(){
+            document.getElementById('tab-font').style.backgroundColor = 'white';
+            document.getElementById('tab-font').style.borderBottom = '1px gray solid';
+            document.getElementById('tab-alignment').style.backgroundColor = '#dadbe0';
+            document.getElementById('tab-alignment').style.borderBottom = '1px #dadbe0 solid';
+            document.getElementById('tab-insert').style.backgroundColor = 'white';
+            document.getElementById('tab-insert').style.borderBottom = '1px gray solid';
             this.selected = 'Align';
         },
         selectInsert: function(){
+            document.getElementById('tab-font').style.backgroundColor = 'white';
+            document.getElementById('tab-font').style.borderBottom = '1px gray solid';
+            document.getElementById('tab-alignment').style.backgroundColor = 'white';
+            document.getElementById('tab-alignment').style.borderBottom = '1px gray solid';
+            document.getElementById('tab-insert').style.backgroundColor = '#dadbe0';
+            document.getElementById('tab-insert').style.borderBottom = '1px #dadbe0 solid';
             this.selected = 'Insert';
         },
         checkPass: function() {
@@ -266,7 +291,7 @@
 
       },
 
-      async onFileChange(event){
+      async onFileChange(){
 
         var blobData =  this.$refs.file.files[0];
         // let blob = new Blob([blobData],{type: 'image/*'});
@@ -279,48 +304,21 @@
         self.data = '';
         readFile(blobData, function(e){
           self.data = e.target.result;
-          console.log(self.data)
+
         });
 
 
-        console.log(event)
-
       },
-      async getHTML() {
+
+        async getHTML() {
           try {
-            // var thumbnail = "";
-            // var reader = new FileReader();
-            // reader.addEventListener('load', function() {
-            //
-            //   reader.readAsDataURL(this.result);
-            //   console.log(this.result)
-            // });
-            // reader.readAsText(document.getElementById('thumbnail').files[0]);
-            // // console.log(thumbnail);
-            // document.querySelector("#image").src =";"
 
-
-            // reader.onloadend = function() {
-            //   var base64data = reader.result;
-            //   // console.log(base64data);
-            // }
-
-
-
-
-
-
-            // let data = new FormData()
             this.Title = document.getElementById('Title').innerText;
             this.Content = document.getElementById('content').innerHTML;
             this.Blurb = document.getElementById('blurb').innerText;
             this.Author = document.getElementById('author').innerText;
             this.Date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
 
-            // data.append("Thumbnail", this.Thumbnail, "image.png");
-
-
-            // console.log(this.thumbnail)
             const response = await BlogController.createBlog({
               Title: this.Title,
               Content: this.Content,
@@ -330,9 +328,13 @@
               Thumbnail: self.data
 
             });
+            console.log(response.Date);
+            //Clear Fields after saving to database
+            document.getElementById('Title').innerText = "";
+            document.getElementById('content').innerHTML = "";
+            document.getElementById('blurb').innerText = "";
+            document.getElementById('author').innerText = "";
 
-
-            document.getElementById('help').innerHTML = JSON.stringify(response);
           } catch (err) {
             this.error = err;
             console.log(this.error)
@@ -359,20 +361,52 @@
     height: 100%;
     position: relative;
       float: left;
+      padding-top: 10px;
+      display: none;
+      /*animation: fade-in 0.5s;*/
+      background-color: #dadbe0;
+      border: 1px gray solid;
+      border-bottom: none;
+      border-top: none;
+  }
+  .command-bar button {
+      float: left;
+      padding: 5px;
+      margin-left: 5px;
+
+
   }
   #control-bar{
-    height: 200px
+    height: 200px;
+      padding-bottom: 2%;
+
   }
     #tabs {
-        background-color: #dadbe0;
+        /*background-color: #dadbe0;*/
+        /*border-top: 1px gray solid;*/
+        border-left: 1px gray solid ;
+        border-right: 1px gray solid;
 
     }
     #tabs button{
+        position: relative;
         width: 10%;
         float: left;
+        left:-1px;
         border-top: 1px gray solid;
-        border-left: 1px gray solid ;
+        border-left: 1px gray solid;
         border-right: 1px gray solid;
-        border-radius: 50% 50% 0 0;
+        border-bottom: none;
+        /*background-color: #dadbe0;*/
+        border-radius: 20px 20px 0 0;
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
 </style>
