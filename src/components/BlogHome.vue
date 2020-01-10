@@ -3,7 +3,7 @@
 
         <div>{{myUrl}}</div>
 
-        <div v-for="blog in blogs" v-bind:key="blog">{{blog}}</div>
+        <div v-for="blog in blogs" v-bind:key="blog"><img id="image"/></div>
 
 
 

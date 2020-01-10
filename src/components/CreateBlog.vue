@@ -1,20 +1,25 @@
 <template>
   <div class="wrapper">
       <div v-if="correct === true">
+          <div id="tabs">
+              <button id="tab-font" v-on:click="selectFont">Fonts</button>
+              <button id="tab-alignment" v-on:click="selectAlign">Alignment</button>
+              <button id="tab-insert" v-on:click="selectInsert">Insert</button>
+          </div>
       <div id="control-bar" style="height: 20%;">
         <div style="position: relative;">
           <span>
-            <div class="command-bar" style="display: inline-block">
+            <div v-if="selected ==='Font'" class="command-bar" style="display: inline-block">
               <button v-for="command in fontCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
                 <i class="command.icon"></i>{{command.text}}
               </button>
             </div>
-            <div  class="command-bar" style="display: inline-block">
+            <div  v-if="selected ==='Align'" class="command-bar" style="display: inline-block">
               <button v-for="command in alignCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
                 <i class="command.icon"></i>{{command.text}}
               </button>
             </div>
-            <div  class="command-bar" style="display: inline-block">
+            <div  v-if="selected ==='Insert'" class="command-bar" style="display: inline-block">
               <button v-for="command in insertCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
                 <i class="command.icon"></i>{{command.text}}
               </button>
@@ -33,18 +38,16 @@
         <!--<span><code class="btn btn-xs %btnClass%" title="%desc%" onmousedown="event.preventDefault();" onclick="doCommand(\'%cmd%\')"><i class="%iconClass%"></i> %cmd%</code></span>'-->
 
       </div>
-      <div id="help">asdasd</div>
+          <div style="position: relative; width: 75%; margin-left: auto; margin-right: auto">
       <div id="Title" contenteditable="true"> Place Your Title Here </div>
       <div id="blurb" contenteditable="true"> Place your Blurb here</div>
       <div id="content" contenteditable="true">Place Your Content Here</div>
       <div id="author" contenteditable="true"> Place your Author Name here</div>
         <form id="uploadbanner" enctype="multipart/form-data" >
           Place your thumbnail here <input id="thumbnail" ref="file" name="myfile" type="file" required @change="onFileChange" accept="image/*"/>
-  <!--        <input type="submit" value="submit" id="submit" />-->
         </form>
+          </div>
 
-
-      <img id="photo">
     </div>
       <div v-else>
           <label>Please Enter the Password
@@ -61,7 +64,7 @@
     name: 'HelloWorld',
     data() {
       return {
-        // msg: "<html><head><title>titleTest</title></head><body><a href='test0'>test01</a><img src="../assets/logo.png"><a href='test1'>test02</a><a href='test2'>test03</a></body></html>"
+          selected: "Font",
         userInput: '',
           correct: false,
         password: "1234",
@@ -236,6 +239,15 @@
     },
     methods: {
 
+        selectFont: function(){
+            this.selected = 'Font';
+        },
+        selectAlign: function(){
+            this.selected = 'Align';
+        },
+        selectInsert: function(){
+            this.selected = 'Insert';
+        },
         checkPass: function() {
           this.userInput = document.getElementById("password").value;
           console.log(this.userInput)
@@ -343,11 +355,24 @@
     width: 100%;
   }
   .command-bar {
-    width: 25%;
+    width: 100%;
     height: 100%;
     position: relative;
+      float: left;
   }
   #control-bar{
     height: 200px
   }
+    #tabs {
+        background-color: #dadbe0;
+
+    }
+    #tabs button{
+        width: 10%;
+        float: left;
+        border-top: 1px gray solid;
+        border-left: 1px gray solid ;
+        border-right: 1px gray solid;
+        border-radius: 50% 50% 0 0;
+    }
 </style>

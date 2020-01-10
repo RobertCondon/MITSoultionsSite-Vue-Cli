@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) =>{
         },
         Thumbnail: {
             type: DataTypes.STRING
+        },
+        Date: {
+            type: DataTypes.DATEONLY
         }
 
     });
