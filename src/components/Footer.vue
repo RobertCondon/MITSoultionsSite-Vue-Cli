@@ -55,7 +55,7 @@
 
 
 
-      <div class="bottom-bar" style="font-size: 2.0vw; top:100px; text-align: center;">Copyright © 2019 manageIT. All Rights Reserved. Designed by In House Web.</div>
+      <div class="bottom-bar" style="font-size: 1.1vw; top:80px; text-align: center;">Copyright © 2019 manageIT. All Rights Reserved. Designed by In House Web.</div>
 
 
     </div>
