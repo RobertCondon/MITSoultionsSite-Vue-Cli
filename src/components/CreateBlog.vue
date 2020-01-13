@@ -330,10 +330,6 @@
             });
             console.log(response.Date);
             //Clear Fields after saving to database
-            document.getElementById('Title').innerText = "";
-            document.getElementById('content').innerHTML = "";
-            document.getElementById('blurb').innerText = "";
-            document.getElementById('author').innerText = "";
 
           } catch (err) {
             this.error = err;
@@ -399,6 +395,9 @@
         border-bottom: none;
         /*background-color: #dadbe0;*/
         border-radius: 20px 20px 0 0;
+    }
+    button:focus{
+        outline: none;
     }
 
     @keyframes fade-in {
