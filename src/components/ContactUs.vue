@@ -38,7 +38,7 @@ export default {
       this.isMobile = window.innerWidth < 800
     },
      HoverExpand() {
-       document.getElementById('message').style.width = "572px";
+       /*document.getElementById('message').style.width = "572px";
        document.getElementById('message').style.maxWidth = "572px";
        document.getElementById('message').style.border = "solid 2px #6f6475";
 
@@ -48,11 +48,11 @@ export default {
        for (i = 0; i < input.length; i++) {
          input[i].style.width = "572px";
          input[i].style.border = "solid 2px #6f6475";
-       }
+       }*/
 
      },
     HoverBack() {
-      document.getElementById('message').style.width = null;
+      /*document.getElementById('message').style.width = null;
       document.getElementById('message').style.border = null;
 
       let form = document.getElementById("form");
@@ -61,10 +61,10 @@ export default {
       for (i = 0; i < input.length; i++) {
         input[i].style.width = null;
         input[i].style.border = null;
-      }
+      }*/
     },
     ClickExpand() {
-      document.getElementById('message').style.width = "420px";
+      /*document.getElementById('message').style.width = "420px";
       document.getElementById('message').style.height = "220px";
       document.getElementById('form').style.margin = "400px auto 100px auto";
       document.getElementById('message').style.backgroundColor = "#97869d";
@@ -76,11 +76,11 @@ export default {
         input[i].style.width = "420px";
         input[i].style.height = "50px";
         input[i].style.backgroundColor = "#97869d";
-      }
+      }*/
 
     },
     ClickBack() {
-      setTimeout(() => {
+      /*setTimeout(() => {
         document.getElementById('message').style.width = null;
         document.getElementById('message').style.height = null;
         document.getElementById('message').style.border = null;
@@ -96,7 +96,7 @@ export default {
           input[i].style.border = null;
           input[i].style.backgroundColor = null;
         }
-      }, 200);
+      }, 200);*/
     },
 
     /*
@@ -114,7 +114,7 @@ export default {
 
 </script>
 
-<style >
+<style scoped>
   @import url(https://fonts.googleapis.com/css?family=Lato:400);
 
 
@@ -176,8 +176,8 @@ export default {
 
   input {
     font-size: 1.0vw;
-    width: var(--AllWidth);
-    height: var(--Height);
+    width: 90%;
+    height: 3.8vw;
     padding: 0px 15px 0px 15px;
 
     background: transparent;
@@ -198,22 +198,22 @@ export default {
     color: #e2dedb;
   }
   input:hover {
-    height: calc(var(--Height)*1.1);
-    width: calc(var(--AllWidth)*1.1);
+    height: calc(3.8vw*1.1);
+    width: calc(90%*1.1);
     border: solid 3px #859e30;
   }
   textarea:hover {
-    max-height: calc(var(--TextHeight)*1.1);
-    height: calc(var(--TextHeight)*1.1);
-    max-width: calc(var(--TextWidth)*1.1);
-    width: calc(var(--TextWidth)*1.1);
+    max-height: calc(13vw*1.1);
+    height: calc(13vw*1.1);
+    max-width: calc(90%*1.1);
+    width: calc(90%*1.1);
     border: solid 3px #859e30;
   }
 
   textarea {
-    width: var(--TextWidth);
-    max-width: var(--TextWidth);
-    height:  var(--TextHeight);
+    width: 90%;
+    max-width: 90%;
+    height:  13vw;
     max-height:  90%;
     padding: 15px;
 
@@ -250,6 +250,7 @@ export default {
     }
     input,  textarea  {
       font-size: 4.0vw;
+      height: initial;
     }
   }
 

@@ -1,6 +1,28 @@
 <template>
   <div class="wrapper" style="padding: 20px;">
+      <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div id="ModalContent" class="modal-content">
+              <span v-on:click="ClosePopUp" class="close">&times;</span>
+              <h2 style="display: block; margin-bottom: 30px">{{ModalButtons.Question}}</h2>
+              <div style="width: 200px; display: inline-block;  white-space: nowrap;" v-for="Option in ModalButtons.OptionsList" v-bind:key="Option.Text">
+                <button style="display: inline-block; white-space: nowrap;" v-on:click="CommandFromModal(Option)">{{Option.Text}}</button>
+              </div>
+          </div>
+
+      </div>
+      <!-- The Modal -->
+
       <div v-if="correct === true">
+          <button v-on:click="PopUp" id="myBtn">Open Modal</button>
+
+
+
+
+
+
+
           <div id="tabs">
               <button id="tab-font" v-on:click="selectFont" style="background-color: #dadbe0;border-bottom: 1px #dadbe0 solid">Fonts</button>
               <button id="tab-alignment" v-on:click="selectAlign" style="background-color: white; border-bottom: 1px gray solid">Alignment</button>
@@ -10,22 +32,22 @@
         <div style="position: relative;">
           <span>
             <div v-if="selected ==='Font'" class="command-bar" style="display: block; padding-left: 2%">
-              <button v-for="command in fontCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
+              <button v-for="command in fontCommands" class="format-button" v-bind:key="command.cmd" v-on:click="doCommand(command)" >
                 {{command.text}}
               </button>
             </div>
             <div  v-if="selected ==='Align'" class="command-bar" style="display: inline-block; padding-left: 2%;">
-              <button v-for="command in alignCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
+              <button v-for="command in alignCommands" class="format-button" v-bind:key="command.cmd" v-on:click="doCommand(command)" >
                {{command.text}}
               </button>
             </div>
             <div  v-if="selected ==='Insert'" class="command-bar" style="display: inline-block; padding-left: 2%">
-              <button v-for="command in insertCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
+              <button v-for="command in insertCommands" class="format-button" v-bind:key="command.cmd" v-on:click="doCommand(command)" >
                 {{command.text}}
               </button>
             </div>
             <div  class="command-bar" style="display: block; float: right; padding-right: 2%; border: 1px gray solid; border-top: none; border-radius: 0 0 20px 0; padding-bottom: 5px" >
-              <button v-for="command in removeCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" style="float: right; margin-right: 10px">
+              <button v-for="command in removeCommands" class="format-button" v-bind:key="command.cmd" v-on:click="doCommand(command)" style="float: right; margin-right: 10px">
                 <i class="command.icon"></i>{{command.text}}
               </button>
             </div>
@@ -61,14 +83,18 @@
 
 <script>
   import BlogController from '@/services/BlogServices'
-// import JQuery from 'jquery'
+  // import JQuery from 'jquery'
+
+
   export default {
     name: 'HelloWorld',
-    data() {
+      data() {
       return {
           selected: "Font",
         userInput: '',
-          correct: false,
+          correct: true,
+          ModalButtonSize: 0,
+          ModalButtons: [{'Question': 'TestingStuff'}],
         password: "1234",
         parms: [{
           "cmd": "aCommandName",
@@ -93,12 +119,33 @@
             "val": "rgba(0,0,0,0.5)",
             "desc": "Changes a font color for the selection or at the insertion point. This requires a color value string to be passed in as a value argument."
           },
+            /* @import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,400,600|Montserrat&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500i&display=swap');?*/
           {
             "cmd": "fontName",
             "val": "'Inconsolata', monospace",
             "text": "Font Style",
+              "Modal": "true",
+              "Question": "What Font would you like?",
+              'OptionsList': [
+                  {
+                      "cmd": "fontName",
+                      'Text': 'Bebas Neue'
+                  },
+                  {
+                      "cmd": "fontName",
+                      'Text': 'Big Shoulders Text'
+                  },
+                  {
+                      "cmd": "fontName",
+                      'Text': 'Comic Sans Ms'
+                  }
+
+              ],
             "desc": "Changes the font name for the selection or at the insertion point. This requires a font name string (\"Arial\" for example) to be passed in as a value argument."
           },
+
           {
             "cmd": "fontSize",
             "val": "1-7",
@@ -179,6 +226,11 @@
             "desc": "Outdents the line containing the selection or insertion point."
           },
         ],
+          /*
+          doCommand: function (command) {
+        var val = (typeof command.val !== "undefined") ? prompt("Value for " + command.cmd + "?", command.val) : "";
+        document.execCommand(command.cmd, false, (val || ""));}
+           */
         insertCommands: [
           {
             "cmd": "createLink",
@@ -235,11 +287,44 @@
 
     },
     mounted() {
+        // Get the modal
+        var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        },
+
+// When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        },
+
+// When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                document.getElementById("myModal").style.display = "none";
+
+            }
+        }
 
 
     },
+
     methods: {
+        PopUp: function() {
+            document.getElementById("myModal").style.display = "block"
+        },
+        ClosePopUp: function() {
+            document.getElementById("myModal").style.display = "none"
+        },
+
 
         selectFont: function(){
 
@@ -278,6 +363,7 @@
           console.log(this.userInput)
           if (this.userInput === this.password) {
               this.correct = true;
+
           }
         },
       sendHtml: function () {
@@ -286,10 +372,18 @@
         outputSection.innerHTML = this.userInput;
       },
       doCommand: function (command) {
-        var val = (typeof command.val !== "undefined") ? prompt("Value for " + command.cmd + "?", command.val) : "";
-        document.execCommand(command.cmd, false, (val || ""));
+        if(command.Modal === undefined) {
+          var val = (typeof command.val !== "undefined") ? prompt("Value for " + command.cmd + "?", command.val) : "";
+          document.execCommand(command.cmd, false, (val || ""));
+        } else {
+            this.ModalButtons = command;
+            this.PopUp();
+        }
 
       },
+        CommandFromModal(command) {
+            document.execCommand(command.cmd, false, (command.Text || ""));
+        },
 
       async onFileChange(){
 
@@ -340,7 +434,10 @@
 
       }
     },
+
   }
+
+
 </script>
 
 
@@ -408,4 +505,49 @@
             opacity: 1;
         }
     }
+
+
+
+
+
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      z-index: 1;
+    display: inline-block;
+  }
+
+  /* The Close Button */
+  .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  }
 </style>

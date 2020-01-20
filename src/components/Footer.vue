@@ -428,4 +428,12 @@
   @keyframes spin {
     100% { transform: rotate(360deg); }
   }
+  @media (max-width:800px){
+    .bottom-bar {
+      width: initial;
+    }
+    .content-container {
+      display: flex;
+    }
+  }
 </style>
