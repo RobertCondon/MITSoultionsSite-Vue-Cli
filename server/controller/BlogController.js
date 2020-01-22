@@ -53,5 +53,21 @@ module.exports = {
                 error: e
             })
         }
+    },
+    async deleteBlog(req,res) {
+        try{
+            const blogId = req.params.blogId;
+            const del = await Blog.destroy({
+                where: {
+                    id: blogId
+                }
+            })
+            console.log(del)
+
+        }catch (e) {
+            res.status(400).send({
+                error: e
+            })
+        }
     }
 };

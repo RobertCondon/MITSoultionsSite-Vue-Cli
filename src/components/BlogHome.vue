@@ -2,28 +2,39 @@
     <div class="blog">
         <navbar></navbar>
         <BlogHomeTitle></BlogHomeTitle>
-        <img style=" z-index: 1; position: absolute; transform: translate(0, -25vw); width: 100%; left: 0"  src="../assets/images/Divider2.png" alt="Ah shit lost it again">
+        <img style=" z-index: 1; position: absolute; transform: translate(0, -22vw); width: 100%; left: 0"  src="../assets/images/Divider2.png" alt="Ah shit lost it again">
+        <div>
+            <button style="display: inline-block" v-on:click="SortNewBlogs">New Order</button>
+            <input v-on:change="SortNewBlogs" style="display: inline-block" id="SearchBlog" type="text" placeholder="Search">
+        </div>
+        <div>
 
+        <div style="transition: 1s" v-for="blog in this.ShownBlogs" v-bind:key="blog.thumbnail" >
+            <transition name="BlogLoad" :key="blog.thumbnail">
+            <div style="transition: 1s" class="BlogPost" v-if="blog.Type < TotalBlogSize">
 
-        <div class="BlogPost" v-for="blog in blogs" v-bind:key="blog">
+                <img class="Thumbnail" v-bind:src="blog.Thumbnail" alt="../assets/images/BrokenImage.png">
+                <div class="BlogContent">
+                    <div class="AuthorDate">
+                        <h3 class="BlogAuthor">By: {{blog.Author}}</h3>
+                        <h3 class="BlogAuthor">{{blog.Date}}</h3>
+                    </div>
+                    <router-link tag="div" v-bind:to="'/Blog/'+blog.id">
+                        <h1 class="BlogTitle">{{blog.Title}} </h1>
+                    </router-link>
+                    <h2 class="BlogBlurb">{{blog.Blurb}}</h2>
 
-            <img class="Thumbnail" v-bind:src="blog.Thumbnail" alt="../assets/images/BrokenImage.png">
-
-            <div class="BlogContent">
-                <div class="AuthorDate">
-                    <h3 class="BlogAuthor">By: {{blog.Author}}</h3>
-                    <h3 class="BlogAuthor">{{blog.Date}}</h3>
                 </div>
-                <router-link tag="div" v-bind:to="'/Blog/'+blog.id">
-                    <h1 class="BlogTitle">{{blog.Title}} </h1>
-                </router-link>
-                <h2 class="BlogBlurb">{{blog.Blurb}}</h2>
-
             </div>
+            </transition>
+        </div>
+
         </div>
 
 
-        <Footer></Footer>
+
+
+        <Footer style="transition: 0.5s"></Footer>
 
     </div>
 </template>
@@ -33,14 +44,23 @@
     import BlogHomeTitle from "./BlogHomeTitle";
     import Footer from "./Footer";
     import Navbar from "./Navbar";
+    import JQuery from 'jquery';
+    let $ = JQuery;
+
+
     export default {
+
         components: {Navbar, Footer, BlogHomeTitle},
         data() {
             return {
                 myUrl: 'asdfb',
                 blogContent:"",
                 blogs: '',
-                thumbnail: ''
+                thumbnail: '',
+                TotalBlogSize: 2,
+                ShownBlogs: undefined,
+                TransferBlogList: undefined,
+                Reversed: false,
             }
         },
         methods: {
@@ -48,24 +68,70 @@
                 try {
 
                     const blogs = await BlogController.getAll();
+
                     console.log(blogs.data.Blogs);
-                    this.blogs = blogs.data.Blogs
-                    this.thumbnail = this.blogs[9].Thumbnail.data
+                    this.blogs = blogs.data.Blogs;
+                    this.ReRollBlogs();
+                    this.thumbnail = this.blogs[9].Thumbnail.data;
+
                     // this.blogContent = blogData.data.blog.Content;
                     // document.getElementById('blog').innerHTML = this.blogContent
                 } catch (e) {
                     console.log(e);
                     this.myUrl = e;
                 }
+            },
+
+            async ReRollBlogs() {
+
+                this.ShownBlogs = this.blogs.slice();
+                this.SortNewBlogs();
+            },
+            SortNewBlogs: function() {
+                this.ShownBlogs = this.blogs.slice();
+                let BlogLength = this.ShownBlogs.length;
+                let SearchText = document.getElementById('SearchBlog').value;
+                if(this.Reversed) {
+                    this.ShownBlogs = this.ShownBlogs.reverse();
+                }
+                this.Reversed = !this.Reversed;
+                let FilterList = [];
+                let i = 0;
+                for(i=0; i < BlogLength; i++) {
+                    if((this.ShownBlogs[i].Title.includes(SearchText) || this.ShownBlogs[i].Blurb.includes(SearchText))) {
+                        FilterList.push(this.ShownBlogs[i]);
+                        console.log("Added new chunk to list");
+                        console.log(FilterList);
+                    }
+                }
+                console.log(FilterList);
+                this.ShownBlogs = FilterList.slice();
+                for(i=0; i < this.ShownBlogs.length; i++) {
+                    this.ShownBlogs[i]["Type"] = i;
+                }
+                this.TotalBlogSize = 2;
+
             }
         },
         beforeMount() {
             this.getBlogs()
         },
+
+        computed: {
+
+        },
         mounted() {
-
-
-
+            var self = this;
+            this.$nextTick(function(){
+                window.addEventListener("scroll", function() {
+                    self.Scrolled = document.documentElement.scrollTop;
+                    if ($(window).scrollTop() + $(window).height() > $(document).height() - 200) {
+                        if(self.TotalBlogSize < self.blogs.length) {
+                            self.TotalBlogSize += 1;
+                        }
+                    }
+                })
+            })
         }
     }
 </script>
@@ -73,6 +139,7 @@
     .Thumbnail {
         width: auto;
         max-width: 30vw;
+        min-height: 17vw;
         height: auto;
         max-height: 19vw;
         horiz-align: center;
@@ -90,6 +157,7 @@
         top: 0;
         margin: 2vw 0 2vw 0;
         min-width: 72.5vw;
+        height: 23vw;
 
         box-shadow:  1px 10px 18px #888888;
         overflow: hidden; /* make sure it hides the content that overflows */
@@ -138,4 +206,18 @@
     .blog {
         background-color: #dadbe0;
     }
+    .BlogLoad-enter-active {
+        transition: all 1s ease;
+    }
+    .BlogLoad-leave-active {
+        transition: all .8s;
+    }
+    .BlogLoad-enter, .BlogLoad-leave-to
+        /* .slide-fade-leave-active below version 2.1.8 */ {
+        transform: scale(0.1);
+        -ms-transform: scale(0.1);
+        -webkit-transform: scale(0.1);
+        opacity: 0;
+    }
+
 </style>

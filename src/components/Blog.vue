@@ -4,6 +4,9 @@
         <navbar></navbar>
         <div id="Buffer"></div>
 
+        <div v-if="authorized === true">
+            <button v-on:click="deleteBlog"> Delete Blog</button>
+        </div>
         <img id="image">
         <div id="blog"></div>
 
@@ -19,7 +22,8 @@
             return {
                 myUrl: 'asdfb',
                 blogContent:"",
-                thumbnail:''
+                thumbnail:'',
+                authorized: false
             }
         },
         methods: {
@@ -35,7 +39,7 @@
 
                     })
 
-                    console.log(blogData.data.blog.Thumbnail)
+                    // console.log(blogData.data.blog.Thumbnail)
                     this.thumbnail = blogData.data.blog.Thumbnail;
                     this.blogContent = blogData.data.blog.Content;
                     document.getElementById('blog').innerHTML = this.blogContent;
@@ -46,10 +50,26 @@
                     console.log(e);
                     this.myUrl = e;
                 }
+            },
+            async deleteBlog() {
+                try {
+                    alert("Blog Deleted from Database")
+                    let id = this.$router.currentRoute.params.blogId;
+                    let del = await BlogController.deleteBlog(id);
+                    console.log(del);
+
+                } catch (e) {
+                    console.log(e)
+                }
             }
         },
         beforeMount() {
             this.getBlog()
+            if (this.$cookies.isKey("token")) {
+                this.authorized = true
+            } else {
+                this.authorized = false
+            }
         },
         mounted() {
 

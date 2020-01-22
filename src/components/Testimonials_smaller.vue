@@ -13,52 +13,23 @@
 
 
 
-            <i class="arrow animated left" style="left: 15%;
-                border: solid black;
-                border-width: 0px 7px 7px 0;
-                 display: inline-block;
-                 padding: 10px;
-
-                 height: 50px;
-                 width: 50px;
-                 float: left;
-                 position: absolute;
-                 top: 450px" v-on:click="previousItem"></i>
+            <i id="Larrow" class="arrow animated left" style="" v-on:click="previousItem"></i>
 
 
 
-            <i class="arrow animated right" style="right: 15%;
-                    border: solid black;
-                     border-width: 0px 7px 7px 0;
-                     display: inline-block;
-                     padding: 10px;
-                     height: 50px;
-                     width: 50px;
-                     float: right;
-                    top: 450px;
-                    position: absolute;"
+            <i id="Rarrow" class="arrow animated right" style=""
                      v-on:click="nextItem" ></i>
 
 
 
 
           <div class="Title" style="margin-left: auto; margin-right: auto;">
-          <span style="font-family: 'Martel', serif; font-weight: bolder; font-size: 75px; opacity: 100%;">Testimonials</span>
+          <span id="TitleString" style="">Testimonials</span>
           </div>
 
           <div id="testimonials-container"
                  style="
-                 width: 60%;
-                 max-height: 1000px;
-                 border-style: inset;
-                 border-radius: 50px 0px 50px 0px;
-                 border-width: 15px;
-                 border-color: #859e30;
-                 margin-left: auto;
-                 margin-right: auto;
-                 transition: opacity 500ms ease 0s;
-                 background-color: white;
-                 z-index: -1;">
+                 ">
 
                 <div id="testimonials"
                      style="text-align: center; padding: 15px; color: #272727;"
@@ -189,10 +160,10 @@
         ],
         i: 0,
         arrowHeight: 500,
+          IsMobile: false,
       }
     },
-    mounted: function(){
-    },
+
     methods: {
       nextItem: function() {
         this.i += 1;
@@ -207,7 +178,17 @@
           this.i = this.testlist.length-1
         }
       },
+        onResize () {
+            this.IsMobile = window.innerWidth < 800
+        }
     },
+
+      mounted() {
+
+          this.onResize();
+          window.addEventListener('resize', this.onResize, {passive: true});
+      }
+
   }
 </script>
 
@@ -216,6 +197,35 @@
 
 <style>
 
+  #Larrow {
+    left: 15%;
+    border: solid black;
+    border-width: 0px 7px 7px 0;
+    display: inline-block;
+    padding: 10px;
+
+    height: 50px;
+    width: 50px;
+    float: left;
+    position: absolute;
+    top: 450px
+  }
+  #Rarrow {
+    right: 15%;
+    border: solid black;
+    border-width: 0px 7px 7px 0;
+    display: inline-block;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    float: right;
+    top: 450px;
+    position: absolute;
+  }
+
+  #TitleString {
+    font-family: 'Martel', serif; font-weight: bolder; font-size: 3vw; opacity: 100%;
+  }
 
   .wrapper{
 
@@ -399,22 +409,74 @@
   #testimonials-container
   {
     box-shadow: 0 12px 20px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    width: 60%;
+
+    border-style: inset;
+    border-radius: 50px 0px 50px 0px;
+    border-width: 15px;
+    border-color: #859e30;
+    margin-left: auto;
+    margin-right: auto;
+    transition: opacity 500ms ease 0s;
+    background-color: white;
+    z-index: -1;
   }
   .Title{
     background-image: url("../assets/images/white_cloud.png");
     background-repeat: no-repeat;
     -webkit-background-size: contain;
     background-size: contain;
-    font-size: 1.2rem;
     line-height: 1.3;
     margin-left: auto;
     margin-right: auto;
-    width: 600px;
-    height: 150px;
+    width: 30vw;
+    height: 20vh;
     padding: 15px;
     position: relative;
 
 
+  }
+  @media (max-width:800px){
+    #testimonials-container {
+      width: 90%;
+    }
+    #Larrow {
+      left: 3%;
+      border: solid black;
+      border-width: 0px 7px 7px 0;
+      display: inline-block;
+      padding: 10px;
+
+      height: 40px;
+      width: 40px;
+      float: left;
+      position: absolute;
+      top: 550px
+    }
+    #Rarrow {
+      right: 3%;
+      border: solid black;
+      border-width: 0px 7px 7px 0;
+      display: inline-block;
+      padding: 10px;
+      height: 40px;
+      width: 40px;
+      float: right;
+      top: 550px;
+      position: absolute;
+    }
+    .Title {
+      margin-top: 20%;
+      width: 90vw;
+      height: 10vh;
+      padding-bottom: 0;
+    }
+    #TitleString {
+      font-family: 'Martel', serif; font-weight: bolder; font-size: 9vw; opacity: 100%;
+    }
+    .content-container li {
+      width: 80vw;
+    }
   }
 
 </style>

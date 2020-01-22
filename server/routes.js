@@ -9,6 +9,8 @@ module.exports = (app) => {
     // AuthenticationControllerPolicy.register
     app.get('/blog/:blogId', BlogController.getBlog);
 
+    app.delete('/blog/:blogId', BlogController.deleteBlog)
+
     app.get('/blog', BlogController.getAll);
 
     // app.put('/create', BlogController.uploadThumbnail)

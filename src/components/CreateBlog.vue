@@ -1,10 +1,23 @@
 <template>
+  <div class="wrapper" style="padding: 20px;">
+      <div id="myModal" class="modal">
 
-    <div class="wrapper" style="padding: 20px; overflow: hidden">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
-        <div v-if="correct === true">
-            <div id="tabs">
+          <!-- Modal content -->
+          <div id="ModalContent" class="modal-content">
+              <span v-on:click="ClosePopUp" class="close">&times;</span>
+              <h2 style="display: block; margin-bottom: 30px">{{ModalButtons.Question}}</h2>
+              <div style="width: 200px; display: inline-block;  white-space: nowrap;" v-for="Option in ModalButtons.OptionsList" v-bind:key="Option.Text">
+                <button style="display: inline-block; white-space: nowrap;" v-on:click="CommandFromModal(Option)">{{Option.Text}}</button>
+              </div>
+          </div>
+
+      </div>
+      <!-- The Modal -->
+
+      <div v-if="correct === true">
+          <button v-on:click="PopUp" id="myBtn">Open Modal</button>
+
+          <div id="tabs">
               <button id="tab-font" v-on:click="selectFont" style="background-color: #dadbe0;border-bottom: 1px #dadbe0 solid">Fonts</button>
               <button id="tab-alignment" v-on:click="selectAlign" style="background-color: white; border-bottom: 1px gray solid">Alignment</button>
               <button id="tab-insert" v-on:click="selectInsert" style="background-color: white; border-bottom: 1px gray solid">Insert</button>
@@ -16,23 +29,23 @@
         <div style="position: relative;">
           <span>
             <div v-if="selected ==='Font'" class="command-bar" style="display: block; padding-left: 2%">
-              <button v-for="command in fontCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
+              <button v-for="command in fontCommands" class="format-button" v-bind:key="command.cmd" v-on:click="doCommand(command)" >
                 {{command.text}}
               </button>
                 <span style="float: right; margin-right: 50px;">A list of fonts can be found <a href="https://www.w3.org/Style/Examples/007/fonts.en.html" target="_blank">here</a></span>
             </div>
             <div  v-if="selected ==='Align'" class="command-bar" style="display: inline-block; padding-left: 2%;">
-              <button v-for="command in alignCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
+              <button v-for="command in alignCommands" class="format-button" v-bind:key="command.cmd" v-on:click="doCommand(command)" >
                {{command.text}}
               </button>
             </div>
             <div  v-if="selected ==='Insert'" class="command-bar" style="display: inline-block; padding-left: 2%">
-              <button v-for="command in insertCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
+              <button v-for="command in insertCommands" class="format-button" v-bind:key="command.cmd" v-on:click="doCommand(command)" >
                 {{command.text}}
               </button>
             </div>
             <div  class="command-bar" style="display: block; float: right; padding-right: 2%; border: 1px gray solid; border-top: none; border-radius: 0 0 20px 0; padding-bottom: 5px" >
-              <button v-for="command in removeCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" style="float: right; margin-right: 10px">
+              <button v-for="command in removeCommands" class="format-button" v-bind:key="command.cmd" v-on:click="doCommand(command)" style="float: right; margin-right: 10px">
                 <i class="command.icon"></i>{{command.text}}
               </button>
             </div>
@@ -41,13 +54,14 @@
 
         </div>
           <div>
-              <button class="get-html" v-on:click="getHTML" style="margin-top: 10px; alignment: center"> Save to Blogsite! </button>
+              <button class="get-html" v-on:click="getHTML" style="margin-top: 10px; alignment: center; margin-right: 10%"> Save to Blogsite! </button>
+              <button class="get-html" v-on:click="updateCookie" style="margin-top: 10px; alignment: center"> Save Progress </button>
           </div>
 
       </div>
           <br>
           <div style="position: relative; width: 75%; margin-left: auto; margin-right: auto">
-             <div id="Title" contenteditable="true" style="margin-top: 10px;"> Title </div>
+             <div id="Title" contenteditable="true" style="margin-top: 10px;" > Title </div>
               <hr>
               <div id="blurb" contenteditable="true" style="margin-top: 10px;"> Blurb</div>
               <hr>
@@ -65,19 +79,7 @@
           <label>Please Enter the Password
           <input id="password" type="password">
               <button v-on:click="checkPass">Submit Password</button>
-              <form class="contact-form" @submit.prevent="sendEmail">
-                  <label>Name</label>
-                  <input type="text" name="user_name">
-                  <label>Email</label>
-                  <input type="email" name="user_email">
-                  <label>Message</label>
-                  <input type="text" name="phone_no">
-                  <label>phone</label>
-                  <input type="text" name="company">
-                  <label>company</label>
-                  <textarea name="message"></textarea>
-                  <input type="submit" value="Send">
-              </form>
+
       </label>
       </div>
   </div>
@@ -88,17 +90,15 @@
   import '@fortawesome/fontawesome-free'
   import emailjs from 'emailjs-com'
 
-
-export default {
+  export default {
     name: 'HelloWorld',
-      // components: {
-      //   VueTrix
-      // },
-    data() {
+      data() {
       return {
           selected: "Font",
         userInput: '',
-          correct: false,
+          correct: true,
+          ModalButtonSize: 0,
+          ModalButtons: [{'Question': 'TestingStuff'}],
         password: "1234",
         parms: [{
           "cmd": "aCommandName",
@@ -130,8 +130,26 @@ export default {
             "val": "'Inconsolata', monospace",
             "text": "Font Style",
               "promptMessage": "Select a font",
+              "Modal": "true",
+              "Question": "What Font would you like?",
+              'OptionsList': [
+                  {
+                      "cmd": "fontName",
+                      'Text': 'Bebas Neue'
+                  },
+                  {
+                      "cmd": "fontName",
+                      'Text': 'Big Shoulders Text'
+                  },
+                  {
+                      "cmd": "fontName",
+                      'Text': 'Comic Sans Ms'
+                  }
+
+              ],
             "desc": "Changes the font name for the selection or at the insertion point. This requires a font name string (\"Arial\" for example) to be passed in as a value argument."
           },
+
           {
             "cmd": "fontSize",
             "val": "1-7",
@@ -271,14 +289,61 @@ export default {
 
     },
     mounted() {
+        // Get the modal
+        var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
 
+// Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
 
+// When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        },
+
+// When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        },
+
+// When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                document.getElementById("myModal").style.display = "none";
+
+            }
+        }
+        document.getElementById('Title').innerText = this.Title;
+        document.getElementById('content').innerHTML = this.Content;
+        document.getElementById('blurb').innerText = this.Blurb;
+        document.getElementById('author').innerText = this.Author;
 
     },
+    methods: {
+        updateCookie: function() {
+            // update Cookie
+            this.Title = document.getElementById('Title').innerText;
+            this.Content = document.getElementById('content').innerHTML;
+            this.Blurb = document.getElementById('blurb').innerText;
+            this.Author = document.getElementById('author').innerText;
 
 
-      methods: {
+            this.$cookies.set("Title", this.Title, "1D");
+            this.$cookies.set("Blurb", this.Blurb, "1D");
+            this.$cookies.set("Content",this.Content, "1D");
+            this.$cookies.set("Author", this.Author,"1D");
+
+            alert("Progess Saved! Blog draft will expire in 24 hours")
+
+        },
+        PopUp: function() {
+            document.getElementById("myModal").style.display = "block"
+        },
+        ClosePopUp: function() {
+            document.getElementById("myModal").style.display = "none"
+        },
 
         sendEmail: function (e){
             console.log(e.target);
@@ -331,6 +396,9 @@ export default {
           console.log(this.userInput)
           if (this.userInput === this.password) {
               this.correct = true;
+              this.$cookies.set("token","user_session","1D");
+
+
           }
         },
       sendHtml: function () {
@@ -339,10 +407,19 @@ export default {
         outputSection.innerHTML = this.userInput;
       },
       doCommand: function (command) {
-        var val = (typeof command.val !== "undefined") ? prompt(command.promptMessage, command.val) : "";
-        document.execCommand(command.cmd, false, (val || ""));
+
+        if(command.Modal === undefined) {
+          var val = (typeof command.val !== "undefined") ? prompt("Value for " + command.cmd + "?", command.val) : "";
+          document.execCommand(command.cmd, false, (val || ""));
+        } else {
+            this.ModalButtons = command;
+            this.PopUp();
+        }
 
       },
+        CommandFromModal(command) {
+            document.execCommand(command.cmd, false, (command.Text || ""));
+        },
 
       async onFileChange(){
 
@@ -402,9 +479,25 @@ export default {
 
 
         }
+      },
+      beforeMount() {
+        if (this.$cookies.isKey("token") == false) {
+            this.correct = false;
+        } else {
+            this.correct = true;
+            this.Title = this.$cookies.get("Title");
+            this.Author = this.$cookies.get("Author");
+            this.Blurb = this.$cookies.get("Blurb");
+            this.Content = this.$cookies.get("Content");
+            console.log(this.Title)
+        }
+        console.log(this.$cookies.get("token"), this.correct);
+
       }
 
   }
+
+
 </script>
 
 
@@ -472,8 +565,56 @@ export default {
             opacity: 1;
         }
     }
+
     hr{
         width: 200%;
        margin-left: -400px;
     }
+
+
+
+
+
+
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      z-index: 1;
+    display: inline-block;
+  }
+
+  /* The Close Button */
+  .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
 </style>

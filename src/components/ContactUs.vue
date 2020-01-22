@@ -8,13 +8,13 @@
     </div>
 
     <form id="form" class="topBefore"  @submit.prevent="sendEmail" >
-      <input id="name" name ="user_name" type="text" placeholder="NAME">
-      <input id="email" name="user_email" type="text" placeholder="E-MAIL">
-      <input id="company" name="company" type="text" placeholder="COMPANY">
-      <input id="phone" name="phone" type="text" placeholder="CONTACT NO">
-      <textarea id="message" name="message" type="text" placeholder="MESSAGE"></textarea>
-      <input type="submit" value="send">
-      <a  @mouseover="HoverExpand()" @mouseleave="HoverBack()" @mousedown="ClickExpand()" @click="ClickBack()" id="Submit" class="button"> Submit </a>
+      <input class="input" name ="user_name" type="text" placeholder="NAME">
+      <input class="input" name="user_email" type="text" placeholder="E-MAIL">
+      <input class="input" name="company" type="text" placeholder="COMPANY">
+      <input class="input" name="phone" type="text" placeholder="CONTACT NO">
+      <textarea name="message" type="text" placeholder="MESSAGE"></textarea>
+      <input id="Submit" class="button" value="Submit">
+
     </form>
 
 
@@ -48,15 +48,13 @@ export default {
                 console.log('FAILED...', error);
               });
 
-
-
     },
     //border: solid 1px #859e30;
     onResize () {
       this.isMobile = window.innerWidth < 800
     },
      HoverExpand() {
-       document.getElementById('message').style.width = "572px";
+       /*document.getElementById('message').style.width = "572px";
        document.getElementById('message').style.maxWidth = "572px";
        document.getElementById('message').style.border = "solid 2px #6f6475";
 
@@ -66,11 +64,11 @@ export default {
        for (i = 0; i < input.length; i++) {
          input[i].style.width = "572px";
          input[i].style.border = "solid 2px #6f6475";
-       }
+       }*/
 
      },
     HoverBack() {
-      document.getElementById('message').style.width = null;
+      /*document.getElementById('message').style.width = null;
       document.getElementById('message').style.border = null;
 
       let form = document.getElementById("form");
@@ -79,10 +77,10 @@ export default {
       for (i = 0; i < input.length; i++) {
         input[i].style.width = null;
         input[i].style.border = null;
-      }
+      }*/
     },
     ClickExpand() {
-      document.getElementById('message').style.width = "420px";
+      /*document.getElementById('message').style.width = "420px";
       document.getElementById('message').style.height = "220px";
       document.getElementById('form').style.margin = "400px auto 100px auto";
       document.getElementById('message').style.backgroundColor = "#97869d";
@@ -94,11 +92,11 @@ export default {
         input[i].style.width = "420px";
         input[i].style.height = "50px";
         input[i].style.backgroundColor = "#97869d";
-      }
+      }*/
 
     },
     ClickBack() {
-      setTimeout(() => {
+      /*setTimeout(() => {
         document.getElementById('message').style.width = null;
         document.getElementById('message').style.height = null;
         document.getElementById('message').style.border = null;
@@ -114,7 +112,7 @@ export default {
           input[i].style.border = null;
           input[i].style.backgroundColor = null;
         }
-      }, 200);
+      }, 200);*/
     },
 
     /*
@@ -194,8 +192,8 @@ export default {
 
   input {
     font-size: 1.0vw;
-    width: var(--AllWidth);
-    height: var(--Height);
+    width: 90%;
+    height: 3.8vw;
     padding: 0px 15px 0px 15px;
 
     background: transparent;
@@ -211,27 +209,30 @@ export default {
     -ms-transition: all 0.3s ease-in-out;
   }
 
-  input:focus, textarea:focus{
+  #Submit {
+    width: 20%;
+  }
+  .input:focus, textarea:focus{
     background: #859e30;
     color: #e2dedb;
   }
-  input:hover {
-    height: calc(var(--Height)*1.1);
-    width: calc(var(--AllWidth)*1.1);
+  .input:hover {
+    height: calc(3.8vw*1.1);
+    width: calc(90%*1.1);
     border: solid 3px #859e30;
   }
   textarea:hover {
-    max-height: calc(var(--TextHeight)*1.1);
-    height: calc(var(--TextHeight)*1.1);
-    max-width: calc(var(--TextWidth)*1.1);
-    width: calc(var(--TextWidth)*1.1);
+    max-height: calc(13vw*1.1);
+    height: calc(13vw*1.1);
+    max-width: calc(90%*1.1);
+    width: calc(90%*1.1);
     border: solid 3px #859e30;
   }
 
   textarea {
-    width: var(--TextWidth);
-    max-width: var(--TextWidth);
-    height:  var(--TextHeight);
+    width: 90%;
+    max-width: 90%;
+    height:  13vw;
     max-height:  90%;
     padding: 15px;
 
@@ -266,8 +267,9 @@ export default {
       -ms-transform: translateX(3%);
       transition: 0.3s;
     }
-    input,  textarea  {
+    .input,  textarea  {
       font-size: 4.0vw;
+      height: initial;
     }
   }
 

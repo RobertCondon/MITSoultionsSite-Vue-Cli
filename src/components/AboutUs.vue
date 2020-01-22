@@ -1,47 +1,8 @@
 <template>
-  <div class="wrapper" style="position: relative;">
-    <b-navbar id="nav"  :sticky="true" style="color: darkblue; padding-top: 0px;" type="Dark">
-      <b-navbar-brand href="#">
-        <transition name="fade">
-          <img v-if="Boo" :key="Boo" style=" width: 20vw; position: absolute;  z-index: -3; transform: translateX(-16px); top:0;" src="../assets/images/ManageIT_Background2.png" alt="Ahh">
-        </transition>
-        <transition name="fade">
-          <img v-if="Boo" :key="Boo" class="NavMiddle" style="width: 41vw; height: 5.4vh; position: absolute; top: 0; z-index: -4; transform: translateX(18vw);" src="../assets/images/ManageIT_Background_Line.png" alt="Ahh">
-        </transition>
-        <transition name="fade">
-          <img v-if="Boo" :key="Boo" style="position: absolute; top: 0; z-index: -4; right: 0; width: 42vw;" src="../assets/images/ManageIT_Background_Options.png" alt="Ahh">
-        </transition>
-        <router-link  to="/">
-          <transition name="fade">
-            <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
-          </transition>
-          <transition name="fade">
-            <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logoWhite.png" alt="Ah shit lost it again">
-          </transition>
+  <div>
+    <HomePageMobile style="position: fixed;" v-if="IsMobile"></HomePageMobile>
+    <Navbar v-if="!IsMobile"></Navbar>
 
-        </router-link>
-      </b-navbar-brand>
-
-
-
-
-
-      <b-collapse id="ml-auto" is-nav right>
-        <b-navbar-nav class="ml-auto" id="RightLinks">
-          <b-nav-item class="nav-link"  href="#" >
-            <router-link tag="div" to="/AboutUs"><div class="NavItem"><h2 class="NavTitle">About Us</h2> <div class="NavLine"></div></div></router-link>
-          </b-nav-item>
-          <b-nav-item class="nav-link"  href="#" >
-            <router-link tag="div" to="/OurServices"><div class="NavItem"><h2 class="NavTitle">Our Services</h2> <div class="NavLine"></div></div></router-link>
-          </b-nav-item>
-          <b-nav-item  class="nav-link"  href="#" >
-            <router-link tag="div" to="/ContactUs"> <div class="NavItem"><h2 class="NavTitle">Contact Us</h2> <div class="NavLine"></div></div></router-link>
-          </b-nav-item>
-          <b-nav-item  class="nav-link"  href="#" ><div class="NavItem"><h2 class="NavTitle">Portal</h2> <div class="NavLine"></div></div></b-nav-item>
-        </b-navbar-nav>
-
-      </b-collapse>
-    </b-navbar>
 
       <div id="blurred-image-container">
         <div class="img-src" ></div>
@@ -138,8 +99,7 @@
 
     <!--<div> <img style=" z-index: 1; position: absolute; transform: translate(0, -50px); width: 100vm; right: 0"  src="../assets/images/DividerChunk2.png" alt="Ah shit lost it again"></div>-->
 
-    <Testimonials style="border-top: #859e30; border-top-style: ridge; border-top-width: thick"></Testimonials>
-
+    <Testimonials id="Testmonials" style="border-top: #859e30; border-top-style: ridge; border-top-width: thick"></Testimonials>
     <Footer></Footer>
   </div>
 
@@ -161,11 +121,15 @@
 <script>
   import Footer from "@/components/Footer";
   import Testimonials from "./Testimonials_smaller";
+  import Navbar from "./Navbar";
+  import HomePageMobile from "./HomePageMobile";
 
 
   export default {
     name: 'HelloWorld',
     components: {
+        HomePageMobile,
+        Navbar,
       Testimonials,
       Footer
     },
@@ -175,14 +139,19 @@
         scrollVal: 0,
         opacityVal: 0,
         Boo: false,
+          IsMobile: false,
       }
     },
-    methods() {
-
+    methods: {
+        onResize () {
+            this.IsMobile = window.innerWidth < 800
+        }
     },
 
     mounted() {
 
+        this.onResize();
+        window.addEventListener('resize', this.onResize, { passive: true });
       this.$nextTick(function () {
         window.addEventListener("scroll", function () {
           var blurredimg = document.getElementById('blurred');
@@ -250,6 +219,10 @@
   @import url('https://fonts.googleapis.com/css?family=Tinos&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+  body, html {
+    width: 100vw;
+  }
+
   .content-background{
     background-color: #dadbe0;
     display: block;
@@ -274,7 +247,7 @@
   .ValueTitle {
     text-align: center;
     display: inline-block;
-    font-size: 39px;
+    font-size: 2vw;
     width: 14vw;
     transform: translateX(-2vw);
     font-family: 'Bebas Neue', cursive;
@@ -284,7 +257,7 @@
   }
   .ValueBlerb {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 1vw;
     height: auto;
     color: #2e2e3a;
 
@@ -356,6 +329,7 @@
     text-underline: #859e30;
   }
   .img-src {
+    width: 100vw;
     position: fixed;
     background-position: center;
     -webkit-background-size: cover;
@@ -365,14 +339,19 @@
     right: 0;
     z-index: -1;
     background-image: url("../assets/images/AboutUsBackground.png");
+    background-repeat: no-repeat;
+    background-size: auto;
     -webkit-box-shadow: -25px 25px 50px #f0f0f0, -25px -25px 50px 0 #f0f0f0 inset ;
     -moz-box-shadow: -25px 25px 50px #f0f0f0,-25px -25px 50px 0 #f0f0f0 inset;
     box-shadow: -25px 25px 100px #f0f0f0, -25px -55px 100px 0 #f0f0f0 inset ;
   }
 
+
   .blurred-img {
     opacity: 0;
     background-image: url("../assets/images/AboutUsBackground.png");
+    background-repeat: no-repeat;
+    background-size: auto;
     filter: blur(100px);
     /*-webkit-box-shadow: -25px 25px 100px #CBCED3, -25px -25px 100px 0 #CBCED3  ;*/
     /*-moz-box-shadow: -25px 25px 100px #CBCED3, -25px -25px 100px 0 #CBCED3  ;*/
@@ -663,6 +642,49 @@ background-color: #dadbe0;
     }
     .SoultionsTitle {
       width: 70%;
+    }
+    .ValuePic {
+      width: 25vw;
+    }
+
+    .values{
+      width: 25vw;
+      margin: 10%;
+    }
+
+    .ValueTitle {
+      font-size: 4vw;
+      width: 30vw;
+    }
+    .ValueBlerb {
+      font-size: 3vw;
+    }
+    .our-values{
+      position: relative;
+
+      font-family: 'Bebas Neue', cursive;
+      color: #2e2e3a;
+      font-weight: 400;
+
+      color: #2e2e3a;
+      margin-top: 200px;
+      text-shadow: #859e30 2px 2px 5px;
+      width: 100%;
+    }
+    #Testmonials {
+      margin-top: 60%;
+    }
+    .Page-Title {
+      font-family: 'Bebas Neue', cursive;
+      font-weight: 400;
+      font-size: 9vw;
+      color: #dadbe0;
+      text-shadow: -3px 3px #495d68;
+      top: 50%;
+      text-underline: #859e30;
+    }
+    .img-src, .blurred-img {
+      background-image: url("../assets/images/AboutUsBackgroundMobile.png");
     }
   }
 

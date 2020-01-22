@@ -407,9 +407,10 @@
   import OurServicesTitle from "./OurServicesTitle";
   import SLAPackages from "./SLAPackages";
   import Footer from "../Footer";
-  import JQuery from 'jquery';
+
   import HomePageMobile from "../HomePageMobile";
   import {EventBus} from "../../App";
+  import JQuery from 'jquery';
   let $ = JQuery;
     export default {
         name: "OurServices",

@@ -10,6 +10,9 @@ export default {
     getAll (){
         return Api().get('/blog')
     },
+    deleteBlog (blogId) {
+        return Api().delete('/blog/'+blogId)
+    }
     // uploadThumbnail (file){
     //     return Api().post('/create', file)
     // }
