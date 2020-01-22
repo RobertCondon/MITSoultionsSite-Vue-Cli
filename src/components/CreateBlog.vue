@@ -1,11 +1,17 @@
 <template>
-  <div class="wrapper" style="padding: 20px;">
-      <div v-if="correct === true">
-          <div id="tabs">
+
+    <div class="wrapper" style="padding: 20px; overflow: hidden">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
+        <div v-if="correct === true">
+            <div id="tabs">
               <button id="tab-font" v-on:click="selectFont" style="background-color: #dadbe0;border-bottom: 1px #dadbe0 solid">Fonts</button>
               <button id="tab-alignment" v-on:click="selectAlign" style="background-color: white; border-bottom: 1px gray solid">Alignment</button>
               <button id="tab-insert" v-on:click="selectInsert" style="background-color: white; border-bottom: 1px gray solid">Insert</button>
+
           </div>
+          <span style="position:relative; left: 10%"> Note that only formatting in "Content" will be applied to the Blog site for consistency
+                        </span>
       <div id="control-bar" style="height: 20%;">
         <div style="position: relative;">
           <span>
@@ -13,6 +19,7 @@
               <button v-for="command in fontCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
                 {{command.text}}
               </button>
+                <span style="float: right; margin-right: 50px;">A list of fonts can be found <a href="https://www.w3.org/Style/Examples/007/fonts.en.html" target="_blank">here</a></span>
             </div>
             <div  v-if="selected ==='Align'" class="command-bar" style="display: inline-block; padding-left: 2%;">
               <button v-for="command in alignCommands" class="format-button" v-bind:key="command" v-on:click="doCommand(command)" >
@@ -33,27 +40,44 @@
           </span>
 
         </div>
-        <button class="get-html" v-on:click="getHTML"> Save to Blogsite! </button>
-
-        <!--<span><code class="btn btn-xs %btnClass%" title="%desc%" onmousedown="event.preventDefault();" onclick="doCommand(\'%cmd%\')"><i class="%iconClass%"></i> %cmd%</code></span>'-->
+          <div>
+              <button class="get-html" v-on:click="getHTML" style="margin-top: 10px; alignment: center"> Save to Blogsite! </button>
+          </div>
 
       </div>
           <br>
           <div style="position: relative; width: 75%; margin-left: auto; margin-right: auto">
              <div id="Title" contenteditable="true" style="margin-top: 10px;"> Title </div>
+              <hr>
               <div id="blurb" contenteditable="true" style="margin-top: 10px;"> Blurb</div>
+              <hr>
               <div id="content" contenteditable="true" style="margin-top: 10px;">Content</div>
+              <hr>
               <div id="author" contenteditable="true" style="margin-top: 10px;"> Author</div>
+              <hr>
         <form id="uploadbanner" enctype="multipart/form-data" style="margin-top: 10px;">
-            <label>Thumbnail</label><input id="thumbnail" ref="file" name="myfile" type="file" required @change="onFileChange" accept="image/*"/>
+            <label style="margin-right: 50px">Thumbnail </label><input id="thumbnail" ref="file" name="myfile" type="file" required @change="onFileChange" accept="image/*"/>
         </form>
           </div>
 
     </div>
       <div v-else>
           <label>Please Enter the Password
-          <input id="password">
+          <input id="password" type="password">
               <button v-on:click="checkPass">Submit Password</button>
+              <form class="contact-form" @submit.prevent="sendEmail">
+                  <label>Name</label>
+                  <input type="text" name="user_name">
+                  <label>Email</label>
+                  <input type="email" name="user_email">
+                  <label>Message</label>
+                  <input type="text" name="phone_no">
+                  <label>phone</label>
+                  <input type="text" name="company">
+                  <label>company</label>
+                  <textarea name="message"></textarea>
+                  <input type="submit" value="Send">
+              </form>
       </label>
       </div>
   </div>
@@ -61,9 +85,15 @@
 
 <script>
   import BlogController from '@/services/BlogServices'
-// import JQuery from 'jquery'
-  export default {
+  import '@fortawesome/fontawesome-free'
+  import emailjs from 'emailjs-com'
+
+
+export default {
     name: 'HelloWorld',
+      // components: {
+      //   VueTrix
+      // },
     data() {
       return {
           selected: "Font",
@@ -85,24 +115,28 @@
             "cmd": "backColor",
             "text": "Background Color",
             "val": "rgba(1,1,1,0.5)",
+            "promptMessage": "Select a background colour - Colour inputs can accept #hexcodes, rgba(1,1,1,0.5), and colour names",
             "desc": "Changes the document background color. In styleWithCss mode, it affects the background color of the containing block instead. This requires a color value string to be passed in as a value argument. (Internet Explorer uses this to set text background color.)"
           },
           {
             "cmd": "foreColor",
             "text": "Font Color",
             "val": "rgba(0,0,0,0.5)",
+              "promptMessage": "Select a font colour - Colour inputs can accept #hexcodes, rgba(1,1,1,0.5), and colour names",
             "desc": "Changes a font color for the selection or at the insertion point. This requires a color value string to be passed in as a value argument."
           },
           {
             "cmd": "fontName",
             "val": "'Inconsolata', monospace",
             "text": "Font Style",
+              "promptMessage": "Select a font",
             "desc": "Changes the font name for the selection or at the insertion point. This requires a font name string (\"Arial\" for example) to be passed in as a value argument."
           },
           {
             "cmd": "fontSize",
             "val": "1-7",
             "text": "Font Size",
+              "promptMessage": "Select a font size",
             "icon": "text-height",
             "desc": "Changes the font size for the selection or at the insertion point. This requires an HTML font size (1-7) to be passed in as a value argument."
           },
@@ -184,6 +218,7 @@
             "cmd": "createLink",
             "val": "https://twitter.com/netsi1964",
             "text": "HyperLink",
+              "promptMessage": "Input URL here",
             "icon": "link",
             "desc": "Creates an anchor link from the selection, only if there is a selection. This requires the HREF URI string to be passed in as a value argument. The URI must contain at least a single character, which may be a white space. (Internet Explorer will create a link with a null URI value.)"
           },
@@ -191,6 +226,7 @@
             "cmd": "insertImage",
             "val": "http://dummyimage.com/160x90",
             "text": "Insert Image URL",
+              "promptMessage": "Input Image URL here",
             "icon": "picture-o",
             "desc": "Inserts an image at the insertion point (deletes selection). Requires the image SRC URI string to be passed in as a value argument. The URI must contain at least a single character, which may be a white space. (Internet Explorer will create a link with a null URI value.)"
           },
@@ -238,9 +274,26 @@
 
 
 
-    },
-    methods: {
 
+    },
+
+
+      methods: {
+
+        sendEmail: function (e){
+            console.log(e.target);
+            emailjs.sendForm('gmail', 'template_YAGXsGIo', e.target, 'user_Pg6Rkuwi8Jf1Z3waolwjH')
+                // eslint-disable-next-line no-unused-vars
+                .then((result) => {
+                    // eslint-disable-next-line no-undef
+                    console.log('SUCCESS!', response.status, response.text);
+                }, (error) => {
+                    console.log('FAILED...', error);
+                });
+
+
+
+        },
         selectFont: function(){
 
 
@@ -286,7 +339,7 @@
         outputSection.innerHTML = this.userInput;
       },
       doCommand: function (command) {
-        var val = (typeof command.val !== "undefined") ? prompt("Value for " + command.cmd + "?", command.val) : "";
+        var val = (typeof command.val !== "undefined") ? prompt(command.promptMessage, command.val) : "";
         document.execCommand(command.cmd, false, (val || ""));
 
       },
@@ -311,35 +364,46 @@
       },
 
         async getHTML() {
-          try {
-
-            this.Title = document.getElementById('Title').innerText;
-            this.Content = document.getElementById('content').innerHTML;
-            this.Blurb = document.getElementById('blurb').innerText;
-            this.Author = document.getElementById('author').innerText;
-            this.Date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
-
-            const response = await BlogController.createBlog({
-              Title: this.Title,
-              Content: this.Content,
-              Blurb: this.Blurb,
-              Author: this.Author,
-              Date: this.Date,
-              Thumbnail: self.data
-
-            });
-            console.log(response.Date);
-            //Clear Fields after saving to database
-
-          } catch (err) {
-            this.error = err;
-            console.log(this.error)
-          }
+            try {
 
 
+                this.Title = document.getElementById('Title').innerText;
+                this.Content = document.getElementById('content').innerHTML;
+                this.Blurb = document.getElementById('blurb').innerText;
+                this.Author = document.getElementById('author').innerText;
+                this.Date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
 
+                //Checks if any fields are empty
+                if (this.Title === '' || this.Author === '' || this.Blurb === '' || this.Content === '' || self.data === '') {
+                    alert("Error: Please Fill out all fields to publish a new blog")
+                } else {
+
+                    const response = await BlogController.createBlog({
+                        Title: this.Title,
+                        Content: this.Content,
+                        Blurb: this.Blurb,
+                        Author: this.Author,
+                        Date: this.Date,
+                        Thumbnail: self.data
+
+                    });
+                    console.log(response.Date);
+                    //Clear Fields after saving to database
+                    document.getElementById('Title').innerText = '';
+                    document.getElementById('content').innerHTML = '';
+                    document.getElementById('blurb').innerText = '';
+                    document.getElementById('author').innerText = '';
+                }
+
+            } catch (err) {
+                this.error = err;
+                console.log(this.error)
+            }
+
+
+        }
       }
-    },
+
   }
 </script>
 
@@ -407,5 +471,9 @@
         to {
             opacity: 1;
         }
+    }
+    hr{
+        width: 200%;
+       margin-left: -400px;
     }
 </style>

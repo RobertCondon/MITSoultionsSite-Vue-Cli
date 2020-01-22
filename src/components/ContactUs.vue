@@ -7,12 +7,13 @@
       <img  style="width: 75%; height: 75%" src="../assets/images/ContactUsCard.png" alt="Ah shit lost it again">
     </div>
 
-    <form id="form" class="topBefore">
-      <input id="name" type="text" placeholder="NAME">
-      <input id="email" type="text" placeholder="E-MAIL">
-      <input id="company" type="text" placeholder="COMPANY">
-      <input id="phone" type="text" placeholder="CONTACT NO">
-      <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+    <form id="form" class="topBefore"  @submit.prevent="sendEmail" >
+      <input id="name" name ="user_name" type="text" placeholder="NAME">
+      <input id="email" name="user_email" type="text" placeholder="E-MAIL">
+      <input id="company" name="company" type="text" placeholder="COMPANY">
+      <input id="phone" name="phone" type="text" placeholder="CONTACT NO">
+      <textarea id="message" name="message" type="text" placeholder="MESSAGE"></textarea>
+      <input type="submit" value="send">
       <a  @mouseover="HoverExpand()" @mouseleave="HoverBack()" @mousedown="ClickExpand()" @click="ClickBack()" id="Submit" class="button"> Submit </a>
     </form>
 
@@ -24,6 +25,8 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com";
+
 export default {
   name: "ContactUs",
   data () {
@@ -33,6 +36,21 @@ export default {
     }
   },
   methods: {
+
+    sendEmail: function (e){
+      console.log(e.target);
+      emailjs.sendForm('gmail', 'template_YAGXsGIo', e.target, 'user_Pg6Rkuwi8Jf1Z3waolwjH')
+              // eslint-disable-next-line no-unused-vars
+              .then((result) => {
+                // eslint-disable-next-line no-undef
+                console.log('SUCCESS!', response.status, response.text);
+              }, (error) => {
+                console.log('FAILED...', error);
+              });
+
+
+
+    },
     //border: solid 1px #859e30;
     onResize () {
       this.isMobile = window.innerWidth < 800
@@ -114,7 +132,7 @@ export default {
 
 </script>
 
-<style >
+<style scoped>
   @import url(https://fonts.googleapis.com/css?family=Lato:400);
 
 

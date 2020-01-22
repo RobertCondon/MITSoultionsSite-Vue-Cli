@@ -1,4 +1,5 @@
 module.exports ={
+
     port: process.env.PORT || 8081,
     db: {
         user: process.env.DB_USER || 'MITBlogger',
@@ -8,4 +9,5 @@ module.exports ={
         dialect: 'sqlite',
         storage: './MITBlog.sqlite'
     }
+
 };

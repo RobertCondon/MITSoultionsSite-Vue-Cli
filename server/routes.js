@@ -1,6 +1,7 @@
-// import Blog from "../src/components/Blog";
+
 
 const BlogController = require('./controller/BlogController');
+const SubscribersController = require("./controller/SubscribersController");
 // const AuthenticationControllerPolicy = require('./policies/BlogPolicies')
 
 module.exports = (app) => {
@@ -11,6 +12,9 @@ module.exports = (app) => {
     app.get('/blog', BlogController.getAll);
 
     // app.put('/create', BlogController.uploadThumbnail)
+    app.get('/subs', SubscribersController.getAllSubs);
+
+    app.post('/subs', SubscribersController.createSub);
 
 
 

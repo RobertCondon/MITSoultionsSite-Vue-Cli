@@ -1,25 +1,27 @@
-module.exports = (sequelize, DataTypes) =>{
+module.exports = (sequelize, DataTypes) => {
 
     var Blog = sequelize.define('Blog', {
-        Content:{
-            type: DataTypes.TEXT
-        },
-        Author: {
-            type: DataTypes.STRING
-        },
-        Blurb: {
-            type: DataTypes.TEXT
-        },
-        Title:{
-            type: DataTypes.STRING
-        },
-        Thumbnail: {
-            type: DataTypes.STRING
-        },
-        Date: {
-            type: DataTypes.DATEONLY
-        }
+            Content: {
+                type: DataTypes.TEXT
+            },
+            Author: {
+                type: DataTypes.STRING
+            },
+            Blurb: {
+                type: DataTypes.TEXT
+            },
+            Title: {
+                type: DataTypes.STRING
+            },
+            Thumbnail: {
+                type: DataTypes.STRING
+            },
+            Date: {
+                type: DataTypes.DATEONLY
+            }
 
-    });
-    return Blog
+        });
+
+
+    return Blog;
 };
