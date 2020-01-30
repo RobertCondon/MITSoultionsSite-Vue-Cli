@@ -24,7 +24,7 @@
 
 
           <div class="Title" style="margin-left: auto; margin-right: auto;">
-          <span id="TitleString" style="">Testimonials</span>
+          <span id="TitleString" style="opacity: 1  ">Testimonials</span>
           </div>
 
           <div id="testimonials-container"
@@ -224,7 +224,7 @@
   }
 
   #TitleString {
-    font-family: 'Martel', serif; font-weight: bolder; font-size: 3vw; opacity: 100%;
+    font-family: 'Martel', serif; font-weight: bolder; font-size: 3vw; opacity: 1;
   }
 
   .wrapper{

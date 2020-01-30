@@ -35,7 +35,7 @@
       <transition name="PackageAniRight" :key="Packages">
         <div v-if="Packages" id="PackageSliver" style="" class="Package">
           <div style="background-color: #cdced3;">
-            <h1 class="PackageTitle" style="text-shadow: #D8DBE2 2.5px 1.5px"> Sliver </h1>
+            <h1 class="PackageTitle" style="text-shadow: #D8DBE2 2.5px 1.5px"> Silver </h1>
             <h4>Critical Support</h4>
           </div>
           <div style="background-color: #d6d7dc; margin-top: -10px;">
