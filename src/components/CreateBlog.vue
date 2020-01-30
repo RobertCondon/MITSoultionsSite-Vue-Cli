@@ -505,6 +505,9 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+    .wrapper{
+        overflow-x: hidden;
+    }
   #userInput{
     height: 500px;
     width: 100%;

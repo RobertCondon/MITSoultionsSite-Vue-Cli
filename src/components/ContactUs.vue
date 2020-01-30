@@ -13,7 +13,7 @@
       <input class="input" name="company" type="text" placeholder="COMPANY">
       <input class="input" name="phone" type="text" placeholder="CONTACT NO">
       <textarea name="message" type="text" placeholder="MESSAGE"></textarea>
-      <input id="Submit" class="button" value="Submit">
+      <input id="Submit" type="submit" class="button" value="Submit">
 
     </form>
 
@@ -39,11 +39,11 @@ export default {
 
     sendEmail: function (e){
       console.log(e.target);
-      emailjs.sendForm('gmail', 'template_YAGXsGIo', e.target, 'user_Pg6Rkuwi8Jf1Z3waolwjH')
+      emailjs.sendForm('outlook', 'template_AwizkUiv', e.target, 'user_hYRgq0yoxSTiAJWaSnI2K')
               // eslint-disable-next-line no-unused-vars
               .then((result) => {
                 // eslint-disable-next-line no-undef
-                console.log('SUCCESS!', response.status, response.text);
+                console.log('SUCCESS!', result.status, result.text);
               }, (error) => {
                 console.log('FAILED...', error);
               });

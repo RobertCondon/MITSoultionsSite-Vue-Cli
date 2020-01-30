@@ -1,11 +1,12 @@
 <template>
     <div id="SingleBlog">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <navbar></navbar>
         <div id="Buffer"></div>
 
         <div v-if="authorized === true">
-            <button v-on:click="deleteBlog"> Delete Blog</button>
+            <button class="delete" v-on:click="deleteBlog" style="float: right; margin-right: 5%; background-color: #DD2D4A;"> <i class="fa fa-trash" style="color: #dadbe0"></i></button>
         </div>
         <img id="image">
         <div id="blog"></div>
@@ -53,10 +54,15 @@
             },
             async deleteBlog() {
                 try {
-                    alert("Blog Deleted from Database")
-                    let id = this.$router.currentRoute.params.blogId;
-                    let del = await BlogController.deleteBlog(id);
-                    console.log(del);
+                    if(confirm("Delete blog from newsletter?")) {
+                        alert("Blog Deleted from newsletter");
+                        let id = this.$router.currentRoute.params.blogId;
+                        await BlogController.deleteBlog(id);
+
+
+                    } else {
+                        alert("Blog not deleted from Database")
+                    }
 
                 } catch (e) {
                     console.log(e)
