@@ -29,20 +29,20 @@
               </div>
               <span class="intro-content">
                 <p>
-                We here at Manage IT are here to speak your 'language' removing the confusion and
-                frustration that normally comes with IT work. Because we are a people driven IT team,
+                We here at Manage IT are here to speak your 'language', removing the confusion and
+                frustration that often comes with IT work. Because we are a people driven IT team,
                 and this is how we have long-term business relationships.
                 <br>
                   <br>
                 Our locally based, close-knit team pride ourselves in being able to see your problems
                 from many different angles to come up with creative solutions to best benefit your needs.
-                While making sure you understand each option before you hand-pick the one that you feel
+                While making sure you understand each option before you hand-pick the one that
                 suits your needs.
                 <br>
                   <br>
                 This is all possible because at our core we cultivate innovation, creativity and technical excellence
-                within our team. Allowing you, ease of mind when any problem arrives. From critical system failures to
-                simply using technology to help push your business to work smarter, harder and better.
+                within our team. Allowing you ease of mind when any problem arrives. From critical system failures to
+                simply using technology to help push your business to work smarter, harder and faster.
                 </p>
               </span>
 
