@@ -158,7 +158,8 @@ export default {
     position: absolute;
     margin: 47% auto 10% auto;
     left: 5%;
-    padding: 4% 3% 4% 3%;
+    padding: 1.8% 3% 2% 3%;
+    height: 2.5vw
   }
 
   .button {
@@ -167,7 +168,7 @@ export default {
     background: #c06c84;
     box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    height: 5%;
+    //height: 5%;
     padding: 0 1.6%;
     color: #fff;
     text-transform: uppercase;
