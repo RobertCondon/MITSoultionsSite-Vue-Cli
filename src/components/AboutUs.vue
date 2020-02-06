@@ -60,7 +60,7 @@
                 <div class="values">
                   <img class="ValuePic" src="../assets/images/svg/OptionsLogo.png" alt="">
                   <span class="ValueTitle">Options</span>
-                  <span class="ValueBlerb">Being Creative and innovative thinkers</span>
+                  <span class="ValueBlerb">Being creative and innovative thinkers</span>
                 </div>
                 <div class="values">
                   <img class="ValuePic" src="../assets/images/svg/ExelanceLogo.png" alt="">
