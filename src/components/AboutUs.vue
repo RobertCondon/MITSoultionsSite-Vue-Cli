@@ -29,13 +29,13 @@
               </div>
               <span class="intro-content">
                 <p>
-                We here at Manage IT are here to speak your 'language', removing the confusion and
+                At manage IT we speak your 'language', removing the confusion and
                 frustration that often comes with IT work. Because we are a people driven IT team,
                 and this is how we have long-term business relationships.
                 <br>
                   <br>
                 Our locally based, close-knit team pride ourselves in being able to see your problems
-                from many different angles to come up with creative solutions to best benefit your needs.
+                from many different angles, to come up with creative solutions to best benefit your needs.
                 While making sure you understand each option before you hand-pick the one that
                 suits your needs.
                 <br>
@@ -55,7 +55,7 @@
                 <div class="values">
                   <img class="ValuePic" src="../assets/images/svg/CustomerUnderstandingLogo.png" alt="">
                   <span style="margin-top: 5%" class="ValueTitle"> Customer Understanding</span>
-                  <span class="ValueBlerb">Simple easy to understand diologe</span>
+                  <span class="ValueBlerb">Simple easy to understand dialogue</span>
                 </div>
                 <div class="values">
                   <img class="ValuePic" src="../assets/images/svg/OptionsLogo.png" alt="">
@@ -65,7 +65,7 @@
                 <div class="values">
                   <img class="ValuePic" src="../assets/images/svg/ExelanceLogo.png" alt="">
                   <span class="ValueTitle">Excellence</span>
-                  <span class="ValueBlerb">Always straving for being at the forefront of our feild</span>
+                  <span class="ValueBlerb">Always starving for being at the forefront of our field</span>
                 </div>
                 <div class="values">
                   <img class="ValuePic" src="../assets/images/svg/LongevityLogo.png" alt="">
