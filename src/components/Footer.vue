@@ -14,8 +14,7 @@
 
       <div  class="content-container">
 
-
-        <img v-if="!isMobile" id="logo" src="../assets/images/MIT_images/MID Circle_Transparent.png" alt="">
+        <img v-on:click="ServiceClick()" v-if="!isMobile" id="logo" src="../assets/images/MIT_images/MID Circle_Transparent.png" alt="">
 
         <div v-if="!isMobile" class="Vision">
           <div class="columnTitle"><span>Our</span> <span style="color: #859E30;"> Mission</span></div><br>
@@ -71,6 +70,8 @@
 
 
 <script>
+  import JQuery from 'jquery';
+  let $ = JQuery;
   export default {
     name: "Footer",
     data() {
@@ -106,6 +107,11 @@
     methods: {
       onResize () {
         this.isMobile = window.innerWidth < 800
+      },
+      ServiceClick() {
+        $('html, body').animate({
+            scrollTop: $("#app").offset().top
+        }, 2000);
       }
     }
 
@@ -162,6 +168,7 @@
     margin-right: auto;
     left:-5%;
     position: relative;
+    cursor: pointer;
     animation: popOutReverse 0.2s ease 0s forwards;
 
   }

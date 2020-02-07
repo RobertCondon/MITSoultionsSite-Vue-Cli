@@ -1,9 +1,27 @@
 <template>
   <div id="PostIts" style="">
-    <img id="Background" style="" src="../../assets/images/ContactUsPostItNote.png" alt="Ah shit lost it again">
-    <img v-if="!isMobile" id="Background1" style="" src="../../assets/images/ContactUsPostItNotePink.png" alt="Ah shit lost it again">
-    <img v-if="!isMobile" id="Keyboard"  src="../../assets/images/ContactUsKeyboard.png" alt="Ah shit lost it again">
-    <div v-if="!isMobile"  id="PinkPostIt" style=" ">
+  </div>
+</template>
+
+<script>
+  /*
+  <div id="ImageLeft"></div>
+
+    <div  id="YellowPostIt" style="">
+
+        <h1 style="opacity: unset" class="PageTitleOne"> IT Support </h1>
+        <h3 style="opacity: 80%" class="SemiTitle"> Professional IT services made for you locally </h3>
+        <h3 style="opacity: 80%" class="SemiTitle"> By a close-knit company in CHCH </h3>
+    </div>
+
+    <div id="ImageRight"></div>
+
+
+
+  <img id="Background" style="" src="../../assets/images/ContactUsPostItNote.png" alt="Ah shit lost it again">
+   <img v-if="!isMobile" id="Keyboard"  src="../../assets/images/ContactUsKeyboard.png" alt="Ah shit lost it again">
+   <img v-if="!isMobile" id="Background1" style="" src="../../assets/images/ContactUsPostItNotePink.png" alt="Ah shit lost it again">
+  <div v-if="!isMobile"  id="PinkPostIt" style=" ">
       <div style="transform: translateY(80%)">
         <h1 style="opacity: unset" class="PageTitleTwo"> Remote Desktop </h1>
         <h3 style="opacity: 80%"  class="SemiTitle1"> Download remote desktop for</h3>
@@ -11,21 +29,7 @@
         <a onclick="window.location.href = 'https://www.microsoft.com/en-us/p/microsoft-remote-desktop/9wzdncrfj3ps?SilentAuth=1&wa=wsignin1.0&activetab=pivot:overviewtab';" id="Submit" class="button"> Download </a>
       </div>
     </div>
-
-    <div  id="YellowPostIt" style="">
-
-        <h1 style="opacity: unset" class="PageTitleOne"> IT Support </h1>
-        <h3 style="opacity: 80%" class="SemiTitle"> Professional IT services made for you locally </h3>
-        <h3 style="opacity: 80%" class="SemiTitle"> By a close-knit company in CHCH </h3>
-
-
-    </div>
-
-
-  </div>
-</template>
-
-<script>
+   */
     export default {
         name: "ContactUsNote",
         data() {
@@ -82,7 +86,13 @@
 
   #PostIts {
     height: 33vw; overflow: hidden; max-height: 100%; max-width: 100%; background-color: #dadbe0;
-    margin-bottom: 400px;
+    margin: 0 5%  100px 5%;
+    border-radius: 20%;
+    -moz-box-shadow: inset 5px 5px 5px rgba(68,68,68,0.6);
+    -webkit-box-shadow: inset 5px 5px 5px rgba(68,68,68,0.6);
+    box-shadow: inset 0px 15px 15px 15px rgba(68,68,68,0.6);
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
   }
 
   #Background {
@@ -93,7 +103,8 @@
   }
 
   #YellowPostIt {
-    overflow: hidden; max-width: 100%; height: 33vw; display: inline-block;  transform: translate(-39%, 25%)
+    overflow: hidden; max-width: 100%; height: 33vw; display: inline-block;
+    transform: translate(0, 25%)
   }
 
   #Background1 {
@@ -109,7 +120,7 @@
     right: 0;
     height: 55%;
     width: 35%;
-    transform: translateY(70%);
+    transform: translateY(120%);
   }
   #PinkPostIt {
     overflow: hidden; max-width: 100%; height: 33vw; display: inline-block; transform: translateX(-71%);
@@ -119,7 +130,7 @@
     display: inline-block;
     font-family: 'Bebas Neue', cursive;
     font-weight: 400;
-    font-size:  6.5vw;
+    font-size:  9.5vw;
     color: #6f6476;
     position: relative;
     z-index: 2;
@@ -141,7 +152,7 @@
   .SemiTitle {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 1.40vw;
+    font-size: 1.80vw;
     color: #6f6476;
     opacity: 80%;
 

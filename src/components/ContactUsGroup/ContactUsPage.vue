@@ -52,7 +52,7 @@
         </b-navbar>
 
         <ContactUsTitle></ContactUsTitle>
-        <ContactUsNote></ContactUsNote>
+
         <ContactUs></ContactUs>
         <h1 style="
         display: inline-block;
@@ -65,7 +65,9 @@
         opacity: 1;
         margin-top: 10%;
          "> Where Are We </h1>
-        <img style=" display: inline-block; width: 100%; padding: 3% 10% 10% 10%" src="../../assets/images/ManageITMap.png" alt="None">
+        <a onclick="window.location.href = 'https://www.google.co.nz/maps/place/2%2F64+Carmen+Road,+Hei+Hei,+Christchurch+8042/@-43.5373934,172.5270289,17z/data=!3m1!4b1!4m5!3m4!1s0x6d31f57aaa60c987:0x99721f232ba36031!8m2!3d-43.5373934!4d172.5292176';" >
+          <img style=" display: inline-block; width: 100%; padding: 3% 10% 10% 10%; cursor: pointer" src="../../assets/images/ManageITMap.png" alt="None">
+        </a>
         <Footer></Footer>
       </div>
     </div>
@@ -74,12 +76,13 @@
 <script>
     import ContactUsTitle from "./ContactUsTitle";
     import ContactUs from "../ContactUs";
-    import ContactUsNote from "./ContactUsNote";
+    //import ContactUsNote from "./ContactUsNote";
+    //<ContactUsNote></ContactUsNote>
     import Footer from "../Footer";
     import HomePageMobile from "../HomePageMobile";
     export default {
         name: "ContactUsPage",
-      components: {HomePageMobile, Footer, ContactUs, ContactUsTitle,ContactUsNote},
+      components: {HomePageMobile, Footer, ContactUs, ContactUsTitle},
       data() {
           return{ Boo: false,
             opacityVal: 0,

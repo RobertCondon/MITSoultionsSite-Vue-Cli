@@ -4,8 +4,10 @@
         <div  v-if="!this.isMobile">
           <div id="Top-Info" class="Contact-Top-Box" style="background-color: black; ">
 
-            <h2 class="Contact-Top"> 0800 648787 </h2>
-            <h2 class="Contact-Top"> 58-64 Carmen Rd </h2>
+            <h2 class="Contact-Top"> 0800 648 787 </h2>
+            <a onclick="window.location.href = 'https://www.google.co.nz/maps/place/2%2F64+Carmen+Road,+Hei+Hei,+Christchurch+8042/@-43.5373934,172.5270289,17z/data=!3m1!4b1!4m5!3m4!1s0x6d31f57aaa60c987:0x99721f232ba36031!8m2!3d-43.5373934!4d172.5292176';" >
+              <h2 class="Contact-Top"> Unit 2, 58-64 Carmen Road </h2>
+            </a>
             <b-button class="Contact-Top" id="PortalButton" style="" variant="outline-success">Client Portal</b-button>
             <div class="line"></div>
           </div>

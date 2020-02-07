@@ -71,17 +71,17 @@
         </p>
         <transition name="ReadMoreTrans">
             <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[0].ReadBool" :key="this.ReadMoreArray[0].ReadBool">
-              The type of computer system you choose needs to have compatible elements, be specific to your business and operate with as few hitches as possible - regardless if it's hardware, software, robust servers, secure backup systems, specific network capabilities or even devices for work done remotely.
+              The type of computer system you choose needs to have compatible elements, be specific to your business and operate with as few hitches as possible - regardless if it's hardware, software, robust servers, secure backup systems, specific network capabilities or even devices for work done remotely.<br>
 
-              Solid yet flexible computer systems allow you to get on with the job, without interruption. IT infrastructure needs to be prepared for the possibility of security breaches, denial of service attacks and power failures.
+              Solid yet flexible computer systems allow you to get on with the job, without interruption. <br><br><br> IT infrastructure needs to be prepared for the possibility of security breaches, denial of service attacks and power failures.
 
-              The advantage of an up-to-date computer system is that it keeps business productivity levels up. As technology progresses, your IT computer systems need to follow suit so you can communicate with suppliers and customers, using compatible technology.
+              The advantage of an up-to-date computer system is that it keeps business productivity levels up. As technology progresses, your IT computer systems need to follow suit so you can communicate with suppliers and customers, using compatible technology.<br><br>
 
-              Having a secure yet malleable and easy-to-adapt computer system helps your business organise data, store and backup vital information, and - with faster processors and updated software - provide rapid and accurate results for reporting and feedback.
+              Having a secure yet malleable and easy-to-adapt computer system helps your business organise data, store and backup vital information, and - with faster processors and updated software - provide rapid and accurate results for reporting and feedback.<br>
 
-              With Manage IT, you'll get all the software, technology and information systems you need. Best of all, we'll also install everything and show you the ropes, ensuring that you're up to speed and know your way around the new technology and software.
+              With Manage IT, you'll get all the software, technology and information systems you need. Best of all, we'll also install everything and show you the ropes, ensuring that you're up to speed and know your way around the new technology and software.<br>
 
-              Boost your productivity levels and get your business back on track with Manage IT. Contact us today.
+              Boost your productivity levels and get your business back on track with Manage IT. Contact us today.<br>
             </p>
         </transition>
         <div class="ArrowAudjust">
@@ -105,13 +105,13 @@
             <div id="Line2" class="ServiceLineTitle"></div>
           </div>
           <p style="opacity: 100%;"   class="ServiceTopContent">
-            Not ready yet for a contract or fully managed support solution? Try our Break Fix Service support for any hardware and software problem.
+            Not ready yet for a contract or fully managed support solution? Try our Break Fix support for any hardware and software problem.
           </p>
           <transition name="ReadMoreTrans">
             <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[1].ReadBool" :key="this.ReadMoreArray[1].ReadBool">
-              Our Break Fix Service provides peace of mind and support for any IT issues you may encounter. A professional team of technicians and extensive expertise supporting multi-vendor hardware and software platforms.
+              Our Break Fix support provides peace of mind for any IT issues you may encounter. Our professional team of engineers and extensive expertise supporting multi-vendor hardware and software platforms.
 
-              A solution best suited for those businesses that have small IT requirements, limited funding, or where the business already has an internal IT person or IT team.
+              A solution that is best suited for those businesses that have small IT requirements, limited funding, or where the business already has internal support.
             </p>
           </transition>
           <div class="ArrowAudjust">
@@ -137,38 +137,40 @@
             <div id="Line3" class="ServiceLineTitle"></div>
           </div>
           <p style="opacity: 100%;"   class="ServiceTopContent">
-            Servers & cloud computing: matching a (virtual) server to your data needs
-            When it comes to small business servers, virtual servers or cloud computing, there are a myriad of server options. Selecting the right fit for your network size, backup preferences and data requirements will reduce downtime, facilitate faster installation of new applications, give you the option of managing email and even hosting your own website.
+            Servers & cloud computing: matching a (virtual) server to your data needs.
+            When it comes to small business servers, virtual servers or cloud computing, there are a myriad of server options. Selecting the right fit for your network size,
+            backup preferences and data requirements will reduce downtime, facilitate faster installation of new applications, give you the option of managing email and even hosting your own website.
             </p>
           <transition name="ReadMoreTrans">
             <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[2].ReadBool" :key="this.ReadMoreArray[2].ReadBool">
-              <br><br><b>Cloud Computing</b><br>
+              <br><br><b>Cloud Computing</b><br><br>
               The trend toward cloud computing simply involves moving your data storage and/or setting up specific business applications on the internet, so the data or software is not stored at your office or workplace. Benefits of cloud computing include the increased ability to access data remotely, reduced hardware outlays and upgrades, and the reassurance of off-site storage for backup and recovery – an advantage in the event of another earthquake. Cloud computing works best when you have a high-speed data cable for internet connections. If your internet connection is based on copper wires or is unreliable, then cloud computing may not be the ideal solution.
 
 
-              <br><br><b>Small Business Servers</b><br>
+              <br><br><br><b>Small Business Servers</b><br><br>
               Increasing workloads place increasing demands on your servers. With a proven track record of successful installation, we can help to specify and source a small business server to store and traffic your data, whether you've got 4 computers in your office or 400! Our server-based computing solutions offer a range of features, including:
 
-              Extensive research and development behind each solution design
-              Seamless, reliable and predictable user experience
-              Consistent performance
-              Full-feature functionality
-              Extends application access to employees, business partners, vendors and customers
+              <br><em>Extensive research and development behind each solution design</em><br>
+              <em>Seamless, reliable and predictable user experience</em><br>
+              <em>Consistent performance</em><br>
+              <em>Full-feature functionality</em><br>
+              <em>Extends application access to employees, business partners, vendors and customers</em><br>
 
 
-              <br><br><b>Virtual Server Options</b><br>
+              <br><br><br><b>Virtual Server Options</b><br><br>
               A virtual server is popular for businesses with large data storage needs, proprietary software, multiple websites, or a strong online presence. Because your website is hosted on its own [usually large] server, you don't have to compete with other websites for access. A virtual server is more secure than shared servers and enables you to create your own software programmes.
 
               Take the guesswork out of choosing servers for your business computer systems. Talk to us about selecting the server management system that will optimise your business, not jeopardise it.
 
 
-              <br><br><b>Service Agreements</b><br>
+             <br><br><br><b>Service Agreements</b><br><br>
               If you have a sizeable network which requires multiple software installations and servicing there are benefits of partnering in our regular, server-based computing service:
 
               Rapid deployment of applications and accelerated upgrades
               Instant on-delivery of applications from a single point over any connection
               Utilisation of standard products and technologies
-              Reduced remote servicing costs
+              Reduced remote servicing costs.
+              Passing on responsibility
             </p>
           </transition>
           <div class="ArrowAudjust">

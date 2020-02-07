@@ -13,7 +13,7 @@
             <h4 style="padding-bottom: 15px" class="PackageFeature"> Formalised system status reporting </h4>
           </div>
           <div style="background-color: #cdced3; padding: 20px;  margin-top: -10px;">
-            <h1 class="PackagePrice"> Single Payment </h1>
+            <h1 class="PackagePrice"> Monthly Subscription </h1>
           </div>
         </div>
       </transition>
@@ -26,10 +26,10 @@
           <h4 style="padding-top: 15px" class="PackageFeature"> 24/7 break/fix support </h4>
           <h4 class="PackageFeature"> Agreed response times </h4>
           <h4 class="PackageFeature"> Formalised disaster recovery planning </h4>
-          <h4 style="padding-bottom: 15px" class="PackageFeature"> Quarterly updated images of critical computers held at MIT </h4>
+          <h4 class="PackageFeature"> Silver Plus+</h4>
         </div>
         <div style="background-color: #cdced3; padding: 20px;  margin-top: -10px;">
-          <h1 class="PackagePrice"> Monthly Payments </h1>
+          <h1 class="PackagePrice"> Monthly Subscription </h1>
         </div>
       </div>
       <transition name="PackageAniRight" :key="Packages">
@@ -41,16 +41,16 @@
           <div style="background-color: #d6d7dc; margin-top: -10px;">
             <h4 style="padding-top: 15px" class="PackageFeature"> Proactive monitoring </h4>
             <h4 class="PackageFeature"> Formalised system status reporting </h4>
-            <h4 style="padding-bottom: 15px" class="PackageFeature"> Constant support for one key system/computer </h4>
+            <h4 class="PackageFeature"> Bronze Plus+</h4>
           </div>
           <div style="background-color: #cdced3; padding: 20px;  margin-top: -10px;">
-            <h1 class="PackagePrice"> Monthly Payments </h1>
+            <h1 class="PackagePrice"> Monthly Subscription </h1>
           </div>
         </div>
       </transition>
       <div class="BreakFix">
         <div class="BreakFixContent">
-          <h1 class="BreakFixIntro"> For a more flexibility or as a supplement to our plans we have <br></h1>
+          <h1 class="BreakFixIntro"> For more flexibility or as a supplement to our plans, we have <br></h1>
           <div class="ServiceDiv_SLA" style="position: relative; margin: auto" @click="ServiceClick(1)">
             <div class="IconBottomRight"></div>
             <div class="IconBottomLeft"></div>
@@ -64,8 +64,9 @@
 </template>
 
 <script>
-  import JQuery from 'jquery';
+
   import {EventBus} from "../../App";
+  import JQuery from 'jquery';
   let $ = JQuery;
     export default {
         name: "SLAPackages",
