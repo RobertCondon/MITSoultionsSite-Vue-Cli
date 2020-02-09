@@ -124,7 +124,7 @@
   h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 1.2vw;
     padding: 5px;
   }
 
@@ -150,7 +150,7 @@
  }
 .PackagePrice {
   width: 100%;
-  font-size: 25px;
+  font-size: 1.5vw;
   font-family: 'Bebas Neue', cursive;
   color: #495d68;
 }
@@ -158,6 +158,7 @@
   width: 100%;
   font-family: 'Bebas Neue', cursive;
   color: #495d68;
+  font-size: 2vw;
 }
 
  .Package {
