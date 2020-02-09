@@ -1,6 +1,6 @@
 <template>
     <div style="background-color: #dadbe0; padding-bottom: 100px">
-      <h1 class="SectionTitle"> Service Level Packages (SLA) </h1>
+      <h1 class="SectionTitle"> Service Level Agreements (SLA) </h1>
       <div style="width: 100%; height: 10vw"></div>
       <transition name="PackageAniLeft" :key="Packages">
         <div id="PackageBronze" v-if="Packages" style="" class="Package">
@@ -144,7 +144,7 @@
    text-align: left;
    font-family: 'Montserrat', sans-serif;
    font-weight: 400;
-   font-size: 20px;
+   font-size: 1vw;
    padding: 5px;
    color: #495d68;
  }

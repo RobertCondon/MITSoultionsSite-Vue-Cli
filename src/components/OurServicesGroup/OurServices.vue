@@ -749,7 +749,7 @@
   .ServiceContent {
     display: inline-block;
     padding-top: 240px;
-    padding-left: 12%;
+    padding-left: 0%;
   }
 
   .ServiceTitle {
