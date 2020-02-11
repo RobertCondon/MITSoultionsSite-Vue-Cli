@@ -37,7 +37,6 @@
           <b-nav-item  class="nav-link"  href="#" >
             <router-link tag="div" to="/ContactUs"> <div class="NavItem"><h2 class="NavTitle">Contact Us</h2> <div class="NavLine"></div></div></router-link>
           </b-nav-item>
-          <b-nav-item  class="nav-link"  href="#" ><div class="NavItem"><h2 class="NavTitle">Portal</h2> <div class="NavLine"></div></div></b-nav-item>
         </b-navbar-nav>
 
       </b-collapse>

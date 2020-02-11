@@ -45,7 +45,6 @@
               <b-nav-item  class="nav-link"  href="#" >
                 <router-link tag="div" to="/ContactUs"> <div class="NavItem"><h2 class="NavTitle">Contact Us</h2> <div class="NavLine"></div></div></router-link>
               </b-nav-item>
-              <b-nav-item  class="nav-link"  href="#" ><div class="NavItem"><h2 class="NavTitle">Portal</h2> <div class="NavLine"></div></div></b-nav-item>
             </b-navbar-nav>
 
           </b-collapse>
@@ -65,7 +64,7 @@
         opacity: 1;
         margin-top: 10%;
          "> Where Are We </h1>
-        <a onclick="window.location.href = 'https://www.google.co.nz/maps/place/2%2F64+Carmen+Road,+Hei+Hei,+Christchurch+8042/@-43.5373934,172.5270289,17z/data=!3m1!4b1!4m5!3m4!1s0x6d31f57aaa60c987:0x99721f232ba36031!8m2!3d-43.5373934!4d172.5292176';" >
+        <a target="_blank" rel="noopener noreferrer"  href= "https://www.google.co.nz/maps/place/2%2F64+Carmen+Road,+Hei+Hei,+Christchurch+8042/@-43.5373934,172.5270289,17z/data=!3m1!4b1!4m5!3m4!1s0x6d31f57aaa60c987:0x99721f232ba36031!8m2!3d-43.5373934!4d172.5292176" >
           <img style=" display: inline-block; width: 100%; padding: 3% 10% 10% 10%; cursor: pointer" src="../../assets/images/ManageITMap.png" alt="None">
         </a>
         <Footer></Footer>

@@ -1,5 +1,6 @@
 <template id="three">
   <div  id="app" class="wrapper" >
+    <PortalPage v-if="PortalGO"></PortalPage>
       <div >
         <div  v-if="!this.isMobile">
           <div id="Top-Info" class="Contact-Top-Box" style="background-color: black; ">
@@ -8,7 +9,9 @@
             <a onclick="window.location.href = 'https://www.google.co.nz/maps/place/2%2F64+Carmen+Road,+Hei+Hei,+Christchurch+8042/@-43.5373934,172.5270289,17z/data=!3m1!4b1!4m5!3m4!1s0x6d31f57aaa60c987:0x99721f232ba36031!8m2!3d-43.5373934!4d172.5292176';" >
               <h2 class="Contact-Top"> Unit 2, 58-64 Carmen Road </h2>
             </a>
-            <b-button class="Contact-Top" id="PortalButton" style="" variant="outline-success">Client Portal</b-button>
+
+              <b-button v-on:click="PortalGO = !PortalGO" class="Contact-Top" id="PortalButton" style="" variant="outline-success">Client Portal</b-button>
+
             <div class="line"></div>
           </div>
 
@@ -60,7 +63,7 @@
                   <b-nav-item  class="nav-link"  href="#" >
                     <router-link tag="div" to="/ContactUs"> <div class="NavItem"><h2 class="NavTitle">Contact Us</h2> <div class="NavLine"></div></div></router-link>
                   </b-nav-item>
-                  <b-nav-item  class="nav-link"  href="#" ><div class="NavItem"><h2 class="NavTitle">Portal</h2> <div class="NavLine"></div></div></b-nav-item>
+
                 </b-navbar-nav>
 
               </b-collapse>
@@ -211,6 +214,8 @@
 </template>
 
 <script>
+    import JQuery from 'jquery';
+    let $ = JQuery;
 
   import Parallax from "vue-parallaxy";
   import Testimonials from "@/components/Testimonials";
@@ -221,12 +226,14 @@
   import AllServices from "./AllServices";
   import ContactUs from "./ContactUs";
   import HomePageMobile from "./HomePageMobile";
+  import PortalPage from "./Portal/PortalPage";
 
   import AllServicesMobile from "./AllServicesMobile";
 
   export default {
     name: 'HomePage',
     components: {
+      PortalPage,
       AllServicesMobile,
       HomePageMobile,
       ContactUs,
@@ -257,6 +264,7 @@
         NavTheme: "Light",
         isMobile: false,
         MobileWhyUs: require('../assets/images/WhyUsMobile.png'),
+        PortalGO: false,
       }
     },
     computed: {
@@ -289,11 +297,25 @@
     },
 
     mounted() {
+        var self = this;
+        $('body').click(function(evt){
+            console.log(self.PortalGO);
+            if(evt.target.id === "PortalPage" || evt.target.id === "PortalButton")
+
+                return;
+            //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
+            if($(evt.target).closest('#PortalPage').length)
+
+                return;
+             if(self.PortalGO) {
+                self.PortalGO = false;
+            }
+        });
 
       this.onResize();
       window.addEventListener('resize', this.onResize, { passive: true });
 
-      var self = this;
+
       this.$nextTick(function(){
         window.addEventListener("scroll", function(){
           var navbar = document.getElementById("nav");

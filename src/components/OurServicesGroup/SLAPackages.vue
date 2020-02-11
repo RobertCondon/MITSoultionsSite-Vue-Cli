@@ -23,10 +23,11 @@
           <h4>Full 24/7 Support</h4>
         </div>
         <div style="background-color: #d6d7dc; margin-top: -10px;">
+          <h4 class="PackageFeature"> Silver Plus+</h4>
           <h4 style="padding-top: 15px" class="PackageFeature"> 24/7 break/fix support </h4>
           <h4 class="PackageFeature"> Agreed response times </h4>
           <h4 class="PackageFeature"> Formalised disaster recovery planning </h4>
-          <h4 class="PackageFeature"> Silver Plus+</h4>
+
         </div>
         <div style="background-color: #cdced3; padding: 20px;  margin-top: -10px;">
           <h1 class="PackagePrice"> Monthly Subscription </h1>
@@ -39,9 +40,10 @@
             <h4>Critical Support</h4>
           </div>
           <div style="background-color: #d6d7dc; margin-top: -10px;">
+            <h4 class="PackageFeature"> Bronze Plus+</h4>
             <h4 style="padding-top: 15px" class="PackageFeature"> Proactive monitoring </h4>
             <h4 class="PackageFeature"> Formalised system status reporting </h4>
-            <h4 class="PackageFeature"> Bronze Plus+</h4>
+
           </div>
           <div style="background-color: #cdced3; padding: 20px;  margin-top: -10px;">
             <h1 class="PackagePrice"> Monthly Subscription </h1>

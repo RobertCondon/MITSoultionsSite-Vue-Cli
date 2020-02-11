@@ -29,9 +29,9 @@
               </div>
               <span class="intro-content">
                 <p>
-                At manage IT we speak your 'language', removing the confusion and
-                frustration that often comes with IT work. Because we are a people driven IT team,
-                and this is how we have long-term business relationships.
+                At manageIT we speak your language, removing the confusion and
+                frustration that often comes with IT work. We are a people driven IT team,
+                and this is how we maintain long-term business relationships.
                 <br>
                   <br>
                 Our locally based, close-knit team pride ourselves in being able to see your problems
@@ -65,7 +65,7 @@
                 <div class="values">
                   <img class="ValuePic" src="../assets/images/svg/ExelanceLogo.png" alt="">
                   <span class="ValueTitle">Excellence</span>
-                  <span class="ValueBlerb">Always starving for being at the forefront of our field</span>
+                  <span class="ValueBlerb">Always starving to be at the forefront of our field</span>
                 </div>
                 <div class="values">
                   <img class="ValuePic" src="../assets/images/svg/LongevityLogo.png" alt="">

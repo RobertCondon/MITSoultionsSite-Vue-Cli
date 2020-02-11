@@ -6,6 +6,7 @@ import OurServices from '@/components/OurServicesGroup/OurServices'
 import ContactUSPage from '@/components/ContactUsGroup/ContactUsPage'
 import Blog from '@/components/Blog'
 import BlogHome from '@/components/BlogHome'
+import Portal from '@/components/Portal/PortalPage'
 
 import AboutUs from '@/components/AboutUs'
 
@@ -58,6 +59,11 @@ export default new Router({
       path: '/Create',
       name: 'Create',
       component: CreateBlog
+    },
+    {
+      path: '/Portal',
+      name: 'Portal',
+      component: Portal
     }
   ]
 })
