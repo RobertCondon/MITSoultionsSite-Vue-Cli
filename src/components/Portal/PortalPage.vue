@@ -78,7 +78,7 @@
                 "#OfficeEmail", 0.3, {x:  '30vw', scale: 0}).to("#OfficeEmail", 0.2, {opacity: 1}, '-=0.4').from(
                 "#ConntectWise", 0.3, {x:  '-20vw', y: '35vh', scale: 0}).to("#ConntectWise", 0.2, {opacity: 1}, '-=0.4').from(
                 "#Remote", 0.3, {x:  '20vw', y: '35vw', scale: 0}).to("#Remote", 0.2, {opacity: 1}, '-=0.4')
-        }
+        },
 
 
     }

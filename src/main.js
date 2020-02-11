@@ -7,9 +7,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueLazyload from 'vue-lazyload'
 import VueCookies from 'vue-cookies'
-
+import { gsap } from 'gsap'
+import { CSSPlugin } from 'gsap/CSSPlugin'
+gsap.registerPlugin(CSSPlugin);
 
 Vue.config.productionTip = false;
+Vue.use(gsap);
 Vue.use(VueLazyload);
 Vue.use(bootstrapVue);
 Vue.use(PortalVue);
