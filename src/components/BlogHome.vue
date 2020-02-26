@@ -2,7 +2,7 @@
     <div class="blog">
         <navbar></navbar>
         <BlogHomeTitle></BlogHomeTitle>
-        <img style=" z-index: 1; position: absolute; transform: translate(0, -22vw); width: 100%; left: 0"  src="../assets/images/Divider2.png" alt="Ah shit lost it again">
+        <img style=" z-index: 1; position: absolute; transform: translate(0, -25vw); width: 100%; left: 0"  src="../assets/images/Divider2.png" alt="Ah shit lost it again">
         <div>
             <button style="display: inline-block" v-on:click="SortNewBlogs">New Order</button>
             <input v-on:change="SortNewBlogs" style="display: inline-block" id="SearchBlog" type="text" placeholder="Search">
