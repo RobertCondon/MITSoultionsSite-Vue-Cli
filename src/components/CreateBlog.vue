@@ -88,7 +88,7 @@
 <script>
   import BlogController from '@/services/BlogServices'
   import '@fortawesome/fontawesome-free'
-  import emailjs from 'emailjs-com'
+  //import emailjs from 'emailjs-com'
 
   export default {
     name: 'HelloWorld',
@@ -344,17 +344,36 @@
         ClosePopUp: function() {
             document.getElementById("myModal").style.display = "none"
         },
+        Send : function (to,froms,subject,body,apikey){
 
-        sendEmail: function (e){
-            console.log(e.target);
-            emailjs.sendForm('gmail', 'template_YAGXsGIo', e.target, 'user_Pg6Rkuwi8Jf1Z3waolwjH')
-                // eslint-disable-next-line no-unused-vars
-                .then((result) => {
-                    // eslint-disable-next-line no-undef
-                    console.log('SUCCESS!', response.status, response.text);
-                }, (error) => {
-                    console.log('FAILED...', error);
-                });
+              let nocache= Math.floor((Math.random() * 1000000) + 1);
+              let strUrl = "http://directtomx.azurewebsites.net/mx.asmx/Send?";
+              strUrl += "apikey=" + apikey;
+              strUrl += "&from=" + froms;
+              strUrl += "&to=" + to;
+              strUrl += "&subject=" + encodeURIComponent(subject);
+              strUrl += "&body=" + encodeURIComponent(body);
+              strUrl += "&cachebuster=" + nocache;
+              console.log(strUrl)
+
+
+
+              /*let s = document.createElement( 'img' );
+              s.setAttribute( 'style', 'opacity: 0.0; filter: alpha(opacity=0);' );
+              s.setAttribute( 'src', strUrl);
+              document.body.appendChild( s );
+              console.log("Help!")*/
+        },
+        sendEmail: function (){
+            /*let mx = new directtomx.mx();
+            mx.send(	"8270586-a3ed-49cc-9322-ba7f6c1c61d3",to,froms,subject,body,apikey
+                "Mx@hotmail.com",
+                "rt_condon@hotmail.com",
+                this.Title,
+                this.Blurb);*/
+
+
+
 
 
 
@@ -471,7 +490,7 @@
                     document.getElementById('blurb').innerText = '';
                     document.getElementById('author').innerText = '';
                 }
-
+                this.Send('rt_condon@hotmail.com','Myself@myself.com',this.Title, this.Blurb, "8270586-a3ed-49cc-9322-ba7f6c1c61d3");
             } catch (err) {
                 this.error = err;
                 console.log(this.error)

@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const exphbs = require('express-handlebars');
+
 const cors = require('cors');
 const morgan = require('morgan');
 const {sequelize} = require('./models');
@@ -12,7 +14,9 @@ const app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(cors());
-
+//View Engine
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 require('./routes')(app);
 sequelize.sync()
     .then(() => {
