@@ -26,7 +26,7 @@
 
 <script>
 import emailjs from "emailjs-com";
-
+import BlogService from '../services/BlogServices';
 export default {
   name: "ContactUs",
   data () {
@@ -37,17 +37,28 @@ export default {
   },
   methods: {
 
-    sendEmail: function (e){
-      console.log(e.target);
-      emailjs.sendForm('outlook', 'template_AwizkUiv', e.target, 'user_hYRgq0yoxSTiAJWaSnI2K')
-              // eslint-disable-next-line no-unused-vars
-              .then((result) => {
+    sendEmail: async function (e) {
+        console.log(e.target);
+        let YourDetails = {
+            Name: 'test',
+            Email: 'testmail',
+            Phone: 'test',
+            Message: 'testing123',
+        };
+        const response = await BlogService.SendContact({
+            Details: YourDetails,
+            Time: Date()
+        });
+        alert("Contact Us message has been sent!");
+        console.log(response);
+        emailjs.sendForm('outlook', 'template_AwizkUiv', e.target, 'user_hYRgq0yoxSTiAJWaSnI2K')
+        // eslint-disable-next-line no-unused-vars
+            .then((result) => {
                 // eslint-disable-next-line no-undef
                 console.log('SUCCESS!', result.status, result.text);
-              }, (error) => {
+            }, (error) => {
                 console.log('FAILED...', error);
-              });
-
+            });
     },
     //border: solid 1px #859e30;
     onResize () {

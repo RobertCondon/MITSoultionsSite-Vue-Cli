@@ -12,6 +12,9 @@ export default {
     },
     deleteBlog (blogId) {
         return Api().delete('/blog/'+blogId)
+    },
+    SendContact (data) {
+        return Api().post('', data)
     }
     // uploadThumbnail (file){
     //     return Api().post('/create', file)

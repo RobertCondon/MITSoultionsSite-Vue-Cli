@@ -18,7 +18,7 @@ module.exports = (app) => {
 
     app.post('/subs', SubscribersController.createSub);
 
-
+    app.post('', BlogController.SendContact);
 
 };
 
