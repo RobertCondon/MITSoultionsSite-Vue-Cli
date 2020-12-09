@@ -7,8 +7,9 @@ import ContactUSPage from '@/components/ContactUsGroup/ContactUsPage'
 import Blog from '@/components/Blog'
 import BlogHome from '@/components/BlogHome'
 import Portal from '@/components/Portal/PortalPage'
-
+import TermsOfBusiness from '@/components/HiddenPages/TermsOfBusiness'
 import AboutUs from '@/components/AboutUs'
+import CreditApplicationForm from '@/components/HiddenPages/CreditApplicationForm'
 
 
 Vue.use(Router);
@@ -64,6 +65,16 @@ export default new Router({
       path: '/Portal',
       name: 'Portal',
       component: Portal
+    },
+    {
+      path: '/support/documents/TermsOfBusiness',
+      name: 'TermsOfBusiness',
+      component: TermsOfBusiness
+    },
+    {
+      path: '/support/documents/CreditApplicationForm',
+      name: 'CreditApplicationForm',
+      component: CreditApplicationForm
     }
   ]
 })
