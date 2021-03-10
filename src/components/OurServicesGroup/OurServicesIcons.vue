@@ -134,13 +134,13 @@
   }
   .AllServices_ {
     margin-top: 6%;
-    height: 60%;
+    height: 130px;
     transition: 1s;
     float: left;
     margin-left: 20%;
   }
   .ServiceDiv_:hover .AllServices_ {
-    height: 62%;
+    transform: scale(1.1);
   }
   .ServiceDiv_:hover .ServiceTag {
     font-size: 65px;

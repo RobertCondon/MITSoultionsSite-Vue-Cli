@@ -6,50 +6,48 @@
         <div id="PackageBronze" v-if="Packages" style="" class="Package">
           <div style="background-color: #cdced3;">
             <h1 class="PackageTitle" style=" text-shadow: #F7C59F 2.5px 1.5px"> Bronze </h1>
-            <h4>Understand Whats Going On</h4>
+            <h4 class="PackageSubTitle">Understand Whats Going On</h4>
           </div>
-          <div style="background-color: #d6d7dc; margin-top: -10px;">
-            <h4 style="padding-top: 15px" class="PackageFeature"> Proactive monitoring </h4>
-            <h4 style="padding-bottom: 15px" class="PackageFeature"> Formalised system status reporting </h4>
-          </div>
-          <div style="background-color: #cdced3; padding: 20px;  margin-top: -10px;">
-            <h1 class="PackagePrice"> Monthly Subscription </h1>
+          <div class="PackageInfo">
+            <h4 class="PackageFeature"> Proactive monitoring </h4>
+            <div class="Line"></div>
+            <h4 class="PackageFeature"> Formalised system status reporting </h4>
           </div>
         </div>
       </transition>
       <div id="Gold" class="Package">
         <div style="background-color: #cdced3;">
           <h1 class="PackageTitle" style="text-shadow: #E1CE7A 2.5px 1.5px"> Gold </h1>
-          <h4>Full 24/7 Support</h4>
+          <h4 class="PackageSubTitle">Full 24/7 Support</h4>
         </div>
-        <div style="background-color: #d6d7dc; margin-top: -10px;">
+        <div class="PackageInfo">
           <h4 class="PackageFeature"> Silver Plus+</h4>
-          <h4 style="padding-top: 15px" class="PackageFeature"> 24/7 break/fix support </h4>
+          <div class="Line"></div>
+          <h4 class="PackageFeature"> 24/7 break/fix support </h4>
+          <div class="Line"></div>
           <h4 class="PackageFeature"> Agreed response times </h4>
+          <div class="Line"></div>
           <h4 class="PackageFeature"> Formalised disaster recovery planning </h4>
 
-        </div>
-        <div style="background-color: #cdced3; padding: 20px;  margin-top: -10px;">
-          <h1 class="PackagePrice"> Monthly Subscription </h1>
         </div>
       </div>
       <transition name="PackageAniRight" :key="Packages">
         <div v-if="Packages" id="PackageSliver" style="" class="Package">
           <div style="background-color: #cdced3;">
             <h1 class="PackageTitle" style="text-shadow: #D8DBE2 2.5px 1.5px"> Silver </h1>
-            <h4>Critical Support</h4>
+            <h4 class="PackageSubTitle">Critical Support</h4>
           </div>
-          <div style="background-color: #d6d7dc; margin-top: -10px;">
+          <div class="PackageInfo">
             <h4 class="PackageFeature"> Bronze Plus+</h4>
-            <h4 style="padding-top: 15px" class="PackageFeature"> Proactive monitoring </h4>
+            <div class="Line"></div>
+            <h4 class="PackageFeature"> Proactive monitoring </h4>
+            <div class="Line"></div>
             <h4 class="PackageFeature"> Formalised system status reporting </h4>
 
           </div>
-          <div style="background-color: #cdced3; padding: 20px;  margin-top: -10px;">
-            <h1 class="PackagePrice"> Monthly Subscription </h1>
-          </div>
         </div>
       </transition>
+
       <div class="BreakFix">
         <div class="BreakFixContent">
           <h1 class="BreakFixIntro"> For more flexibility or as a supplement to our plans, we have <br></h1>
@@ -117,12 +115,7 @@
 </script>
 
 <style scoped>
-  #PackageBronze {
-    margin-left: 10%
-  }
-  #PackageSliver {
-    margin-right: 10%
-  }
+
   h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -140,15 +133,23 @@
   }
 
  .PackageFeature {
-   display: list-item;
-   list-style-type: disc;
-   list-style-position: inside;
-   text-align: left;
+   text-align: center;
    font-family: 'Montserrat', sans-serif;
    font-weight: 400;
-   font-size: 1vw;
-   padding: 5px;
+   font-size: 24px;
+   padding: 20px 5px 20px 5px;
    color: #495d68;
+   margin-bottom: initial;
+ }
+  .PackageSubTitle {
+    font-size: 28px;
+  }
+ .Line {
+   width: 80%;
+   background-color: whitesmoke;
+   height: 1px;
+   margin-left: 10%;
+   margin-top: initial;
  }
 .PackagePrice {
   width: 100%;
@@ -160,7 +161,8 @@
   width: 100%;
   font-family: 'Bebas Neue', cursive;
   color: #495d68;
-  font-size: 2vw;
+  font-size: 3.5vw;
+
 }
 
  .Package {
@@ -170,10 +172,17 @@
    z-index: 0;
    box-shadow: 0px 0px 20px #888888;
    transition: 0.8s;
+   border-radius: 20px;
  }
  .Package:hover {
    transform: scale(1.05, 1.05);
    z-index: 3;
+ }
+ .PackageInfo {
+   background-color: #d6d7dc; margin-top: -10px;
+   padding: 50px;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
  }
 
 .SectionTitle {
@@ -203,8 +212,16 @@
 }
 
   #Gold {
-
+    border-bottom:solid 2px gold;
     z-index: 1;
+  }
+  #PackageBronze {
+    margin-left: 10%;
+    border-bottom:solid 2px #F7C59F;
+  }
+  #PackageSliver {
+    margin-right: 10%;
+    border-bottom:solid 2px #D8DBE2;
   }
 
 
@@ -295,6 +312,15 @@
     width: 50%;
   }
   @media (max-width:800px){
+    .PackageSubTitle {
+      font-size: 22px;
+    }
+    .PackageFeature {
+      font-size: 20px;
+    }
+    .PackageInfo {
+      padding: 20px;
+    }
     .PackageTitle {
       font-size: 13vw;
     }
