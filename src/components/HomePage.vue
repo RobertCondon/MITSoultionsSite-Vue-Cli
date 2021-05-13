@@ -6,8 +6,8 @@
           <div id="Top-Info" class="Contact-Top-Box" style="background-color: black; ">
 
             <h2 class="Contact-Top"> 0800 648 787 </h2>
-            <a onclick="window.location.href = 'https://www.google.co.nz/maps/place/2%2F64+Carmen+Road,+Hei+Hei,+Christchurch+8042/@-43.5373934,172.5270289,17z/data=!3m1!4b1!4m5!3m4!1s0x6d31f57aaa60c987:0x99721f232ba36031!8m2!3d-43.5373934!4d172.5292176';" >
-              <h2 class="Contact-Top"> Unit 2, 58-64 Carmen Road </h2>
+            <a onclick="window.location.href = 'https://www.google.com/maps/place/3%2F92B+Russley+Road,+Russley,+Christchurch+8042/@-43.5140819,172.5364731,17z/data=!3m1!4b1!4m8!1m2!2m1!1sUnit+3+92B+Russley+Road+PO+Box+16649+Russley+Christchurch+8042+New+Zealand!3m4!1s0x6d31f518cb3cce4f:0x7ebcf2442331de92!8m2!3d-43.5140858!4d172.5386618';" >
+              <h2 class="Contact-Top"> Unit 3, 92B Russley Road </h2>
             </a>
 
               <b-button v-on:click="PortalGO = !PortalGO" class="Contact-Top" id="PortalButton" style="" variant="outline-success">Client Portal</b-button>
