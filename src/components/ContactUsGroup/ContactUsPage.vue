@@ -53,20 +53,6 @@
         <ContactUsTitle></ContactUsTitle>
 
         <ContactUs></ContactUs>
-        <h1 style="
-        display: inline-block;
-        font-family: 'Bebas Neue', cursive;
-        font-weight: 400;
-        font-size:  6.5vw;
-        color: #6f6476;
-        position: relative;
-        z-index: 2;
-        opacity: 1;
-        margin-top: 10%;
-         "> Where Are We </h1>
-        <a target="_blank" rel="noopener noreferrer"  href= "https://www.google.co.nz/maps/place/2%2F64+Carmen+Road,+Hei+Hei,+Christchurch+8042/@-43.5373934,172.5270289,17z/data=!3m1!4b1!4m5!3m4!1s0x6d31f57aaa60c987:0x99721f232ba36031!8m2!3d-43.5373934!4d172.5292176" >
-          <img style=" display: inline-block; width: 100%; padding: 3% 10% 10% 10%; cursor: pointer" src="../../assets/images/ManageITMap.png" alt="None">
-        </a>
         <Footer></Footer>
       </div>
     </div>
