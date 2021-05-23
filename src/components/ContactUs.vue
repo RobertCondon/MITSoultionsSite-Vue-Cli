@@ -18,7 +18,7 @@
     </form>
 
 
-    <img v-if="!isMobile" style="width: 100%"  src="../assets/images/ContactUsImage.png" alt="Ah shit lost it again">
+    <img v-if="!isMobile" style="width: 100%"  src="../assets/images/ContactUsImage2.png" alt="Ah shit lost it again">
     <img v-if="isMobile" style="width: 100%"  src="../assets/images/ContactUsImageMobile.png" alt="Ah shit lost it again">
 
   </div>
