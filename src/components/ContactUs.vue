@@ -4,7 +4,7 @@
     <div v-if="!isMobile" style="height: 14vh"> </div>
     <div v-if="isMobile" style="height: 6vh"> </div>
     <div v-if="isMobile">
-      <img  style="width: 75%; height: 75%" src="../assets/images/ContactUsCard.png" alt="Ah shit lost it again">
+      <img  style="width: 75%; height: 75%" src="../assets/images/ContactUsCard2.png" alt="Ah shit lost it again">
     </div>
 
     <form id="form" class="topBefore"  @submit.prevent="sendEmail" >
