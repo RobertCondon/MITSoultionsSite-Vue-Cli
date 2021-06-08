@@ -8,11 +8,11 @@
     </div>
 
     <form id="form" class="topBefore"  @submit.prevent="sendEmail" >
-      <input class="input" name ="user_name" type="text" placeholder="NAME">
-      <input class="input" name="user_email" type="text" placeholder="E-MAIL">
-      <input class="input" name="company" type="text" placeholder="COMPANY">
-      <input class="input" name="phone" type="text" placeholder="CONTACT NO">
-      <textarea name="message" type="text" placeholder="MESSAGE"></textarea>
+      <input v-model="YourDetails.Name" class="input" name ="user_name" type="text" placeholder="NAME">
+      <input v-model="YourDetails.Email" class="input" name="user_email" type="text" placeholder="E-MAIL">
+      <input v-model="YourDetails.Company" class="input" name="company" type="text" placeholder="COMPANY">
+      <input v-model="YourDetails.Phone" class="input" name="phone" type="text" placeholder="CONTACT NO">
+      <textarea v-model="YourDetails.Message" name="message" type="text" placeholder="MESSAGE"></textarea>
       <input id="Submit" type="submit" class="button" value="Submit">
 
     </form>
@@ -31,6 +31,13 @@ export default {
   name: "ContactUs",
   data () {
     return {
+    YourDetails: {
+         Name: '',
+         Company: '',
+         Email: '',
+         Phone: '',
+         Message: '',
+     },
       msg: 'Welcome to Your Vue.js App',
       isMobile: false,
     }
@@ -39,14 +46,8 @@ export default {
 
     sendEmail: async function (e) {
         console.log(e.target);
-        let YourDetails = {
-            Name: 'test',
-            Email: 'testmail',
-            Phone: 'test',
-            Message: 'testing123',
-        };
         const response = await BlogService.SendContact({
-            Details: YourDetails,
+            Details: this.YourDetails,
             Time: Date()
         });
         alert("Contact Us message has been sent!");
