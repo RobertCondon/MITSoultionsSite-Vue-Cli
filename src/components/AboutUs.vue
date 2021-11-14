@@ -65,7 +65,7 @@
                 <div class="values">
                   <img class="ValuePic" src="../assets/images/svg/ExelanceLogo.png" alt="">
                   <span class="ValueTitle">Excellence</span>
-                  <span class="ValueBlerb">Always starving to be at the forefront of our field</span>
+                  <span class="ValueBlerb">Always striving to be at the forefront of our field</span>
                 </div>
                 <div class="values">
                   <img class="ValuePic" src="../assets/images/svg/LongevityLogo.png" alt="">
