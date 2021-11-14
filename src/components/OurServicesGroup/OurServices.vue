@@ -108,7 +108,7 @@
           </p>
           <transition name="ReadMoreTrans">
             <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[1].ReadBool" :key="this.ReadMoreArray[1].ReadBool">
-              Our Break Fix support provides peace of mind for any IT issues you may encounter. Our professional team of engineers and extensive expertise supporting multi-vendor hardware and software platforms.
+              Our Break Fix support provides peace of mind for any IT issues you may encounter. Our professional team of engineers and extensive expertise, support multi-vendor hardware and software platforms.
 
               A solution that is best suited for those businesses that have small IT requirements, limited funding, or where the business already has internal support.
             </p>
@@ -197,15 +197,15 @@
           <transition name="ReadMoreTrans">
             <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[3].ReadBool" :key="this.ReadMoreArray[3].ReadBool">
               <br><br><b>We're your backup and recovery experts.</b><br>
-              Why does your business need a backup and recovery plan? Being prepared and organised to mitigate the risk of outages and productivity through IT disaster recovery is extremely important for any company. From virus infections to accidental fire, flood damage and even malicious damage, you need to have procedures in place to combat any level of threat – not to mention seismic wobbles!
+              Why does your business need a backup and recovery plan? Being prepared and organised to mitigate the risk of outages through IT disaster recovery is extremely important for any company. From virus infections to accidental fire, flood and even malicious damage, you need to have procedures in place to combat any level of threat – not to mention seismic wobbles!
 
-              Manage IT can help you to prepare a disaster recovery IT plan by reviewing and establishing backup and recovery systems. Like all disaster plans, few companies prepare for them fully until something actually happens and by then it's too late. Considering disaster recovery IT procedures is important for the continued success of your business.
+              Manage IT can help you to prepare a disaster recovery plan for your IT systems, by reviewing and establishing roust backup and recovery protocols. Like all disaster plans, few companies prepare for them fully until something actually happens and by then it's too late. Considering disaster recovery IT procedures is important for the continued success of your business.
 
-              At Manage IT, we can provide on-site and/or external backup and recovery solutions that best suit your business needs and business requirements at an appropriate price. This can be provided in a mixture of solutions such as locally attached storage right through to cloud-based storage, or even high-availablility virtualisation.
+              At Manage IT, we can provide on-site and/or external backup and recovery options that best suit your business needs and requirements at an appropriate price. This can be provided through mixture of solutions locally attached storage, cloud-based storage, or even high-availablility virtualisation.
 
-              Formalising the defined disaster recovery strategy under a service level agreement (SLA) ensures that the strategy is regularly checked and maintained, providing you with an assurance that the solution is working and that we have an agreed formalised backup and recovery action plan to address the problem should the managed system fail.
+              Formalising the defined disaster recovery strategy under a service level agreement (SLA) ensures that the strategy is regularly checked and maintained, providing you with assurance that the solution is working and that we have an agreed formalised backup and recovery action plan to address the problem should the managed system fail.
 
-              For most clients it is always our recommendation that an image-based disaster recovery strategy is implemented. It is a well established solution that captures the entire build of the computer and allows you to transfer this build to another piece of hardware within a few hours (depends on the amount of data). As required, we can respond by providing a same-day spare machine, or a complete network refresh, or an overnight office refit – whatever the situation demands.
+              For most clients it is always our recommendation that an image-based disaster recovery strategy is implemented. It is a well established solution that captures the entire build of the computer and allows you to transfer this build to another piece of hardware within a few hours (depending on the amount of data). As required, we can respond by providing a same-day spare machine, a complete network refresh, or an overnight office refit – whatever the situation demands.
 
               <br><br><b>Tips to consider when putting together a backup and recovery plan:</b><br>
               1. Critical Information:
@@ -220,7 +220,7 @@
               <br><br><b>2. Basic Critical Data Requirements (Traditional Strategies):</b><br>
               Any data that is stored either on a local computer and/or in the cloud, should include a basic level of redundancy. This includes redundancy around the hard drives which house the data through to capturing the critical data to an external device that can be stored off site (e.g. tape streamer, RDX, DVD and/or external hard drive).
               <br><br><b>3. Cloud Storage:</b><br>
-              Since the earthquakes, cloud storage has been in increased demand. Designed to capture incremental files changed in a local data repository through to data and computer changes at an image level, this solution is becoming a preferred disaster recovery IT strategy. Providing the assurances around the backup being off site, provisioning for archieval retrieval and as required restoration from a flat file through to a virtualised computer on the internet, the cloud storage solution is becoming the preferred solution.
+              Since the earthquakes, cloud storage has been in increased demand. Designed to capture incremental files changed in a local data repository through to data and computer changes at an image level, this solution is becoming a preferred disaster recovery IT strategy. Providing the assurances around the backup being off site, provisioning for archival retrieval and as required restoration from a flat file through to a virtualised computer on the internet, the cloud storage solution is becoming the preferred solution.
               <br><br><b>4. Complete Failure:</b><br>
               In the event of a complete disaster where your office is totally inaccessible, we can retrieve your backup data and install either onto loan equipment, new equipment and/or in a virtualised environment based in the cloud or locally on site so as to allow your business to get back onto its feet.
 
@@ -289,14 +289,14 @@
           </p>
           <transition name="ReadMoreTrans">
             <p style="opacity: 100%;"   class="ReadMore" v-if="this.ReadMoreArray[5].ReadBool" :key="this.ReadMoreArray[5].ReadBool">
-              When it comes to your database, management solutions, Manage IT are focused on your organisation’s own processes. We work to enhance these processes and the overall business. This means we provide and prove quicker financial returns with the client.
+              When it comes to your database, management solutions, Manage IT are focused on your organisation’s own processes. We work to enhance these processes and the overall business.
 
-              Our database management is flexible around how you want to work and we strive to successfully integrate our work into each customer’s individual operations/methodologies.
+              Our database management is flexible around how you want to work and we strive to successfully integrate our task into each customer’s individual operations/methodologies.
 
               <br><br><b>Understanding your data</b><br>
               Key to everything we do is gaining a complete understanding of your data. Its use. Its structure. Its lifecycle. Its process.
 
-              Manage IT have provided a low to medium tier for delivering customised solutions based on data management and process. We look to understand the importance of your data, how it flows through your organisation and how it empowers and enables your business.
+              We look to understand the importance of your data, how it flows through your organisation and how it empowers and enables your business.
 
             </p>
           </transition>
@@ -325,13 +325,13 @@
           </p>
           <transition name="ReadMoreTrans">
             <p style="opacity: 100%;"  class="ReadMore" v-if="this.ReadMoreArray[6].ReadBool" :key="this.ReadMoreArray[6].ReadBool">
-              Security standards are always changing to keep up with the fast pace of the IT world. This is why it's so important to use an IT consulting company like Manage IT. We have our eyes on the ball all the time, adapting to changes as they happen in order to provide your IT infrastructure with the latest and most secure security systems available.
-
+              Security standards are always changing to keep up with the fast pace of the IT world. This is why it's so important to use an IT consulting company like Manage IT.
+              We keep our eyes on the ball, adapting to changes as they happen, providing your IT infrastructure with the latest and most secure security systems available.
 
               Our various external and internal security measures include:
 
               <br><br><b>External measures</b><br>
-              Security audit<br>
+              Security audits<br>
               Hardware firewalls (managed and unmanaged)<br>
               Email relay tests - These tests ensure that the email server on your network does not allow other email servers to connect and send email via it. Spammers often locate an open relay server and exploit it to send spam.<br>
               Hosted and on-premise email and proxy filters – Threat metrics scan for viruses, spam and other potential threats.<br>
@@ -341,7 +341,7 @@
               Security Accounts – Certain network authority accounts can have elevated priveleges on the network. <br>
               VPN Access – You can specify the users that should have the ability to access the network remotely via a VPN connection. <br>
               <br><br>
-              We also provide summary reports with security updates and recommendations regarding your network. And when required we can provide a comprehensive security audit which is completed by a third party security specialist. You can read more about these in our different business IT support service packages.
+              We also provide summary reports with security updates and recommendations regarding your network. When required we can also provide a comprehensive security audit which is completed by a third party security specialist. You can read more about these in our different business IT support service packages.
 
             </p>
           </transition>
@@ -365,9 +365,9 @@
             <div id="Line8" class="ServiceLineTitle"></div>
           </div>
           <p style="opacity: 100%;"   class="ServiceTopContent">
-            <b>Generally speaking the 'Cloud' refers to the internet.</b><br><br>
-            So Cloud computing is computing over the internet. <br>
-            The value to Cloud varies. The main benfits include the scope you can create to focus on other things by giving responsibilty for maintenance and upkeep of servers and software to someone else; the peace of mind that comes with knowing you can go about your business from anywhere you can find an internet connection, and not be exposed to the downtime risks associated with a fixed location; and finally, having the ability to bring greater certainty to cashflow by replacing irregular and often heavy capital expenditure with regular and predictable operational expenditure.
+            <b>Generally speaking the 'Cloud' refers to the internet;<br><br>
+            So Cloud computing is computing over the internet. <br></b>
+            The value to Cloud varies. The main benfits include the scope you can create to focus on other things by giving responsibilty for maintenance and upkeep of servers and software to someone else; the peace of mind that comes with knowing you can go about your business from anywhere you can find an internet connection, not be exposed to the downtime risks associated with a fixed location; and finally, having the ability to bring greater certainty to cashflow by replacing irregular and often heavy capital expenditure with regular and predictable operational expenditure.
           </p>
           <transition name="ReadMoreTrans">
             <p style="opacity: 100%;"  class="ReadMore" v-if="this.ReadMoreArray[7].ReadBool" :key="this.ReadMoreArray[7].ReadBool">
