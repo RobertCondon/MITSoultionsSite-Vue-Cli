@@ -1,4 +1,4 @@
-<template>
+lost image<template>
     <div style="background-color: #dadbe0;">
       <h1 class="SectionTitle"> Our Services</h1>
 

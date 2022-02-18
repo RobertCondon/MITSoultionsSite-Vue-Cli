@@ -1,4 +1,4 @@
-<template>
+lost image<template>
     <div style="height: 120vh; overflow-x: hidden; max-height: 100%; max-width: 100%">
       <img v-if="!isMobile" id="Background" style="  overflow-x: hidden; max-height: 100%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackground.png" alt="Ah shit lost it again">
       <img v-if="isMobile" id="Background2" style="  overflow-x: hidden; max-height: 110%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackgroundMobile.png" alt="Ah shit lost it again">

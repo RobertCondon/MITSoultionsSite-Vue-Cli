@@ -97,7 +97,7 @@
       </div>
 
 
-    <!--<div> <img style=" z-index: 1; position: absolute; transform: translate(0, -50px); width: 100vm; right: 0"  src="../assets/images/DividerChunk2.png" alt="Ah shit lost it again"></div>-->
+    <!--<div> <img style=" z-index: 1; position: absolute; transform: translate(0, -50px); width: 100vm; right: 0"  src="../assets/images/DividerChunk2.png" alt="lost image" it again"></div>-->
 
     <Testimonials id="Testmonials" style="border-top: #859e30; border-top-style: ridge; border-top-width: thick"></Testimonials>
     <Footer></Footer>

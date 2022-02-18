@@ -1,4 +1,4 @@
-<template>
+lost image<template>
   <div style="background-color: #dadbe0; overflow: hidden; max-width: 100%; max-height: 100%">
 
     <div v-if="!isMobile" style="height: 14vh"> </div>

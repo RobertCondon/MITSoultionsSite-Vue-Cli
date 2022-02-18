@@ -1,4 +1,4 @@
-<template id="three">
+lost image<template id="three">
   <div  id="app" class="wrapper" >
     <PortalPage v-if="PortalGO"></PortalPage>
       <div >

@@ -1,4 +1,4 @@
-<template>
+lost image<template>
   <div id="PostIts" style="">
   </div>
 </template>

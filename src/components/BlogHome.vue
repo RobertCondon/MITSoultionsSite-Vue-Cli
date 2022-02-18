@@ -1,4 +1,4 @@
-<template>
+lost image<template>
     <div class="blog">
         <navbar></navbar>
         <BlogHomeTitle></BlogHomeTitle>

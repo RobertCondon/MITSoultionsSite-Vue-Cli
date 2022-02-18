@@ -1,4 +1,4 @@
-<template>
+lost image<template>
     <div style="background-color: #dadbe0; overflow: hidden; max-width: 100%">
       <div>
         <HomePageMobile v-if="isMobile"></HomePageMobile>

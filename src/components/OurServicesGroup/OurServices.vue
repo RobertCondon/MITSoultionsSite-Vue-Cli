@@ -1,4 +1,4 @@
-<template>
+lost image<template>
     <div style="background-color: #dadbe0" class="wrapper">
       <HomePageMobile v-if="isMobile"></HomePageMobile>
       <b-navbar v-if="!isMobile" id="nav"  :sticky="true" style="color: darkblue; padding-top: 0px;" type="Dark">

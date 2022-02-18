@@ -1,4 +1,4 @@
-<template>
+lost image<template>
   <div>
     <b-navbar id="nav"  :sticky="true" style="color: darkblue; padding-top: 0px; position: fixed" type="Dark">
       <b-navbar-brand href="#">
