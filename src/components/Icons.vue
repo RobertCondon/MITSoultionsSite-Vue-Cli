@@ -5,7 +5,7 @@
       <div id="Tags">
         <router-link  to="/OurServices#ItemThree">
           <div id="Server-Content" class="IconContent"  style="position: absolute;">
-            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Lost image="">
+            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Lost image" style="">
             <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Lost image" style="">
             <img class="SVGimage" src="../assets/images/svg/ServerManagement.png" alt="Lost image" style="">
             <h1 class="ServiceText" style=" "> Server Management </h1>
