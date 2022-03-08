@@ -1,13 +1,13 @@
-lost image<template>
+<template>
     <div id="ServiceBackImage" style=" position: relative;
     z-index: 1;">
-      <img id="ServiceImage"  src="../assets/images/ServicesTemplate2.png" alt="Ah shit lost it again">
+      <img id="ServiceImage"  src="../assets/images/ServicesTemplate2.png" alt="Lost image">
       <div id="Tags">
         <router-link  to="/OurServices#ItemThree">
           <div id="Server-Content" class="IconContent"  style="position: absolute;">
-            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Ah shit lost it again" style="">
-            <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Ah shit lost it again" style="">
-            <img class="SVGimage" src="../assets/images/svg/ServerManagement.png" alt="Ah shit lost it again" style="">
+            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Lost image="">
+            <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Lost image" style="">
+            <img class="SVGimage" src="../assets/images/svg/ServerManagement.png" alt="Lost image" style="">
             <h1 class="ServiceText" style=" "> Server Management </h1>
             <h3 class="Fluff">Professional Server based management <br> and problem solving</h3>
           </div>
@@ -16,9 +16,9 @@ lost image<template>
 
         <router-link  to="/OurServices#ItemFive">
           <div id="Networking-Content" class="IconContent" style=" position: absolute">
-            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Ah shit lost it again" style="">
-            <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Ah shit lost it again" style="">
-            <img class="SVGimage" src="../assets/images/svg/networking.png" alt="Ah shit lost it again">
+            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Lost image" style="">
+            <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Lost image" style="">
+            <img class="SVGimage" src="../assets/images/svg/networking.png" alt="Lost image">
             <h1 class="ServiceText" style=""> Networking </h1>
             <h3 class="Fluff"> Networking to grow with your business <br>  and suit your needs</h3>
           </div>
@@ -26,9 +26,9 @@ lost image<template>
 
         <router-link  to="/OurServices#ItemSeven">
           <div id="Security-Content" class="IconContent" style=" position: absolute">
-            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Ah shit lost it again" style="">
-            <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Ah shit lost it again" style="">
-            <img class="SVGimage" src="../assets/images/svg/security.png" alt="Ah shit lost it again">
+            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Lost image" style="">
+            <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Lost image" style="">
+            <img class="SVGimage" src="../assets/images/svg/security.png" alt="Lost image">
             <h1 class="ServiceText" style=""> Security Services</h1>
             <h3 class="Fluff"> Protect your systems and data with <br> right expert advice</h3>
           </div>
@@ -36,9 +36,9 @@ lost image<template>
 
         <router-link  to="/OurServices#ItemThree">
           <div id="Disaster-Content" class="IconContent" style="position: absolute">
-            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Ah shit lost it again" style="">
-            <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Ah shit lost it again" style="">
-            <img class="SVGimage" src="../assets/images/svg/disasterRecovery.png" alt="Ah shit lost it again">
+            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Lost image" style="">
+            <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Lost image" style="">
+            <img class="SVGimage" src="../assets/images/svg/disasterRecovery.png" alt="Lost image">
             <h1 class="ServiceText" style=""> Disaster Recovery </h1>
             <h3 class="Fluff"> Backup and recovery, we make sure no <br> matter what your data is safe</h3>
           </div>
@@ -46,9 +46,9 @@ lost image<template>
 
         <router-link  to="/OurServices#ItemOne">
           <div id="Systems-Content" class="IconContent"  style=" position: absolute">
-            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Ah shit lost it again" style="">
-            <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Ah shit lost it again" style="">
-            <img class="SVGimage" src="../assets/images/svg/computerSystems.png" alt="Ah shit lost it again">
+            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Lost image" style="">
+            <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Lost image" style="">
+            <img class="SVGimage" src="../assets/images/svg/computerSystems.png" alt="Lost image">
             <h1 class="ServiceText" style=""> Computer Systems </h1>
             <h3 class="Fluff"> Change from outdated technology <br>to new more productive systems</h3>
           </div>
@@ -56,9 +56,9 @@ lost image<template>
 
         <router-link  to="/OurServices#ItemEight">
           <div id="Cloud-Content" class="IconContent"  style=" position: absolute">
-            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Ah shit lost it again" style="">
-            <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Ah shit lost it again" style="">
-            <img class="SVGimage" src="../assets/images/svg/cloudComputing.png" alt="Ah shit lost it again">
+            <img class="BorderY" src="../assets/images/IconBorderY.png" alt="Lost image" style="">
+            <img class="BorderX" src="../assets/images/IconBorderX.png" alt="Lost image" style="">
+            <img class="SVGimage" src="../assets/images/svg/cloudComputing.png" alt="Lost image">
             <h1 class="ServiceText" style=""> Cloud computing </h1>
             <h3 class="Fluff"> Simplify your IT systems with the <br>adaptive capabilities of a Cloud solution</h3>
           </div>

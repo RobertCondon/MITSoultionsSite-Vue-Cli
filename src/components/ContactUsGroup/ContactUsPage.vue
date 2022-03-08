@@ -1,4 +1,4 @@
-lost image<template>
+<template>
     <div style="background-color: #dadbe0; overflow: hidden; max-width: 100%">
       <div>
         <HomePageMobile v-if="isMobile"></HomePageMobile>
@@ -16,10 +16,10 @@ lost image<template>
             </transition>
             <router-link  to="/">
               <transition name="fade">
-                <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
+                <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../../assets/images/manageit-digital_logo.png" alt="Lost image">
               </transition>
               <transition name="fade">
-                <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../../assets/images/manageit-digital_logoWhite.png" alt="Ah shit lost it again">
+                <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../../assets/images/manageit-digital_logoWhite.png" alt="Lost image">
               </transition>
 
             </router-link>

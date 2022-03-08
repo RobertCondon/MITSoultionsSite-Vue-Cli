@@ -1,4 +1,4 @@
-lost image<template id="three">
+<template id="three">
   <div  id="app" class="wrapper" >
     <PortalPage v-if="PortalGO"></PortalPage>
       <div >
@@ -34,10 +34,10 @@ lost image<template id="three">
                 </transition>
                 <router-link  to="/">
                   <transition name="fade">
-                    <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
+                    <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logo.png" alt="Lost image">
                   </transition>
                   <transition name="fade">
-                    <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logoWhite.png" alt="Ah shit lost it again">
+                    <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logoWhite.png" alt="Lost image">
                   </transition>
 
                 </router-link>
@@ -73,7 +73,7 @@ lost image<template id="three">
 
 
 
-            <img style=" z-index: 1; position: absolute; transform: translate(0, -65%); width: 100%; left: 0"  src="../assets/images/Divider2.png" alt="Ah shit lost it again">
+            <img style=" z-index: 1; position: absolute; transform: translate(0, -65%); width: 100%; left: 0"  src="../assets/images/Divider2.png" alt="Lost image">
 
 
 
@@ -95,7 +95,7 @@ lost image<template id="three">
 
               </div>
               <div class="ServiceBackground" style="height: 20vh"></div>
-              <img style=" z-index: 1; position: absolute; transform: translate(0, -34%); width: 101%; right: 0"  src="../assets/images/ParrlaxImageTransition.png" alt="Ah shit lost it again">
+              <img style=" z-index: 1; position: absolute; transform: translate(0, -34%); width: 101%; right: 0"  src="../assets/images/ParrlaxImageTransition.png" alt="Lost image">
 
 
 
@@ -112,12 +112,12 @@ lost image<template id="three">
                 </parallax>
               </div>
 
-            <img style=" z-index: 1; position: absolute; transform: translate(0, -64%); width: 101%; right: 0"  src="../assets/images/ParrlaxBottomTransition.png" alt="Ah shit lost it again">
+            <img style=" z-index: 1; position: absolute; transform: translate(0, -64%); width: 101%; right: 0"  src="../assets/images/ParrlaxBottomTransition.png" alt="Lost image">
 
             <div style=" z-index: 1; background-color: #dadbe0; overflow: hidden; max-width: 100%;">
 
              <ContactUs style="z-index: 1;"></ContactUs>
-              <div> <img style=" z-index: 1; position: absolute; transform: translate(0, -10%); width: 100vm; right: 0"  src="../assets/images/DividerChunk2.png" alt="Ah shit lost it again"></div>
+              <div> <img style=" z-index: 1; position: absolute; transform: translate(0, -10%); width: 100vm; right: 0"  src="../assets/images/DividerChunk2.png" alt="Lost image"></div>
 
               <Testimonials></Testimonials>
 
@@ -155,7 +155,7 @@ lost image<template id="three">
                   and everything inbetween, we assure peace of mind
                 </h4>
               </div>
-              <img style=" z-index: 1; position: absolute; transform: translate(0, -65%); width: 100%; left: 0"  src="../assets/images/Divider2.png" alt="Ah shit lost it again">
+              <img style=" z-index: 1; position: absolute; transform: translate(0, -65%); width: 100%; left: 0"  src="../assets/images/Divider2.png" alt="Lost image">
               <div  class="ServiceBackground">
                 <div class="ServiceBackground" >
                 <h1 style=" overflow: hidden;  font-size: 17.0vw;
@@ -168,7 +168,7 @@ lost image<template id="three">
                 </div>
 
                 <div style="transform: translate(0, 20%); background-repeat: no-repeat; background-size: 100% 100%;" v-bind:style="{'background-image': 'url('+MobileWhyUs+')'}">
-                  <img style=" z-index: 1; position: absolute; top:-2px;  width: 101%; right: 0"  src="../assets/images/ParrlaxImageTransition2.png" alt="Ah shit lost it again">
+                  <img style=" z-index: 1; position: absolute; top:-2px;  width: 101%; right: 0"  src="../assets/images/ParrlaxImageTransition2.png" alt="Lost image">
                   <div style="margin-top: 0%">
                     <h3 style=" overflow: hidden;  font-size: 5.0vw;
                   color: #495d68;;
@@ -197,7 +197,7 @@ lost image<template id="three">
                       to help people and business work smarter, faster and better."
                     </h4>
                   </div>
-                  <img style=" z-index: 1; position: absolute; bottom: 0; width: 101%; right: 0"  src="../assets/images/ParrlaxBottomTransition.png" alt="Ah shit lost it again">
+                  <img style=" z-index: 1; position: absolute; bottom: 0; width: 101%; right: 0"  src="../assets/images/ParrlaxBottomTransition.png" alt="Lost image">
                 </div>
                 <div style="transform: translateY(16%)">
                   <ContactUs></ContactUs>

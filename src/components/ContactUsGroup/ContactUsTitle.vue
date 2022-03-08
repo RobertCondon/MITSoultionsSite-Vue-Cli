@@ -1,7 +1,7 @@
-lost image<template>
+<template>
   <div style="height: 120vh; overflow-x: hidden; max-height: 100%; max-width: 100%">
-    <img v-if="!isMobile" id="Background" style="  overflow-x: hidden; max-height: 100%; max-width: 100%" src="../../assets/images/ContactUsTitleBackground.png" alt="Ah shit lost it again">
-    <img v-if="isMobile" id="Background2" style="  overflow-x: hidden; max-height: 110%; max-width: 100%" src="../../assets/images/ContactUsTitleBackgroundMobile.png" alt="Ah shit lost it again">
+    <img v-if="!isMobile" id="Background" style="  overflow-x: hidden; max-height: 100%; max-width: 100%" src="../../assets/images/ContactUsTitleBackground.png" alt="Lost image">
+    <img v-if="isMobile" id="Background2" style="  overflow-x: hidden; max-height: 110%; max-width: 100%" src="../../assets/images/ContactUsTitleBackgroundMobile.png" alt="Lost image">
       <div  style="z-index: 2; transform: translateY(60%)">
          <h1 style="opacity: 1" class="PageTitleOne"> Contact Us </h1>
         <h3 style="opacity: 0.8; z-index: 3;" class="SemiTitle"> Get In Touch</h3>

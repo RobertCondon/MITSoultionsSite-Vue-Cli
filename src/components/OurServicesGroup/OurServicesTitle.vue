@@ -1,11 +1,11 @@
-lost image<template>
+<template>
     <div style="height: 120vh; overflow-x: hidden; max-height: 100%; max-width: 100%">
-      <img v-if="!isMobile" id="Background" style="  overflow-x: hidden; max-height: 100%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackground.png" alt="Ah shit lost it again">
-      <img v-if="isMobile" id="Background2" style="  overflow-x: hidden; max-height: 110%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackgroundMobile.png" alt="Ah shit lost it again">
+      <img v-if="!isMobile" id="Background" style="  overflow-x: hidden; max-height: 100%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackground.png" alt="Lost image">
+      <img v-if="isMobile" id="Background2" style="  overflow-x: hidden; max-height: 110%; max-width: 100%" src="../../assets/images/OurServicesPageTitleBackgroundMobile.png" alt="Lost image">
       <div id="OurServicesTitleCard" style=" position: absolute; overflow: hidden; max-width: 100%">
         <div id="Wires" style="  overflow-x: hidden; max-height: 100%; max-width: 100%">
-          <img id="WireOne" style="opacity: 0.2;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
-          <img id="WireTwo" style="opacity: 0.2;" src="../../assets/images/CableAnimation.png" alt="Ah shit lost it again">
+          <img id="WireOne" style="opacity: 0.2;" src="../../assets/images/CableAnimation.png" alt="Lost image">
+          <img id="WireTwo" style="opacity: 0.2;" src="../../assets/images/CableAnimation.png" alt="Lost image">
         </div>
         <div  style="z-index: 2;">
           <h1 style="opacity: 1; z-index: 2;" class="PageTitleTwo" > Our </h1> <h1 style="opacity: 1" class="PageTitleOne"> Services</h1>

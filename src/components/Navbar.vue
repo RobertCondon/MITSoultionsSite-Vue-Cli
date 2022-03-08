@@ -1,4 +1,4 @@
-lost image<template>
+<template>
   <div>
     <b-navbar id="nav"  :sticky="true" style="color: darkblue; padding-top: 0px; position: fixed" type="Dark">
       <b-navbar-brand href="#">
@@ -13,10 +13,10 @@ lost image<template>
         </transition>
         <router-link  to="/">
           <transition name="fade">
-            <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
+            <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logo.png" alt="Lost image">
           </transition>
           <transition name="fade">
-            <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logoWhite.png" alt="Ah shit lost it again">
+            <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../assets/images/manageit-digital_logoWhite.png" alt="Lost image">
           </transition>
 
         </router-link>

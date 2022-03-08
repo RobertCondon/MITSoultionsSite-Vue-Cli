@@ -1,4 +1,4 @@
-lost image<template>
+<template>
     <div style="background-color: #dadbe0" class="wrapper">
       <HomePageMobile v-if="isMobile"></HomePageMobile>
       <b-navbar v-if="!isMobile" id="nav"  :sticky="true" style="color: darkblue; padding-top: 0px;" type="Dark">
@@ -14,10 +14,10 @@ lost image<template>
           </transition>
           <router-link  to="/">
             <transition name="fade">
-              <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../../assets/images/manageit-digital_logo.png" alt="Ah shit lost it again">
+              <img v-if="Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../../assets/images/manageit-digital_logo.png" alt="Lost image">
             </transition>
             <transition name="fade">
-              <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../../assets/images/manageit-digital_logoWhite.png" alt="Ah shit lost it again">
+              <img v-if="!Boo" :key="Boo" style="position: absolute; top: 10%; left: 1%; width: 15vw;" src="../../assets/images/manageit-digital_logoWhite.png" alt="Lost image">
             </transition>
 
           </router-link>
@@ -54,8 +54,8 @@ lost image<template>
 
 
       <div style="padding-top: 90px; position: relative; z-index: 1;" id="ItemOne"  class="ServiceItem">
-        <img class="Divider" style=" position: relative; z-index: 1; width: 100vm; right: 0; transform: translateY(-90px)"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
-        <img class="ServiceIcon" id="IconOne" style="opacity: 0.1;" src="../../assets/images/svg/computerSystems.png" alt="Ah shit lost it again">
+        <img class="Divider" style=" position: relative; z-index: 1; width: 100vm; right: 0; transform: translateY(-90px)"  src="../../assets/images/DividerChunk3.png" alt="Lost image">
+        <img class="ServiceIcon" id="IconOne" style="opacity: 0.1;" src="../../assets/images/svg/computerSystems.png" alt="Lost image">
 
         <h1 class="ServiceNumber " style="opacity: 0.1;"  v-if="!isMobile" >01</h1>
         <div class="ServiceContent">
@@ -89,14 +89,14 @@ lost image<template>
             <i v-if="this.ReadMoreArray[0].ReadBool" class="ArrowIconUp"></i>
           </div>
         </div>
-        <img  id="Divder1" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+        <img  id="Divder1" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Lost image">
       </div>
 
 
 
 
       <div id="ItemTwo"  class="ServiceItem">
-        <img class="ServiceIcon" id="IconTwo" style=" opacity: 0.1; "  src="../../assets/images/svg/breakfixServices.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" id="IconTwo" style=" opacity: 0.1; "  src="../../assets/images/svg/breakfixServices.png" alt="Lost image">
         <h1 class="ServiceNumber" style="opacity: 0.1;"  v-if="!isMobile" >02</h1>
         <div class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -119,7 +119,7 @@ lost image<template>
               <i v-if="this.ReadMoreArray[1].ReadBool" class="ArrowIconUp"></i>
             </div>
           </div>
-          <img  id="Divder2" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder2" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Lost image">
         </div>
       </div>
 
@@ -128,7 +128,7 @@ lost image<template>
 
 
       <div id="ItemThree"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/ServerManagement.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/ServerManagement.png" alt="Lost image">
         <h1 class="ServiceNumber" style="opacity: 0.1;"  v-if="!isMobile" >03</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -178,13 +178,13 @@ lost image<template>
               <i v-if="this.ReadMoreArray[2].ReadBool" class="ArrowIconUp"></i>
             </div>
           </div>
-          <img  id="Divder3" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder3" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Lost image">
         </div>
       </div>
 
 
       <div id="ItemFour"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/disasterRecovery.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/disasterRecovery.png" alt="Lost image">
         <h1 class="ServiceNumber " style="opacity: 0.1;"  v-if="!isMobile" >04</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -233,14 +233,14 @@ lost image<template>
               <i v-if="this.ReadMoreArray[3].ReadBool" class="ArrowIconUp"></i>
             </div>
           </div>
-          <img  id="Divder4" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder4" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Lost image">
         </div>
       </div>
 
 
 
       <div id="ItemFive"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/networking.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/networking.png" alt="Lost image">
         <h1 class="ServiceNumber" style="opacity: 0.1;"  v-if="!isMobile" >05</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -270,13 +270,13 @@ lost image<template>
               <i v-if="this.ReadMoreArray[4].ReadBool" class="ArrowIconUp"></i>
             </div>
           </div>
-          <img  id="Divder5" class="Divider" style="z-index: 0; width: 100vm; right: 0"  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder5" class="Divider" style="z-index: 0; width: 100vm; right: 0"  src="../../assets/images/DividerChunk3.png" alt="Lost image">
         </div>
       </div>
 
 
       <div id="ItemSix" name="ItemSix"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/databaseManagement.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/databaseManagement.png" alt="Lost image">
         <h1 class="ServiceNumber " style="opacity: 0.1;"  v-if="!isMobile" >06</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -306,13 +306,13 @@ lost image<template>
               <i v-if="this.ReadMoreArray[5].ReadBool" class="ArrowIconUp"></i>
             </div>
           </div>
-          <img  id="Divder6" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder6" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Lost image">
         </div>
       </div>
 
 
       <div id="ItemSeven"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/security.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/security.png" alt="Lost image">
         <h1 class="ServiceNumber" style="opacity: 0.1;"  v-if="!isMobile" >07</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -351,13 +351,13 @@ lost image<template>
               <i v-if="this.ReadMoreArray[6].ReadBool" class="ArrowIconUp"></i>
             </div>
           </div>
-          <img  id="Divder7" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder7" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Lost image">
         </div>
       </div>
 
 
       <div id="ItemEight" style="margin-bottom: -200px"  class="ServiceItem">
-        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/cloudComputing.png" alt="Ah shit lost it again">
+        <img class="ServiceIcon" style=" opacity: 0.1; "  src="../../assets/images/svg/cloudComputing.png" alt="Lost image">
         <h1 class="ServiceNumber" style="opacity: 0.1;"  v-if="!isMobile" >08</h1>
         <div style="transform: translateY(-185px)" class="ServiceMegaContent">
           <div class="ServiceContent">
@@ -395,7 +395,7 @@ lost image<template>
               </div>
 
           </div>
-          <img  id="Divder8" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Ah shit lost it again">
+          <img  id="Divder8" class="Divider" style=""  src="../../assets/images/DividerChunk3.png" alt="Lost image">
         </div>
 
       </div>

@@ -1,4 +1,4 @@
-lost image<template>
+<template>
     <div style="background-color: #dadbe0;">
       <h1 class="SectionTitle"> Our Services</h1>
 
@@ -8,7 +8,7 @@ lost image<template>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
         <div class="ContentForIcons">
-          <img class="AllServices_" style="" src="../../assets/images/svg/breakfixServices.png" alt="Ah shit lost it again">
+          <img class="AllServices_" style="" src="../../assets/images/svg/breakfixServices.png" alt="Lost image">
           <h1 class="ServiceTag" style="  "> Break/Fix <br> Support </h1>
         </div>
       </div>
@@ -19,7 +19,7 @@ lost image<template>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
         <div class="ContentForIcons">
-          <img class="AllServices_" style="" src="../../assets/images/svg/security.png" alt="Ah shit lost it again">
+          <img class="AllServices_" style="" src="../../assets/images/svg/security.png" alt="Lost image">
           <h1 id="SecurityText" class="ServiceTag" style="  "> IT Security </h1>
         </div>
       </div>
@@ -30,7 +30,7 @@ lost image<template>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
         <div class="ContentForIcons">
-          <img class="AllServices_"   src="../../assets/images/svg/computerSystems.png" alt="Ah shit lost it again">
+          <img class="AllServices_"   src="../../assets/images/svg/computerSystems.png" alt="Lost image">
           <h1 class="ServiceTag" style=" "> Computer Systems </h1>
         </div>
       </div>
@@ -40,7 +40,7 @@ lost image<template>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
         <div class="ContentForIcons">
-        <img class="AllServices_" style=" " src="../../assets/images/svg/ServerManagement.png" alt="Ah shit lost it again">
+        <img class="AllServices_" style=" " src="../../assets/images/svg/ServerManagement.png" alt="Lost image">
         <h1  class="ServiceTag" style="  "> Server <br> Management </h1>
         </div>
       </div>
@@ -51,7 +51,7 @@ lost image<template>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
         <div class="ContentForIcons">
-        <img class="AllServices_" src="../../assets/images/svg/disasterRecovery.png" alt="Ah shit lost it again">
+        <img class="AllServices_" src="../../assets/images/svg/disasterRecovery.png" alt="Lost image">
         <h1 class="ServiceTag" style=" "> Disaster Recovery </h1>
         </div>
       </div>
@@ -62,7 +62,7 @@ lost image<template>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
         <div class="ContentForIcons">
-        <img class="AllServices_" style="" src="../../assets/images/svg/networking.png" alt="Ah shit lost it again">
+        <img class="AllServices_" style="" src="../../assets/images/svg/networking.png" alt="Lost image">
         <h1 id="NetworkingText" class="ServiceTag" style=""> Networking  </h1>
         </div>
       </div>
@@ -73,7 +73,7 @@ lost image<template>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
         <div class="ContentForIcons">
-        <img class="AllServices_" style="" src="../../assets/images/svg/databaseManagement.png" alt="Ah shit lost it again">
+        <img class="AllServices_" style="" src="../../assets/images/svg/databaseManagement.png" alt="Lost image">
         <h1  class="ServiceTag" style="">Database <br> Management </h1>
         </div>
       </div>
@@ -84,7 +84,7 @@ lost image<template>
         <div class="IconTopRight"></div>
         <div class="IconTopLeft"></div>
         <div class="ContentForIcons">
-          <img class="AllServices_" style="" src="../../assets/images/svg/cloudComputing.png" alt="Ah shit lost it again">
+          <img class="AllServices_" style="" src="../../assets/images/svg/cloudComputing.png" alt="Lost image">
           <h1 class="ServiceTag" style=""> Cloud <br> computing </h1>
         </div>
       </div>

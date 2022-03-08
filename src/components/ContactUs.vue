@@ -1,10 +1,10 @@
-lost image<template>
+<template>
   <div style="background-color: #dadbe0; overflow: hidden; max-width: 100%; max-height: 100%">
 
     <div v-if="!isMobile" style="height: 14vh"> </div>
     <div v-if="isMobile" style="height: 6vh"> </div>
     <div v-if="isMobile">
-      <img  style="width: 75%; height: 75%" src="../assets/images/ContactUsCard2.png" alt="Ah shit lost it again">
+      <img  style="width: 75%; height: 75%" src="../assets/images/ContactUsCard2.png" alt="Lost imag">
     </div>
 
     <form id="form" class="topBefore"  @submit.prevent="sendEmail" >
@@ -18,8 +18,8 @@ lost image<template>
     </form>
 
 
-    <img v-if="!isMobile" style="width: 100%"  src="../assets/images/ContactUsImage2.png" alt="Ah shit lost it again">
-    <img v-if="isMobile" style="width: 100%"  src="../assets/images/ContactUsImageMobile.png" alt="Ah shit lost it again">
+    <img v-if="!isMobile" style="width: 100%"  src="../assets/images/ContactUsImage2.png" alt="Lost image">
+    <img v-if="isMobile" style="width: 100%"  src="../assets/images/ContactUsImageMobile.png" alt="Lost image">
 
   </div>
 </template>

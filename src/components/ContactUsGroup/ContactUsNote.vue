@@ -1,4 +1,4 @@
-lost image<template>
+<template>
   <div id="PostIts" style="">
   </div>
 </template>
@@ -18,9 +18,9 @@ lost image<template>
 
 
 
-  <img id="Background" style="" src="../../assets/images/ContactUsPostItNote.png" alt="Ah shit lost it again">
-   <img v-if="!isMobile" id="Keyboard"  src="../../assets/images/ContactUsKeyboard.png" alt="Ah shit lost it again">
-   <img v-if="!isMobile" id="Background1" style="" src="../../assets/images/ContactUsPostItNotePink.png" alt="Ah shit lost it again">
+  <img id="Background" style="" src="../../assets/images/ContactUsPostItNote.png" alt="Lost image">
+   <img v-if="!isMobile" id="Keyboard"  src="../../assets/images/ContactUsKeyboard.png" alt="Lost image">
+   <img v-if="!isMobile" id="Background1" style="" src="../../assets/images/ContactUsPostItNotePink.png" alt="Lost image">
   <div v-if="!isMobile"  id="PinkPostIt" style=" ">
       <div style="transform: translateY(80%)">
         <h1 style="opacity: unset" class="PageTitleTwo"> Remote Desktop </h1>
