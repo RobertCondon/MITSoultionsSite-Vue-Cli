@@ -54,7 +54,7 @@ module.exports = {
             console.log("New massage by "+req.body.Details.Name);
             let info = {
                 from: '"Do not reply" <contact@inhouseweb.nz>', // sender address
-                to: 'rt_condon@hotmail.com', // list of receivers
+                to: process.env.Receiver_Email, // list of receivers
                 //to: 'rt_condon@hotmail.com',
                 subject: "Contact Us Form", // Subject line
                 html: "<b>Your details</b><br>"+
